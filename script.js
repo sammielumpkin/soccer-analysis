@@ -343,7 +343,7 @@ function render(d) {
 
     <h3>Rows that were dropped or left out</h3>
     <ul>
-      <li>During cleaning, rows with a missing or unreadable date, or with no final score, were dropped, because a match with no result cannot be counted. The ${n0(d.n_matches_total)} matches used here are the rows that remained.</li>
+      <li>The cleaning step is set to drop any row with a missing or unreadable date or with no final score, because a match with no result cannot be counted. It found none, so all ${n0(d.n_matches_total)} downloaded matches are kept.</li>
       <li>${n0(d.favorite_win_rate_overall.excluded_invalid_odds)} matches were left out of every odds-based number because a recorded odd was corrupted (a value of 1.0 or below is impossible for decimal odds). That leaves ${n0(d.favorite_win_rate_overall.matches_with_odds)} matches with usable odds.</li>
       <li>Some statistics are only recorded in some leagues and seasons, so those sections use a subset: ${n0(ht.matches_with_ht_data)} matches with half-time scores, ${n0(st_)} with shots on target, and ${n0(d.red_cards_vs_win.matches_with_card_data)} with card data.</li>
       <li>Team rankings only include clubs with at least ${d.results_by_team_top10_home_win_pct.min_home_matches_threshold} home matches (${d.results_by_team_top10_home_win_pct.teams_qualifying} clubs qualify), so a team with a short record cannot top a list.</li>
