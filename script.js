@@ -37,7 +37,7 @@ function render(d) {
     h2: `Home teams win ${pc(rates.home_win_pct)} of matches, far more often than visitors (${pc(rates.away_win_pct)})`,
     paras: [
       `Across all ${n0(d.n_matches_total)} matches, the home side won ${pc(rates.home_win_pct)}, the away side won ${pc(rates.away_win_pct)}, and ${pc(rates.draw_pct)} ended in a draw.`,
-      `The edge shows up in every league, but its size varies. ${withFlag(topHome.League)} has the highest home-win rate at ${pc(topHome.home_win_pct)} across ${n0(topHome.matches)} matches, while ${withFlag(lowHome.League)} has the lowest at ${pc(lowHome.home_win_pct)} across ${n0(lowHome.matches)}.`,
+      `The edge shows up in every league, but its size varies. ${esc(topHome.League)} has the highest home-win rate at ${pc(topHome.home_win_pct)} across ${n0(topHome.matches)} matches, while ${esc(lowHome.League)} has the lowest at ${pc(lowHome.home_win_pct)} across ${n0(lowHome.matches)}.`,
     ],
     plot: stacked(
       [...leagues].sort((a, b) => b.home_win_pct - a.home_win_pct).map(r => ({
@@ -83,7 +83,7 @@ function render(d) {
     h2: `Betting $${u.stake_per_bet_usd} on the underdog every match would have lost ${money(Math.abs(u.total_profit_usd))}`,
     paras: [
       `Suppose you staked $${u.stake_per_bet_usd} on the longest-odds outcome in each of ${n0(u.total_bets)} matches. The total result would be ${money(u.total_profit_usd)}, a return of ${signed(u.overall_roi_pct)}% per bet. Underdogs win often enough to feel tempting, but not often enough to cover the bookmaker's margin.`,
-      `${profitable.length === 1 ? `Only one season was profitable: ${profitable[0].Season} at ${signed(profitable[0].roi_pct)}%.` : `${profitable.length} seasons were profitable.`} The worst season was ${worstS.Season} at ${signed(worstS.roi_pct)}%. By league, ${withFlag(bestL.League)} lost the least (${signed(bestL.roi_pct)}%) and ${withFlag(worstL.League)} lost the most (${signed(worstL.roi_pct)}%).`,
+      `${profitable.length === 1 ? `Only one season was profitable: ${profitable[0].Season} at ${signed(profitable[0].roi_pct)}%.` : `${profitable.length} seasons were profitable.`} The worst season was ${worstS.Season} at ${signed(worstS.roi_pct)}%. By league, ${esc(bestL.League)} lost the least (${signed(bestL.roi_pct)}%) and ${esc(worstL.League)} lost the most (${signed(worstL.roi_pct)}%).`,
     ],
     plot: vbar(u.by_season.map(r => ({ label: r.Season, value: r.roi_pct })), { unit: "%", dec: 0, label: "Underdog flat-bet return by season" }),
     caption: "Return on investment (profit per $1 staked) for betting the underdog in every match, by season.",
@@ -94,7 +94,7 @@ function render(d) {
   fill("goals", {
     h2: `${g.league} scores the most, and its goals per game rose from ${f2(g.first_5_seasons_avg)} to ${f2(g.last_5_seasons_avg)}`,
     paras: [
-      `${withFlag(g.league)} averages ${f2(g.overall_avg_goals_per_game)} goals per game, the highest of the ${leagues.length} leagues. Its average peaked at ${f2(g.peak_avg_goals_per_game)} in ${g.peak_season} and was lowest at ${f2(g.trough_avg_goals_per_game)} in ${g.trough_season}.`,
+      `${esc(g.league)} averages ${f2(g.overall_avg_goals_per_game)} goals per game, the highest of the ${leagues.length} leagues. Its average peaked at ${f2(g.peak_avg_goals_per_game)} in ${g.peak_season} and was lowest at ${f2(g.trough_avg_goals_per_game)} in ${g.trough_season}.`,
       `Comparing the first five seasons (${f2(g.first_5_seasons_avg)}) with the last five (${f2(g.last_5_seasons_avg)}) gives a rise of ${f2(g.change_first5_to_last5)} goals per game. A straight-line fit through the ${g.by_season.length} seasons slopes ${signed(g.linear_trend_goals_per_game_per_season, 4)} goals per game each season.`,
     ],
     plot: lineChart(g.by_season.map(r => shortSeason(r.Season)), [{ name: `${g.league} goals per game`, values: g.by_season.map(r => r.avg_goals_per_game) }],
@@ -109,8 +109,8 @@ function render(d) {
   fill("scores", {
     h2: allSame ? `${sc[0].most_common_score} is the most common final score in all ${sc.length} leagues` : "The most common final score differs between leagues",
     paras: [
-      `${withFlag(scHi.League)} has the highest share of ${scHi.most_common_score} results at ${pc(scHi.most_common_pct)} (${n0(scHi.most_common_count)} of ${n0(scHi.matches)} matches). ${withFlag(scLo.League)} has the lowest at ${pc(scLo.most_common_pct)}.`,
-      `Behind the top score, the next most common results in ${withFlag(scLo.League)} are ${scLo.top_3.slice(1).map(t => `${t.score} (${pc(t.pct)})`).join(" and ")}. In ${withFlag(scHi.League)} they are ${scHi.top_3.slice(1).map(t => `${t.score} (${pc(t.pct)})`).join(" and ")}. Low-scoring outcomes dominate everywhere.`,
+      `${esc(scHi.League)} has the highest share of ${scHi.most_common_score} results at ${pc(scHi.most_common_pct)} (${n0(scHi.most_common_count)} of ${n0(scHi.matches)} matches). ${esc(scLo.League)} has the lowest at ${pc(scLo.most_common_pct)}.`,
+      `Behind the top score, the next most common results in ${esc(scLo.League)} are ${scLo.top_3.slice(1).map(t => `${t.score} (${pc(t.pct)})`).join(" and ")}. In ${esc(scHi.League)} they are ${scHi.top_3.slice(1).map(t => `${t.score} (${pc(t.pct)})`).join(" and ")}. Low-scoring outcomes dominate everywhere.`,
     ],
     plot: hbar([...sc].sort((a, b) => b.most_common_pct - a.most_common_pct).map(r => ({ label: `${r.League} (${r.most_common_score})`, flag: flagSrc(r.League), value: r.most_common_pct })),
       { labelW: 190, label: "Share of matches with the most common score, by league" }),
@@ -124,7 +124,7 @@ function render(d) {
     h2: `Half-time leaders go on to win ${pc(ht.lead_held_pct)} of the time; only ${pc(ht.lead_reversed_pct)} of leads are reversed`,
     paras: [
       `In ${n0(ht.matches_with_a_ht_leader)} of ${n0(ht.matches_with_ht_data)} matches with half-time data, one team was ahead at the break. That team went on to win ${pc(ht.lead_held_pct)} of the time, drew ${pc(ht.lead_drawn_pct)}, and lost ${pc(ht.lead_reversed_pct)}.`,
-      `Comebacks are most frequent in ${withFlag(hcRate.League)} (${pc(hcRate.comeback_pct)} of leads), while ${withFlag(hcCount.League)} has the most in raw count (${n0(hcCount.comebacks)}). When matches were level at half-time (${n0(lv.matches)}), they finished ${pc(lv.home_win_pct)} home wins, ${pc(lv.draw_pct)} draws and ${pc(lv.away_win_pct)} away wins.`,
+      `Comebacks are most frequent in ${esc(hcRate.League)} (${pc(hcRate.comeback_pct)} of leads), while ${esc(hcCount.League)} has the most in raw count (${n0(hcCount.comebacks)}). When matches were level at half-time (${n0(lv.matches)}), they finished ${pc(lv.home_win_pct)} home wins, ${pc(lv.draw_pct)} draws and ${pc(lv.away_win_pct)} away wins.`,
     ],
     plot: hbar([
       { label: "Lead held (win)", value: ht.lead_held_pct, cls: "c1" },
@@ -170,7 +170,7 @@ function render(d) {
 
   // ---- 10. upsets
   const up = d.biggest_upsets, a = up[0], b = up[1], c = up[2], e = up[3];
-  const line = r => `${r.HomeTeam} ${r.FTHG}–${r.FTAG} ${r.AwayTeam} (${withFlag(r.League)}, ${r.Date})`;
+  const line = r => `${r.HomeTeam} ${r.FTHG}–${r.FTAG} ${r.AwayTeam} (${esc(r.League)}, ${r.Date})`;
   const sameVictim = a.LosingTeam === b.LosingTeam && a.WinningOdds === b.WinningOdds;
   fill("upsets", {
     h2: sameVictim
