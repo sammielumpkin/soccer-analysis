@@ -355,7 +355,9 @@ function renderTable(groups, total, B) {
   const body = sorted.map(g => `<tr><td>${esc(g.name)}</td>${TABLE_COLS.slice(1).map(c => `<td>${cell(c.key, g.acc)}</td>`).join("")}</tr>`).join("");
   const foot = `<tr><td>All in view</td>${TABLE_COLS.slice(1).map(c => `<td>${total.n ? cell(c.key, total) : "—"}</td>`).join("")}</tr>`;
   $("table").innerHTML = `<thead><tr>${head}</tr></thead><tbody>${body}</tbody><tfoot>${foot}</tfoot>`;
-  $("table-note").textContent = `${groups.length} ${B.label.toLowerCase()}${groups.length === 1 ? "" : "s"} shown. Click a heading to sort.`;
+  const noun = B.label.toLowerCase();
+  const plural = noun.endsWith("y") ? `${noun.slice(0, -1)}ies` : `${noun}s`;
+  $("table-note").textContent = `${groups.length} ${groups.length === 1 ? noun : plural} shown. Click a heading to sort.`;
 }
 
 function bindTable() {
