@@ -250,11 +250,11 @@ const empty = msg => `<div class="empty">${esc(msg)}</div>`;
 
 function renderTiles(total, teamsInView) {
   const has = total.n > 0;
-  const fav = MEASURES.fav.val(total), roi = MEASURES.roi.val(total);
+  const roi = MEASURES.roi.val(total);
   const tiles = [
     [has ? n0(total.n) : "—", "matches analyzed"],
     [has ? pc(MEASURES.home.val(total)) : "—", "of matches won by the home team"],
-    [fav === null ? "—" : pc(fav), "of matches won by the bookmakers' favorite"],
+    [has ? pc(MEASURES.draw.val(total)) : "—", "of matches ending in a draw"],
     [roi === null ? "—" : `${signed(roi)}%`, "return on betting the underdog in every match"],
     [has ? f2(MEASURES.goals.val(total)) : "—", "goals per game"],
     [has ? n0(teamsInView) : "—", "teams with a match in view"],

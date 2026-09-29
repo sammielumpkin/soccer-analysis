@@ -2,7 +2,7 @@
 
 A two-page website about 78,676 professional football matches from 10 European leagues across 20 seasons (2005-06 to 2024-25), by Samantha Lumpkin.
 
-- **Report** (`index.html`): 12 findings, each with the numbers behind it and a chart, plus a section explaining the data and how every figure is computed.
+- **Report** (`index.html`): 10 findings, each with the numbers behind it and a chart, plus a section explaining the data and how every figure is computed.
 - **Dashboard** (`dashboard.html`): loads the match data in the browser and lets you filter by season, country, league, team and result, switch the measure and the breakdown, and see the charts, summary numbers and table change.
 
 Both pages are plain HTML, CSS and JavaScript with no build step, and share one nav bar and one stylesheet.
@@ -23,7 +23,7 @@ Some statistics are only recorded for some leagues and seasons, so those columns
 
 | File | What it does |
 | --- | --- |
-| `index.html` | The report page, and the page that opens at the site URL. Holds the title, summary, headline numbers, 12 finding sections and the data/methods section. `script.js` fills in the text and charts. |
+| `index.html` | The report page, and the page that opens at the site URL. Holds the title, summary, headline numbers, 10 finding sections and the data/methods section. `script.js` fills in the text and charts. |
 | `dashboard.html` | The dashboard page: filters, summary numbers, switches, four charts, the table and the reset button. `dashboard.js` fills it in. |
 | `style.css` | The one stylesheet both pages share: soccer theme (pitch background, colors, fonts, animations), nav bar, layout, chart colors and dashboard controls. |
 | `charts.js` | Shared code for both pages: number formatters and the functions that draw the SVG charts (horizontal bars, stacked bars, vertical bars, lines). |
@@ -73,4 +73,4 @@ Then open <http://localhost:8000>. The pages load their data with `fetch`, which
 
 ## How the numbers are defined
 
-The report's last section spells out every rate, ratio and average. The dashboard's "How each measure is computed" list uses the same definitions. With every filter reset, the dashboard's first four summary numbers match the report's four headline numbers (78,676 matches, 44.5% home wins, 49.6% favorite wins, and a -8.9% return on betting the underdog).
+The report's last section spells out every rate, ratio and average. The dashboard's "How each measure is computed" list uses the same definitions. With every filter reset, the dashboard's first four summary numbers match the report's four headline numbers (78,676 matches, 44.5% home wins, 27.6% draws, and a -8.9% return on betting the underdog).

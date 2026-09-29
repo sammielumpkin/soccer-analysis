@@ -153,11 +153,11 @@ _Last updated 2026-09-29._
 ### Done
 - **Data set:** European football match results, 10 leagues, 20 seasons (2005-06 to 2024-25). `data/matches.csv` has 78,676 rows and 27 columns (one row is one match). The raw download is kept in `data/matches_raw.csv`.
 - **Scripts** (`scripts/`): `download_data.py`, `check_requirements.py`, `clean_data.py` (drops `Div`, writes `data/cleaning_log.json`), `analysis.py` (writes `data/findings.json`, including raw and dropped row counts), and `verify_findings.py` (recomputes the findings independently; 71 of 71 match).
-- **Report page** (`index.html`, `script.js`): title, byline, summary, 4 headline numbers, 12 finding sections with charts, and the closing data and methods section. Every figure is read from `data/findings.json`. Checked in a browser: 12 charts, no errors.
+- **Report page** (`index.html`, `script.js`): title, byline, summary, 4 headline numbers, 10 finding sections with charts, and the closing data and methods section. Every figure is read from `data/findings.json`. Checked in a browser: 10 charts, no errors. The "Fading edge" and "Favorites" sections were removed; their numbers are still computed in `analysis.py` and stored in `findings.json`.
 - **Dashboard** (`dashboard.html`, `dashboard.js`): loads `data/matches.csv` in the browser.
   - Filters: season from/to, country, league, team, team plays home/away, result.
   - 6 summary numbers, 4 charts, a measure switch (9 measures), a breakdown switch (league, season, country), a sortable table, and a reset button.
-  - With no filters, its first four numbers match the report (78,676 matches, 44.5%, 49.6%, -8.9%).
+  - With no filters, its first four numbers match the report (78,676 matches, 44.5% home wins, 27.6% draws, -8.9% underdog return).
   - Five filtered views were checked against an independent pandas calculation, and all matched. Clicks on the filters, switches, table headings and reset were tested.
 - **Shared site code:** `charts.js` (formatters and SVG charts used by both pages) and `style.css` (soccer theme: pitch background, condensed headings, rolling and bouncing ball animations that turn off for reduced motion). Both pages have the same nav bar with Report and Dashboard links.
 - **README.md:** lists every file and what it does, and links to football-data.co.uk as the data source.

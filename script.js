@@ -20,14 +20,14 @@ function render(d) {
   // ---- header: summary + 4 headline numbers
   document.getElementById("summary").textContent =
     `This report looks at ${n0(d.n_matches_total)} matches from ${leagues.length} European leagues across ${seasons.length} seasons, ` +
-    `${firstSeason} to ${lastSeason}. Home teams won ${pc(rates.home_win_pct)} of them, bookmakers' favorites won ${pc(d.favorite_win_rate_overall.favorite_win_pct)}, ` +
+    `${firstSeason} to ${lastSeason}. Home teams won ${pc(rates.home_win_pct)} of them, ${pc(rates.draw_pct)} ended in a draw, ` +
     `and a $${d.underdog_flat_bet_pnl.stake_per_bet_usd} bet on the underdog in every match would have returned ${signed(d.underdog_flat_bet_pnl.overall_roi_pct)}%. ` +
     `The sections below cover home advantage, betting odds, goals, half-time swings, shots, red cards and the biggest upsets.`;
 
   document.getElementById("stats").innerHTML = [
     [n0(d.n_matches_total), "matches analyzed"],
     [pc(rates.home_win_pct), "of matches won by the home team"],
-    [pc(d.favorite_win_rate_overall.favorite_win_pct), "of matches won by the bookmakers' favorite"],
+    [pc(rates.draw_pct), "of matches ending in a draw"],
     [`${signed(d.underdog_flat_bet_pnl.overall_roi_pct)}%`, "return on betting the underdog in every match"],
   ].map(([num, label]) => `<div class="stat"><div class="num">${num}</div><div class="label">${label}</div></div>`).join("");
 
@@ -46,23 +46,7 @@ function render(d) {
     caption: "Share of matches ending in a home win, draw or away win, by league.",
   });
 
-  // ---- 2. the fading edge (strongest league) + COVID season
-  const tr = d.strongest_league_home_advantage_trend, cv = d.home_advantage_covid;
-  const covidIdx = seasons.findIndex(s => s.Season === cv.season);
-  fill("fading-edge", {
-    h2: `${tr.league}'s home advantage slipped from ${pc(tr.first_5_seasons_avg_pct)} to ${pc(tr.last_5_seasons_avg_pct)} over ${tr.by_season.length} seasons`,
-    paras: [
-      `${tr.league} is the league with the strongest home advantage overall (${pc(tr.overall_home_win_pct)}). Its home-win rate peaked at ${pc(tr.peak_home_win_pct)} in ${tr.peak_season} and bottomed out at ${pc(tr.trough_home_win_pct)} in ${tr.trough_season}. The average of its first five seasons was ${pc(tr.first_5_seasons_avg_pct)}; the last five averaged ${pc(tr.last_5_seasons_avg_pct)}, a change of ${signed(tr.change_first5_to_last5_pct_points)} percentage points. A straight-line fit through all ${tr.by_season.length} seasons slopes ${signed(tr.linear_trend_pct_points_per_season, 3)} points per season.`,
-      `The empty-stadium season shows how much crowds may matter. In ${cv.season}, the home-win rate across all leagues fell to ${pc(cv.home_win_pct_2020_21)}, ${f1(Math.abs(cv.drop_vs_before_pct_points))} points below the ${pc(cv.avg_home_win_pct_before)} average of the seasons before it. ${cv.recovered_after ? `In the seasons afterwards it averaged ${pc(cv.avg_home_win_pct_after)}, ${cv.avg_home_win_pct_after < cv.avg_home_win_pct_before ? "up from the dip but still below the earlier level" : "back to the earlier level"}.` : ""}`,
-    ],
-    plot: lineChart(tr.by_season.map(r => shortSeason(r.Season)), [
-      { name: `${tr.league} home-win %`, values: tr.by_season.map(r => r.home_win_pct) },
-      { name: "All leagues home-win %", values: seasons.map(r => r.home_win_pct), dash: true },
-    ], { unit: "%", label: `Home-win rate by season, ${tr.league} versus all leagues` }),
-    caption: `Home-win rate by season (labels show the season's start and end year, e.g. ${shortSeason(firstSeason)} = ${firstSeason}). The dip near ${cv.season} is the empty-stadium season.`,
-  });
-
-  // ---- 3. home fortresses
+  // ---- 2. home fortresses
   const t10 = d.results_by_team_top10_home_win_pct, fort = d.home_away_gap_by_team.biggest_home_fortress[0];
   fill("fortresses", {
     h2: `${t10.top_10[0].Team} won ${pc(t10.top_10[0].home_win_pct)} of home matches, the best home record of ${t10.teams_qualifying} clubs`,
@@ -74,20 +58,7 @@ function render(d) {
     caption: `Home-win rate of the ten strongest home teams (minimum ${t10.min_home_matches_threshold} home matches).`,
   });
 
-  // ---- 4. favorites
-  const fl = d.favorite_win_rate_by_league, fo = d.favorite_win_rate_overall, pr = d.predictability;
-  fill("favorites", {
-    h2: `Bookmakers' favorites win only ${pc(fo.favorite_win_pct)} of the time, and it varies from ${pc(pr.most_upsets_favorite_win_pct)} to ${pc(pr.most_predictable_favorite_win_pct)} by league`,
-    paras: [
-      `Taking the team with the shortest Bet365 odds as the favorite, favorites won ${pc(fo.favorite_win_pct)} of ${n0(fo.matches_with_odds)} matches with usable odds. That is about a coin flip, because draws and upsets are common in football.`,
-      `${pr.most_predictable_league} is the most predictable league, with favorites winning ${pc(pr.most_predictable_favorite_win_pct)}. ${pr.most_upsets_league} has the most upsets: favorites win just ${pc(pr.most_upsets_favorite_win_pct)}, so ${pc(pr.most_upsets_upset_pct)} of matches end in a draw or an underdog win.`,
-    ],
-    plot: hbar([...fl].sort((a, b) => b.favorite_win_pct - a.favorite_win_pct).map(r => ({ label: r.League, value: r.favorite_win_pct })),
-      { max: 100, label: "Favorite win rate by league" }),
-    caption: "Share of matches won by the pre-match favorite, by league.",
-  });
-
-  // ---- 5. calibration
+  // ---- 3. calibration
   const cal = d.odds_calibration, co = d.odds_calibration_overall, fr = d.favorite_calibration_by_range;
   const lowR = fr.overall_by_range[0], hiR = fr.overall_by_range[fr.overall_by_range.length - 1];
   fill("calibration", {
@@ -104,7 +75,7 @@ function render(d) {
     caption: "Implied versus actual home-win rate, grouped by the home team's implied chance (x axis).",
   });
 
-  // ---- 6. underdog P&L
+  // ---- 4. underdog P&L
   const u = d.underdog_flat_bet_pnl;
   const profitable = u.by_season.filter(r => r.profit_usd > 0);
   const worstS = minBy(u.by_season, r => r.roi_pct), bestL = maxBy(u.by_league, r => r.roi_pct), worstL = minBy(u.by_league, r => r.roi_pct);
@@ -118,7 +89,7 @@ function render(d) {
     caption: "Return on investment (profit per $1 staked) for betting the underdog in every match, by season.",
   });
 
-  // ---- 7. goals
+  // ---- 5. goals
   const g = d.highest_scoring_league_trend;
   fill("goals", {
     h2: `${g.league} scores the most, and its goals per game rose from ${f2(g.first_5_seasons_avg)} to ${f2(g.last_5_seasons_avg)}`,
@@ -131,7 +102,7 @@ function render(d) {
     caption: `Average total goals (home plus away) per match in the ${g.league}, by season.`,
   });
 
-  // ---- 8. most common score
+  // ---- 6. most common score
   const sc = d.most_common_score_by_league;
   const allSame = sc.every(r => r.most_common_score === sc[0].most_common_score);
   const scHi = maxBy(sc, r => r.most_common_pct), scLo = minBy(sc, r => r.most_common_pct);
@@ -146,7 +117,7 @@ function render(d) {
     caption: "Share of each league's matches that ended with its most common scoreline (shown in brackets).",
   });
 
-  // ---- 9. half-time
+  // ---- 7. half-time
   const ht = d.halftime_leads, hc = d.halftime_comebacks_by_league, lv = ht.level_at_half_time;
   const hcRate = hc.by_league.find(r => r.League === hc.most_comebacks_by_rate), hcCount = hc.by_league.find(r => r.League === hc.most_comebacks_by_raw_count);
   fill("half-time", {
@@ -163,7 +134,7 @@ function render(d) {
     caption: "Final result for the team that led at half-time.",
   });
 
-  // ---- 10. shots on target
+  // ---- 8. shots on target
   const st = d.shots_on_target_vs_win, so = st.overall;
   const leagueHM = st.by_league.map(r => r.home_win_pct_when_home_more);
   fill("shots", {
@@ -180,7 +151,7 @@ function render(d) {
     caption: "Home win rate, grouped by which team had more shots on target.",
   });
 
-  // ---- 11. red cards
+  // ---- 9. red cards
   const rc = d.red_cards_vs_win;
   fill("red-cards", {
     h2: `Teams reduced to ten men still win ${pc(rc.either_team_sole_red_card_combined.still_won_pct)} of the time`,
@@ -197,7 +168,7 @@ function render(d) {
     caption: "Share of matches won by the team that received the only red card, compared with the home win rate in matches with no red cards.",
   });
 
-  // ---- 12. upsets
+  // ---- 10. upsets
   const up = d.biggest_upsets, a = up[0], b = up[1], c = up[2], e = up[3];
   const line = r => `${r.HomeTeam} ${r.FTHG}–${r.FTAG} ${r.AwayTeam} (${r.League}, ${r.Date})`;
   const sameVictim = a.LosingTeam === b.LosingTeam && a.WinningOdds === b.WinningOdds;
@@ -234,7 +205,7 @@ function render(d) {
     <h3>How each rate and average is computed</h3>
     <ul>
       <li><strong>Home win, draw and away win %:</strong> matches with that result ÷ matches in the group (league, season or team) × 100, rounded to one decimal.</li>
-      <li><strong>Season and league trends:</strong> the first-five and last-five figures are simple averages of five yearly rates, and the trend is the slope of a least-squares line through the yearly values. The "before" and "after" averages around ${d.home_advantage_covid.season} are simple averages of the yearly rates on either side.</li>
+      <li><strong>Season and league trends:</strong> the first-five and last-five figures are simple averages of five yearly rates, and the trend is the slope of a least-squares line through the yearly values.</li>
       <li><strong>Favorite and underdog:</strong> the favorite is the outcome (home, draw or away) with the lowest Bet365 odds and the underdog is the one with the highest. Favorite win % = matches the favorite won ÷ matches with usable odds × 100.</li>
       <li><strong>Implied probability:</strong> 1 ÷ odds for each outcome, divided by the sum of those three values, so the bookmaker's margin is removed and the three add to 100%. Calibration compares the average implied chance with the share that actually happened, in bands of implied chance.</li>
       <li><strong>Underdog profit and return:</strong> a $${d.underdog_flat_bet_pnl.stake_per_bet_usd} stake on the underdog wins (odds − 1) dollars if it happens and loses $${d.underdog_flat_bet_pnl.stake_per_bet_usd} otherwise. Return = total profit ÷ number of bets × 100.</li>
