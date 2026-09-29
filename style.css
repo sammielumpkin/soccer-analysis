@@ -401,3 +401,13 @@ svg image { outline: none; }
 .field { position: relative; }
 .field .select-flag { position: absolute; left: 10px; bottom: 14px; pointer-events: none; }
 select.has-flag { padding-left: 36px; }
+
+/* ---------- leagues table: one block per country ---------- */
+.league-table tbody + tbody tr:first-child > * { border-top: 2px solid var(--border); }
+.league-table tbody tr:not(:last-child) > * { border-bottom-color: transparent; }
+.league-table th.country-cell { text-align: left; vertical-align: middle; font: 700 1rem/1.2 var(--font-head); letter-spacing: 0.04em; text-transform: none; color: inherit; }
+.league-table td.l { text-align: left; }
+.league-table tbody tr:hover { background: transparent; }
+.league-table tbody:hover { background: var(--accent-soft); }
+.league-table th.l { text-align: left; }
+.league-table th.country-cell { border-bottom: 1px solid var(--border); }

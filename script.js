@@ -32,10 +32,15 @@ function render(d) {
     `The data covers the top ${divisions === 2 ? "two divisions" : divisions + " divisions"} in ${countries} countries, ${seasons.length} seasons each.`;
   const tierName = t => (t === 1 ? "Top division" : "Second division");
   const teams = r => (r.teams_per_season_min === r.teams_per_season_max ? `${r.teams_per_season_typical}` : `${r.teams_per_season_typical} (${r.teams_per_season_min}–${r.teams_per_season_max})`);
+  const byCountry = [...new Set(ov.map(r => r.Country))].sort();
   document.getElementById("league-table").innerHTML =
-    `<thead><tr><th>League</th><th>Country</th><th>Division</th><th>Teams per season</th><th>Matches</th></tr></thead><tbody>` +
-    ov.map(r => `<tr><td>${withFlag(r.League)}</td><td>${esc(r.Country)}</td><td>${tierName(r.tier)}</td><td>${teams(r)}</td><td>${n0(r.matches)}</td></tr>`).join("") +
-    `</tbody>`;
+    `<thead><tr><th>Country</th><th class="l">League</th><th class="l">Division</th><th>Teams per season</th><th>Matches</th></tr></thead>` +
+    byCountry.map(c => {
+      const rows = ov.filter(r => r.Country === c).sort((x, y) => x.tier - y.tier);
+      return `<tbody>` + rows.map((r, i) =>
+        `<tr>${i === 0 ? `<th scope="rowgroup" rowspan="${rows.length}" class="country-cell">${withFlag(c)}</th>` : ""}` +
+        `<td class="l">${esc(r.League)}</td><td class="l">${tierName(r.tier)}</td><td>${teams(r)}</td><td>${n0(r.matches)}</td></tr>`).join("") + `</tbody>`;
+    }).join("");
 
   document.getElementById("stats").innerHTML = [
     [n0(d.n_matches_total), "matches analyzed"],
