@@ -25,7 +25,7 @@ function render(d) {
   // ---- header: summary + 4 headline numbers
   document.getElementById("summary").textContent =
     `This report looks at ${n0(d.n_matches_total)} matches from ${leagues.length} European leagues across ${seasons.length} seasons, ` +
-    `${firstSeason} to ${lastSeason}. Home teams won ${pc(rates.home_win_pct)} of them, ${pc(rates.draw_pct)} ended in a draw, ` +
+    `${firstSeason} to ${lastSeason}. Home teams won ${pc(rates.home_win_pct)} of them and ${pc(rates.draw_pct)} ended in a draw. ` +
     `${d.results_by_team_top10_home_win_pct.top_10[0].Team} has the best home record of ${d.results_by_team_top10_home_win_pct.teams_qualifying} clubs, winning ${pc(d.results_by_team_top10_home_win_pct.top_10[0].home_win_pct)} of its home matches. ` +
     `Bookmaker odds are well calibrated (they implied ${pc(d.odds_calibration_overall.avg_implied_home_win_pct)} home wins against an actual ${pc(d.odds_calibration_overall.actual_home_win_pct)}), ` +
     `yet a $${d.underdog_flat_bet_pnl.stake_per_bet_usd} bet on the underdog in every match would have returned ${signed(d.underdog_flat_bet_pnl.overall_roi_pct)}%. ` +
