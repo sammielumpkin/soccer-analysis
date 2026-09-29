@@ -56,8 +56,8 @@ const legend = items => `<div class="legend">${items.map((t, i) => `<span class=
 // ---------------------------------------------------------------- charts
 /* Horizontal bars. items: [{label, value, cls?, text?}]. Negative values
    extend left of a zero line. */
-function hbar(items, { unit = "%", dec = 1, labelW = 150, max, label = "Bar chart", xTitle } = {}) {
-  const W = 640, rowH = 28, top = 6, right = 64;
+function hbar(items, { unit = "%", dec = 1, labelW = 150, max, label = "Bar chart", xTitle, width } = {}) {
+  const W = width ?? 640, rowH = 28, top = 6, right = 64;
   const vals = items.map(i => i.value);
   const hi = max ?? Math.max(0, ...vals), lo = Math.min(0, ...vals);
   const barW = W - labelW - right;
@@ -105,8 +105,8 @@ function stacked(items, { labelW = 130, rowH = 30, label = "Stacked bar chart", 
    A null value leaves a gap in the line. A muted series is drawn as a thin
    grey line (no dots) underneath the others, for showing context.
    tipDec sets the decimals in hover tips (default: same as the axis). */
-function lineChart(cats, series, { unit = "", yMin, yMax, dec, tipDec, label = "Line chart", markers = [], xTitle, yTitle, legend: showLegend = true } = {}) {
-  const W = 640, H = 300 + (xTitle ? 20 : 0), m = { l: yTitle ? 68 : 52, r: 30, t: 16, b: xTitle ? 60 : 40 };
+function lineChart(cats, series, { unit = "", yMin, yMax, dec, tipDec, label = "Line chart", markers = [], xTitle, yTitle, legend: showLegend = true, width } = {}) {
+  const W = width ?? 640, H = 300 + (xTitle ? 20 : 0), m = { l: yTitle ? 68 : 52, r: 30, t: 16, b: xTitle ? 60 : 40 };
   const all = series.flatMap(s => s.values).filter(v => v !== null && v !== undefined);
   let lo = yMin ?? Math.min(...all), hi = yMax ?? Math.max(...all);
   const pad = (hi - lo) * 0.15 || 1;
@@ -119,7 +119,7 @@ function lineChart(cats, series, { unit = "", yMin, yMax, dec, tipDec, label = "
   const Y = v => m.t + ((hi - v) / (hi - lo)) * (H - m.t - m.b);
   const grid = ticks.map(t => `<line class="grid" x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}"/>
     <text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${mn(t.toFixed(d))}${unit}</text>`).join("");
-  const xl = cats.map((c, i) => (cats.length > 10 && i % 2 ? "" :
+  const xl = cats.map((c, i) => (cats.length > 10 && i % (W < 500 ? 4 : 2) ? "" :
     `<text x="${X(i)}" y="${H - m.b + 18}" text-anchor="middle">${esc(c)}</text>`)).join("");
   const td = tipDec ?? d;
   const order = series.map((s, k) => k).sort((a, b) => !!series[b].muted - !!series[a].muted);

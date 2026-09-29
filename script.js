@@ -130,17 +130,32 @@ function render(d) {
     values: gSeasons.map(sn => (gRows.find(r => r.League === l.League && r.Season === sn) || {}).avg_goals_per_game ?? null),
   }));
   const runnerUp = g.overall_by_league.filter(r => r.League !== g.league)[0];
+  // The line chart and the ranked bars are drawn at a narrower width on phones so their text stays legible.
+  const goalsPlot = () => {
+    const phone = window.innerWidth < 640, width = phone ? 360 : 640;
+    return lineChart(gSeasons.map(shortSeason), [...gSeries.filter(x => x.muted), { name: `${g.league} goals per game`, values: gSeries.find(x => !x.muted).values }],
+        { dec: 2, label: `Goals per game by league and season, ${g.league} highlighted`, legend: false, xTitle: "Season", yTitle: "Goals per game", width })
+      + `<div class="legend"><span class="l1">${esc(g.league)}</span><span class="lg">The other ${leagues.length - 1} leagues</span></div>`
+      + `<div class="chart-subtitle">Average goals per game by league, all ${seasons.length} seasons</div>`
+      + hbar(g.overall_by_league.map(r => ({ label: r.League, flag: flagSrc(r.League), value: r.avg_goals_per_game, text: f2(r.avg_goals_per_game), cls: r.League === g.league ? "c1" : "c4" })),
+        { labelW: phone ? 126 : 150, label: "Average goals per game by league", xTitle: "Goals per game", width });
+  };
+  let goalsPhone = window.innerWidth < 640;
+  window.addEventListener("resize", () => {
+    if ((window.innerWidth < 640) !== goalsPhone) {
+      goalsPhone = window.innerWidth < 640;
+      document.querySelector("#goals .plot").innerHTML = goalsPlot();
+    }
+  });
   fill("goals", {
     h2: `${g.league} scores the most, and its goals per game rose from ${f2(g.first_5_seasons_avg)} to ${f2(g.last_5_seasons_avg)}`,
     paras: [
       `${esc(g.league)} averages ${f2(g.overall_avg_goals_per_game)} goals per game, the highest of the ${leagues.length} leagues. The next highest is the ${esc(runnerUp.League)}, at ${f2(runnerUp.avg_goals_per_game)}. Its average peaked at ${f2(g.peak_avg_goals_per_game)} in ${g.peak_season} and was lowest at ${f2(g.trough_avg_goals_per_game)} in ${g.trough_season}.`,
       `Comparing the first five seasons (${f2(g.first_5_seasons_avg)}) with the last five (${f2(g.last_5_seasons_avg)}) gives a rise of ${f2(g.change_first5_to_last5)} goals per game. A straight-line fit through the ${g.by_season.length} seasons slopes ${signed(g.linear_trend_goals_per_game_per_season, 4)} goals per game each season.`,
     ],
-    plot: lineChart(gSeasons.map(shortSeason), [...gSeries.filter(x => x.muted), { name: `${g.league} goals per game`, values: gSeries.find(x => !x.muted).values }],
-      { dec: 2, label: `Goals per game by league and season, ${g.league} highlighted`, legend: false, xTitle: "Season", yTitle: "Goals per game" })
-      + `<div class="legend"><span class="l1">${esc(g.league)}</span><span class="lg">The other ${leagues.length - 1} leagues (hover for names)</span></div>`,
+    plot: goalsPlot(),
     title: `Goals per game, all ${leagues.length} leagues`,
-    caption: `Average total goals (home plus away) per match by league and season. The ${g.league} is highlighted.`,
+    caption: `Average total goals (home plus away) per match by league and season. The ${g.league} is highlighted in green.`,
   });
 
   // ---- 6. most common score

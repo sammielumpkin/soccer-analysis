@@ -262,6 +262,7 @@ figure.chart {
 }
 figure.chart svg { display: block; width: 100%; height: auto; }
 figure.chart .chart-title { font: 700 1.05rem/1.2 var(--font-head); letter-spacing: 0.02em; color: var(--text); margin: 0 0 8px; }
+figure.chart .chart-subtitle { font: 700 0.95rem/1.2 var(--font-head); letter-spacing: 0.02em; color: var(--text); margin: 22px 0 6px; }
 figure.chart figcaption { color: var(--muted); font-size: 0.88rem; margin-top: 8px; }
 
 .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; font-size: 0.88rem; color: var(--muted); }
