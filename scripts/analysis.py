@@ -73,6 +73,18 @@ by_season = result_rates("Season")
 findings["results_by_league"] = by_league
 findings["results_by_season"] = by_season
 
+# Same rates broken down by team (their home matches only), so we can rank
+# the teams with the strongest -- and weakest -- home records. Restricted to
+# teams with enough home matches (same threshold used in section 7) so the
+# ranking isn't driven by a team that only played a handful of home games.
+by_team = [r for r in result_rates("HomeTeam") if r["matches"] >= MIN_TEAM_MATCHES]
+by_team.sort(key=lambda r: r["home_win_pct"], reverse=True)
+findings["results_by_team_top10_home_win_pct"] = {
+    "min_home_matches_threshold": MIN_TEAM_MATCHES,
+    "teams_qualifying": len(by_team),
+    "top_10": [{"Team": r["HomeTeam"], **{k: v for k, v in r.items() if k != "HomeTeam"}} for r in by_team[:10]],
+}
+
 overall_h = pct((df["FTR"] == "H").sum(), N_TOTAL)
 overall_d = pct((df["FTR"] == "D").sum(), N_TOTAL)
 overall_a = pct((df["FTR"] == "A").sum(), N_TOTAL)
@@ -84,6 +96,10 @@ top_home = max(by_league, key=lambda r: r["home_win_pct"])
 low_home = min(by_league, key=lambda r: r["home_win_pct"])
 print(f"   Strongest home advantage: {top_home['League']} ({top_home['home_win_pct']}% home wins)")
 print(f"   Weakest home advantage:   {low_home['League']} ({low_home['home_win_pct']}% home wins)")
+
+print(f"\n   Top 10 teams by home win rate (min {MIN_TEAM_MATCHES} home matches, {len(by_team)} teams qualify):")
+for r in findings["results_by_team_top10_home_win_pct"]["top_10"]:
+    print(f"     {r['Team']:<20} home {r['home_win_pct']}%  draw {r['draw_pct']}%  away win {r['away_win_pct']}%  (n={r['matches']})")
 
 # ---------------------------------------------------------------------------
 # 2. Home advantage in 2020-21 (empty stadiums) vs before/after

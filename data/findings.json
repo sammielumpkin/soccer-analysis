@@ -214,6 +214,82 @@
       "away_win_pct": 29.8
     }
   ],
+  "results_by_team_top10_home_win_pct": {
+    "min_home_matches_threshold": 150,
+    "teams_qualifying": 222,
+    "top_10": [
+      {
+        "Team": "Barcelona",
+        "matches": 380,
+        "home_win_pct": 79.7,
+        "draw_pct": 11.8,
+        "away_win_pct": 8.4
+      },
+      {
+        "Team": "Bayern Munich",
+        "matches": 340,
+        "home_win_pct": 77.6,
+        "draw_pct": 14.7,
+        "away_win_pct": 7.6
+      },
+      {
+        "Team": "Real Madrid",
+        "matches": 380,
+        "home_win_pct": 77.4,
+        "draw_pct": 12.9,
+        "away_win_pct": 9.7
+      },
+      {
+        "Team": "Juventus",
+        "matches": 382,
+        "home_win_pct": 71.5,
+        "draw_pct": 19.6,
+        "away_win_pct": 8.9
+      },
+      {
+        "Team": "Man City",
+        "matches": 380,
+        "home_win_pct": 71.1,
+        "draw_pct": 14.2,
+        "away_win_pct": 14.7
+      },
+      {
+        "Team": "Man United",
+        "matches": 380,
+        "home_win_pct": 67.1,
+        "draw_pct": 17.6,
+        "away_win_pct": 15.3
+      },
+      {
+        "Team": "Paris SG",
+        "matches": 371,
+        "home_win_pct": 66.8,
+        "draw_pct": 19.4,
+        "away_win_pct": 13.7
+      },
+      {
+        "Team": "Ath Madrid",
+        "matches": 380,
+        "home_win_pct": 66.6,
+        "draw_pct": 18.7,
+        "away_win_pct": 14.7
+      },
+      {
+        "Team": "Liverpool",
+        "matches": 380,
+        "home_win_pct": 66.6,
+        "draw_pct": 23.7,
+        "away_win_pct": 9.7
+      },
+      {
+        "Team": "Inter",
+        "matches": 380,
+        "home_win_pct": 66.3,
+        "draw_pct": 20.0,
+        "away_win_pct": 13.7
+      }
+    ]
+  },
   "overall_result_rates": {
     "home_win_pct": 44.5,
     "draw_pct": 27.6,
