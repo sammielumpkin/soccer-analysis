@@ -3478,6 +3478,248 @@
     "change_first5_to_last5": 0.31,
     "linear_trend_goals_per_game_per_season": 0.0209
   },
+  "most_common_score_by_league": [
+    {
+      "League": "2. Bundesliga",
+      "matches": 6120,
+      "most_common_score": "1-1",
+      "most_common_count": 772,
+      "most_common_pct": 12.6,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 772,
+          "pct": 12.6
+        },
+        {
+          "score": "1-0",
+          "matches": 552,
+          "pct": 9.0
+        },
+        {
+          "score": "2-1",
+          "matches": 527,
+          "pct": 8.6
+        }
+      ]
+    },
+    {
+      "League": "Bundesliga",
+      "matches": 6120,
+      "most_common_score": "1-1",
+      "most_common_count": 721,
+      "most_common_pct": 11.8,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 721,
+          "pct": 11.8
+        },
+        {
+          "score": "2-1",
+          "matches": 540,
+          "pct": 8.8
+        },
+        {
+          "score": "1-0",
+          "matches": 449,
+          "pct": 7.3
+        }
+      ]
+    },
+    {
+      "League": "Championship",
+      "matches": 11040,
+      "most_common_score": "1-1",
+      "most_common_count": 1441,
+      "most_common_pct": 13.1,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 1441,
+          "pct": 13.1
+        },
+        {
+          "score": "1-0",
+          "matches": 1177,
+          "pct": 10.7
+        },
+        {
+          "score": "2-1",
+          "matches": 1034,
+          "pct": 9.4
+        }
+      ]
+    },
+    {
+      "League": "La Liga",
+      "matches": 7600,
+      "most_common_score": "1-1",
+      "most_common_count": 906,
+      "most_common_pct": 11.9,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 906,
+          "pct": 11.9
+        },
+        {
+          "score": "1-0",
+          "matches": 858,
+          "pct": 11.3
+        },
+        {
+          "score": "2-1",
+          "matches": 674,
+          "pct": 8.9
+        }
+      ]
+    },
+    {
+      "League": "Ligue 1",
+      "matches": 7351,
+      "most_common_score": "1-1",
+      "most_common_count": 965,
+      "most_common_pct": 13.1,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 965,
+          "pct": 13.1
+        },
+        {
+          "score": "1-0",
+          "matches": 818,
+          "pct": 11.1
+        },
+        {
+          "score": "0-0",
+          "matches": 653,
+          "pct": 8.9
+        }
+      ]
+    },
+    {
+      "League": "Ligue 2",
+      "matches": 7393,
+      "most_common_score": "1-1",
+      "most_common_count": 1010,
+      "most_common_pct": 13.7,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 1010,
+          "pct": 13.7
+        },
+        {
+          "score": "1-0",
+          "matches": 925,
+          "pct": 12.5
+        },
+        {
+          "score": "0-0",
+          "matches": 780,
+          "pct": 10.6
+        }
+      ]
+    },
+    {
+      "League": "Premier League",
+      "matches": 7600,
+      "most_common_score": "1-1",
+      "most_common_count": 813,
+      "most_common_pct": 10.7,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 813,
+          "pct": 10.7
+        },
+        {
+          "score": "1-0",
+          "matches": 756,
+          "pct": 9.9
+        },
+        {
+          "score": "2-1",
+          "matches": 648,
+          "pct": 8.5
+        }
+      ]
+    },
+    {
+      "League": "Segunda Division",
+      "matches": 9224,
+      "most_common_score": "1-1",
+      "most_common_count": 1261,
+      "most_common_pct": 13.7,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 1261,
+          "pct": 13.7
+        },
+        {
+          "score": "1-0",
+          "matches": 1251,
+          "pct": 13.6
+        },
+        {
+          "score": "0-0",
+          "matches": 932,
+          "pct": 10.1
+        }
+      ]
+    },
+    {
+      "League": "Serie A",
+      "matches": 7600,
+      "most_common_score": "1-1",
+      "most_common_count": 929,
+      "most_common_pct": 12.2,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 929,
+          "pct": 12.2
+        },
+        {
+          "score": "1-0",
+          "matches": 771,
+          "pct": 10.1
+        },
+        {
+          "score": "2-1",
+          "matches": 680,
+          "pct": 8.9
+        }
+      ]
+    },
+    {
+      "League": "Serie B",
+      "matches": 8628,
+      "most_common_score": "1-1",
+      "most_common_count": 1309,
+      "most_common_pct": 15.2,
+      "top_3": [
+        {
+          "score": "1-1",
+          "matches": 1309,
+          "pct": 15.2
+        },
+        {
+          "score": "1-0",
+          "matches": 1048,
+          "pct": 12.1
+        },
+        {
+          "score": "0-0",
+          "matches": 862,
+          "pct": 10.0
+        }
+      ]
+    }
+  ],
   "predictability": {
     "most_predictable_league": "Premier League",
     "most_predictable_favorite_win_pct": 55.1,

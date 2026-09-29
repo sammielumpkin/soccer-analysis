@@ -339,6 +339,28 @@ print(f"   Peak: {goal_peak['Season']} ({goal_peak['avg_goals_per_game']})  |  T
 print(f"   First 5 seasons avg: {goal_first5_avg}  |  Last 5 seasons avg: {goal_last5_avg}  |  Linear trend: {goal_slope:.4f} goals/game per season")
 
 # ---------------------------------------------------------------------------
+# 5c. Most common final score, by league
+# ---------------------------------------------------------------------------
+df["Score"] = df["FTHG"].astype(str) + "-" + df["FTAG"].astype(str)
+
+common_scores_by_league = []
+for lg, g in df.groupby("League"):
+    n = len(g)
+    top3 = g["Score"].value_counts().head(3)
+    common_scores_by_league.append({
+        "League": lg, "matches": n,
+        "most_common_score": top3.index[0], "most_common_count": int(top3.iloc[0]),
+        "most_common_pct": pct(top3.iloc[0], n),
+        "top_3": [{"score": s, "matches": int(c), "pct": pct(c, n)} for s, c in top3.items()],
+    })
+findings["most_common_score_by_league"] = common_scores_by_league
+
+print("\n5c) Most common final score, by league")
+for r in common_scores_by_league:
+    top3_str = "  ".join(f"{t['score']} ({t['pct']}%)" for t in r["top_3"])
+    print(f"   {r['League']:<20} {top3_str}")
+
+# ---------------------------------------------------------------------------
 # 6. Most predictable league / most upsets
 # ---------------------------------------------------------------------------
 eligible = [r for r in favorite_by_league if r["matches_with_odds"] >= MIN_LEAGUE_ODDS_MATCHES]
