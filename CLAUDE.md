@@ -151,28 +151,26 @@ not share code or files.
 _Last updated 2026-09-29._
 
 ### Done
-- **Data set:** European football match results, 10 leagues, 20 seasons (2005-06 onward). `data/matches.csv` has 78,676 rows and 28 columns (one row is one match). Raw download kept in `data/matches_raw.csv`.
-- **Scripts** (`scripts/`): `download_data.py`, `check_requirements.py`, `clean_data.py`, `analysis.py` (writes `data/findings.json`), and `verify_findings.py` (recomputes the findings independently).
-- **Report page** (`index.html`, `script.js`, `style.css`): title, byline, summary, headline-number block, 12 finding sections, and the closing "About the data" section. Every figure is read from `data/findings.json`.
-- **Findings covered:** home advantage and its trend, team home/away gaps, favorites, odds calibration, underdog flat-betting P&L, goals per game, most common scores, half-time comebacks, shots on target, red cards, and biggest upsets.
+- **Data set:** European football match results, 10 leagues, 20 seasons (2005-06 to 2024-25). `data/matches.csv` has 78,676 rows and 27 columns (one row is one match). The raw download is kept in `data/matches_raw.csv`.
+- **Scripts** (`scripts/`): `download_data.py`, `check_requirements.py`, `clean_data.py` (drops `Div`, writes `data/cleaning_log.json`), `analysis.py` (writes `data/findings.json`, including raw and dropped row counts), and `verify_findings.py` (recomputes the findings independently; 71 of 71 match).
+- **Report page** (`index.html`, `script.js`): title, byline, summary, 4 headline numbers, 12 finding sections with charts, and the closing data and methods section. Every figure is read from `data/findings.json`. Checked in a browser: 12 charts, no errors.
+- **Dashboard** (`dashboard.html`, `dashboard.js`): loads `data/matches.csv` in the browser.
+  - Filters: season from/to, country, league, team, team plays home/away, result.
+  - 6 summary numbers, 4 charts, a measure switch (9 measures), a breakdown switch (league, season, country), a sortable table, and a reset button.
+  - With no filters, its first four numbers match the report (78,676 matches, 44.5%, 49.6%, -8.9%).
+  - Five filtered views were checked against an independent pandas calculation, and all matched. Clicks on the filters, switches, table headings and reset were tested.
+- **Shared site code:** `charts.js` (formatters and SVG charts used by both pages) and `style.css` (soccer theme: pitch background, condensed headings, rolling and bouncing ball animations that turn off for reduced motion). Both pages have the same nav bar with Report and Dashboard links.
+- **README.md:** lists every file and what it does, and links to football-data.co.uk as the data source.
+- **Repository:** public, on GitHub, with incremental commits. Everything is pushed to `main`.
 
 ### Still to do
-- **`dashboard.html` and its script.** Nothing exists yet. It needs:
-  - filters for 4+ variables, including season and team
-  - 4+ summary numbers
-  - 4+ charts with a measure switch and a breakdown switch
-  - a table of the numbers behind the view
-  - a reset button
-  - It must load `data/matches.csv` in the browser.
-- **Link the dashboard from the report nav bar,** and give both pages the same nav bar.
-- **README.md:** list every file and what it does, and say where the data came from.
-- **Publish:** enable GitHub Pages from `main`, then open the live URL and check that both pages load.
-- **Submission file:** one .txt or .md with name, student ID, repo URL, and live site URL.
-- **Cross-check:** dashboard numbers must match the report and the data when the filters are all cleared.
+- **Enable GitHub Pages** from the `main` branch (the Pages API currently returns 404, so it is not on yet). Then open the live URL and check that both pages load and the dashboard loads `data/matches.csv`.
+- **Submission file:** one .txt or .md with four lines: name, student ID, repository URL, live site URL. The student ID is still needed.
+- **Optional:** read the live pages once end to end to check the wording of each finding.
 
 ### Open issues
-- **Untested in a browser:** the report has not been opened yet, so chart rendering and the `fetch` of `findings.json` are unchecked. `fetch` needs a web server, so test with a local server or on Pages, not by double-clicking the file.
-- **Sparse columns:** shots, cards, and half-time fields are blank for many older or lower-tier matches, so those findings use fewer rows than the headline count. The methods section should say which rows each figure uses.
-- **Odds:** corrupted 0.0 odds values caused a division by zero earlier, and `analysis.py` now guards against that. The dashboard needs the same guard.
-- **Data size:** `matches.csv` is 8.4 MB, which may make the dashboard slow to load. Consider whether `matches_raw.csv` (10 MB) needs to stay in the repo.
-- **Commit history:** the site files were untracked until now, so the history has no incremental commits for the report page. Commit the dashboard in small steps.
+- **Dark mode is untested.** It is styled but has not been seen in a browser. Animations were only seen as still screenshots.
+- **Phone layout:** neither page overflows sideways at 390px, but it has not been checked by eye on a real phone.
+- **Sparse columns:** shots, cards and half-time fields are blank for many older or lower-tier matches, so those findings use fewer rows than the headline count. The report's methods section gives the row counts.
+- **Odds:** 2 matches have an odd of 1.0 or below and 123 have no odds. They are left out of the odds-based numbers, in both `analysis.py` and the dashboard.
+- **Data size:** `data/matches.csv` is 8.2 MB, so the dashboard takes a moment to load. `data/matches_raw.csv` (10 MB) is only needed to rebuild the data.
