@@ -8,7 +8,12 @@ Steps:
    integers instead of floats, so the CSV doesn't carry a ".0" on every
    value. This keeps data/matches.csv small enough for the dashboard to
    fetch and parse quickly in the browser.
+4. Drop the Div column (the football-data.co.uk division code, e.g. "E0").
+   The League and Country columns carry the same information in words.
+5. Write data/cleaning_log.json with the row counts, so analysis.py can
+   report them in data/findings.json.
 """
+import json
 import os
 import pandas as pd
 
@@ -33,6 +38,7 @@ n_missing_score = int((missing_score & ~missing_date).sum())
 
 drop_mask = missing_date | missing_score
 kept = df.loc[~drop_mask].copy()
+kept = kept.drop(columns=["Div"])
 
 # --- Compact number formatting: whole-number stat columns as nullable Int64 ---
 for col in INT_COLS:
@@ -54,6 +60,14 @@ kept.to_csv(OUT_PATH, index=False)
 raw_size = os.path.getsize(RAW_PATH)
 out_size = os.path.getsize(OUT_PATH)
 end_rows = len(kept)
+
+with open("data/cleaning_log.json", "w") as f:
+    json.dump({
+        "raw_rows": start_rows,
+        "dropped_unparseable_date": n_missing_date,
+        "dropped_missing_score": n_missing_score,
+        "rows_kept": end_rows,
+    }, f, indent=2)
 
 print(f"Start rows:              {start_rows:,}")
 print(f"Dropped - unparseable date: {n_missing_date:,}")

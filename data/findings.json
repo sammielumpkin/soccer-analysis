@@ -1,5 +1,11 @@
 {
   "n_matches_total": 78676,
+  "cleaning": {
+    "raw_rows": 78676,
+    "dropped_unparseable_date": 0,
+    "dropped_missing_score": 0,
+    "rows_dropped_total": 0
+  },
   "results_by_league": [
     {
       "League": "2. Bundesliga",

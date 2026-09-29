@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 
 IN_PATH = "data/matches.csv"
+CLEAN_LOG_PATH = "data/cleaning_log.json"
 OUT_PATH = "data/findings.json"
 
 MIN_TEAM_MATCHES = 150   # min home AND away matches to rank a team's home/away gap
@@ -23,6 +24,20 @@ df = pd.read_csv(IN_PATH, parse_dates=["Date"])
 N_TOTAL = len(df)
 
 findings = {"n_matches_total": int(N_TOTAL)}
+
+# Row counts from clean_data.py, so the report can say exactly how many raw
+# rows there were and how many were dropped. The kept count must agree with
+# the file just loaded, otherwise the log is stale and we stop.
+with open(CLEAN_LOG_PATH) as f:
+    _log = json.load(f)
+if _log["rows_kept"] != N_TOTAL:
+    raise SystemExit(f"{CLEAN_LOG_PATH} says {_log['rows_kept']} rows kept but {IN_PATH} has {N_TOTAL}; rerun clean_data.py")
+findings["cleaning"] = {
+    "raw_rows": _log["raw_rows"],
+    "dropped_unparseable_date": _log["dropped_unparseable_date"],
+    "dropped_missing_score": _log["dropped_missing_score"],
+    "rows_dropped_total": _log["raw_rows"] - _log["rows_kept"],
+}
 
 
 def pct(numerator, denominator, digits=1):
