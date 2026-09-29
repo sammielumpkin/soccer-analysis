@@ -2,7 +2,8 @@
 
 A two-page website about 78,676 professional football matches from 10 European leagues across 20 seasons (2005-06 to 2024-25), by Samantha Lumpkin.
 
-- **Report** (`index.html`): 10 findings, each with the numbers behind it and a chart, plus a section explaining the data and how every figure is computed.
+- **Report** (`index.html`): a short "The leagues" section, then 10 findings, each with the numbers behind it and a chart, plus a section explaining the data and how every figure is computed.
+  - **The leagues** is a compact table with one block per country (England, France, Germany, Italy, Spain, in that order), the top division first and the second division below it. Each row gives the league, its division level, its typical number of teams per season (with the range where it changed) and its total matches. The country name and flag appear once per block. The match counts and teams per season are calculated from `data/matches.csv` by `scripts/analysis.py` and read from `data/findings.json`. The division level (top or second) is the one value typed by hand, in `analysis.py`, because the data has no column for it.
 - **Dashboard** (`dashboard.html`): loads the match data in the browser and lets you filter by season, country, league, team and result, switch the measure and the breakdown, and see the charts, summary numbers and table change.
 
 Both pages are plain HTML, CSS and JavaScript with no build step, and share one nav bar and one stylesheet.
@@ -50,7 +51,7 @@ Run these from the repository root, in this order, to rebuild the data from scra
 | `scripts/download_data.py` | Downloads the 10 leagues x 20 seasons of results from football-data.co.uk and saves them as `data/matches_raw.csv`. |
 | `scripts/check_requirements.py` | Prints the row count, column count, number of seasons, number of teams and missing values per column, to confirm the data meets the project requirements. |
 | `scripts/clean_data.py` | Turns `matches_raw.csv` into `matches.csv`: parses the mixed date formats, drops rows with no valid date or final score (none were found), stores whole-number columns as integers, drops `Div`, and writes `cleaning_log.json`. |
-| `scripts/analysis.py` | Computes every finding (home advantage, favorites, odds calibration, underdog bets, goals, scores, half-time swings, shots, red cards, upsets) and saves them to `data/findings.json`. |
+| `scripts/analysis.py` | Computes the league overview (matches and teams per season for each league, saved as `league_overview`; the division level is the only value typed by hand) and every finding (home advantage, favorites, odds calibration, underdog bets, goals, scores, half-time swings, shots, red cards, upsets) and saves them to `data/findings.json`. |
 | `scripts/verify_findings.py` | Recomputes the headline findings from `matches.csv` using different pandas techniques than `analysis.py` and checks that they match `findings.json`. |
 
 ### Project
