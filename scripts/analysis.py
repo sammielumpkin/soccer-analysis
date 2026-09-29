@@ -474,6 +474,34 @@ print(f"   Lead held: {findings['halftime_leads']['lead_held_pct']}%  |  Pulled 
 print(f"   Level at half-time ({n_level:,} matches) finished: home {level_outcome['home_win_pct']}%, draw {level_outcome['draw_pct']}%, away {level_outcome['away_win_pct']}%")
 
 # ---------------------------------------------------------------------------
+# 8b. Half-time comebacks, by league: how often does the trailing team win?
+# ---------------------------------------------------------------------------
+leading = leading.copy()
+leading["Comeback"] = ((leading["HTR"] == "H") & (leading["FTR"] == "A")) | \
+                       ((leading["HTR"] == "A") & (leading["FTR"] == "H"))
+
+comebacks_by_league = []
+for lg, g in leading.groupby("League"):
+    n = len(g)
+    c = int(g["Comeback"].sum())
+    comebacks_by_league.append({"League": lg, "matches_with_a_ht_leader": n, "comebacks": c, "comeback_pct": pct(c, n)})
+comebacks_by_league.sort(key=lambda r: r["comeback_pct"], reverse=True)
+
+most_by_rate = comebacks_by_league[0]
+most_by_count = max(comebacks_by_league, key=lambda r: r["comebacks"])
+findings["halftime_comebacks_by_league"] = {
+    "most_comebacks_by_rate": most_by_rate["League"],
+    "most_comebacks_by_raw_count": most_by_count["League"],
+    "by_league": comebacks_by_league,
+}
+
+print(f"\n8b) Half-time comebacks by league (trailing team wins outright)")
+for r in comebacks_by_league:
+    print(f"   {r['League']:<20} {r['comebacks']:>4}/{r['matches_with_a_ht_leader']:<5} = {r['comeback_pct']}%")
+print(f"   Most comebacks by rate:  {most_by_rate['League']} ({most_by_rate['comeback_pct']}%)")
+print(f"   Most comebacks by count: {most_by_count['League']} ({most_by_count['comebacks']} comebacks)")
+
+# ---------------------------------------------------------------------------
 # 9. Shots on target vs winning, by league
 # ---------------------------------------------------------------------------
 st = df.dropna(subset=["HST", "AST"]).copy()

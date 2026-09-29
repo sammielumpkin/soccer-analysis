@@ -4150,6 +4150,72 @@
       "away_win_pct": 24.3
     }
   },
+  "halftime_comebacks_by_league": {
+    "most_comebacks_by_rate": "Serie A",
+    "most_comebacks_by_raw_count": "Championship",
+    "by_league": [
+      {
+        "League": "Serie A",
+        "matches_with_a_ht_leader": 4387,
+        "comebacks": 369,
+        "comeback_pct": 8.4
+      },
+      {
+        "League": "Championship",
+        "matches_with_a_ht_leader": 6319,
+        "comebacks": 525,
+        "comeback_pct": 8.3
+      },
+      {
+        "League": "2. Bundesliga",
+        "matches_with_a_ht_leader": 3563,
+        "comebacks": 289,
+        "comeback_pct": 8.1
+      },
+      {
+        "League": "Ligue 2",
+        "matches_with_a_ht_leader": 3985,
+        "comebacks": 323,
+        "comeback_pct": 8.1
+      },
+      {
+        "League": "Bundesliga",
+        "matches_with_a_ht_leader": 3706,
+        "comebacks": 295,
+        "comeback_pct": 8.0
+      },
+      {
+        "League": "Ligue 1",
+        "matches_with_a_ht_leader": 4175,
+        "comebacks": 327,
+        "comeback_pct": 7.8
+      },
+      {
+        "League": "La Liga",
+        "matches_with_a_ht_leader": 4341,
+        "comebacks": 336,
+        "comeback_pct": 7.7
+      },
+      {
+        "League": "Premier League",
+        "matches_with_a_ht_leader": 4510,
+        "comebacks": 346,
+        "comeback_pct": 7.7
+      },
+      {
+        "League": "Segunda Division",
+        "matches_with_a_ht_leader": 4954,
+        "comebacks": 367,
+        "comeback_pct": 7.4
+      },
+      {
+        "League": "Serie B",
+        "matches_with_a_ht_leader": 4699,
+        "comebacks": 343,
+        "comeback_pct": 7.3
+      }
+    ]
+  },
   "shots_on_target_vs_win": {
     "matches_with_shot_data": 59359,
     "overall": {
