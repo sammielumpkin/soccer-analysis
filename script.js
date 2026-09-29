@@ -150,8 +150,8 @@ function render(d) {
   fill("goals", {
     h2: `${g.league} scores the most, and its goals per game rose from ${f2(g.first_5_seasons_avg)} to ${f2(g.last_5_seasons_avg)}`,
     paras: [
-      `${esc(g.league)} averages ${f2(g.overall_avg_goals_per_game)} goals per game, the highest of the ${leagues.length} leagues. The next highest is the ${esc(runnerUp.League)}, at ${f2(runnerUp.avg_goals_per_game)}. Its average peaked at ${f2(g.peak_avg_goals_per_game)} in ${g.peak_season} and was lowest at ${f2(g.trough_avg_goals_per_game)} in ${g.trough_season}.`,
-      `Comparing the first five seasons (${f2(g.first_5_seasons_avg)}) with the last five (${f2(g.last_5_seasons_avg)}) gives a rise of ${f2(g.change_first5_to_last5)} goals per game. A straight-line fit through the ${g.by_season.length} seasons slopes ${signed(g.linear_trend_goals_per_game_per_season, 4)} goals per game each season.`,
+      `${esc(g.league)} averages ${f2(g.overall_avg_goals_per_game)} goals per game, the highest of the ${leagues.length} leagues. The next highest is the ${esc(runnerUp.League)}, at ${f2(runnerUp.avg_goals_per_game)}. The Bundesliga's average peaked at ${f2(g.peak_avg_goals_per_game)} in ${g.peak_season} and was lowest at ${f2(g.trough_avg_goals_per_game)} in ${g.trough_season}.`,
+      `Comparing the Bundesliga's first five seasons (${f2(g.first_5_seasons_avg)}) with the last five (${f2(g.last_5_seasons_avg)}) gives a rise of ${f2(g.change_first5_to_last5)} goals per game. A straight-line fit through the ${g.by_season.length} seasons slopes ${signed(g.linear_trend_goals_per_game_per_season, 4)} goals per game each season.`,
     ],
     plot: goalsPlot(),
     title: `Goals per game, all ${leagues.length} leagues`,
@@ -239,7 +239,7 @@ function render(d) {
       : `The longest-odds winner came in at ${f1(a.WinningOdds)}`,
     paras: [
       `Decimal odds of ${f1(a.WinningOdds)} imply a ${pc(a.WinnerImpliedProbPct)} chance. That happened in ${line(a)}${sameVictim ? ` and again in ${line(b)}` : ""}.`,
-      `Next on the list: ${line(c)} at ${f1(c.WinningOdds)} (${pc(c.WinnerImpliedProbPct)} implied), and ${line(e)} at ${f1(e.WinningOdds)}. The ranking covers the ${up.length} longest-odds winners in matches that had a decisive result.`,
+      `Next on the list: ${line(c)} at ${f1(c.WinningOdds)} (${pc(c.WinnerImpliedProbPct)} implied), and ${line(e)} at ${f1(e.WinningOdds)}. The ranking covers the ${Math.min(up.length, 10)} longest-odds winners in matches that had a decisive result.`,
     ],
     plot: hbar(up.slice(0, 10).map(r => ({ label: `${r.WinningTeam} over ${r.LosingTeam} (${r.Date.slice(0, 4)})`, value: r.WinningOdds, text: f1(r.WinningOdds) })),
       { labelW: 270, label: "Ten longest-odds winners", xTitle: "Decimal odds of the winning team" }),
@@ -261,8 +261,9 @@ function render(d) {
       <li>The downloaded file had ${n0(cl.raw_rows)} rows. The cleaning step drops any row with a missing or unreadable date (${n0(cl.dropped_unparseable_date)} found) or with no final score (${n0(cl.dropped_missing_score)} found), because a match with no result cannot be counted. That is ${n0(cl.rows_dropped_total)} rows dropped, so all ${n0(d.n_matches_total)} matches are kept.</li>
       <li>${n0(d.favorite_win_rate_overall.excluded_invalid_odds)} matches were left out of every odds-based number because a recorded odd was corrupted (a value of 1.0 or below is impossible for decimal odds). That leaves ${n0(d.favorite_win_rate_overall.matches_with_odds)} matches with usable odds.</li>
       <li>Some statistics are only recorded in some leagues and seasons, so those sections use a subset: ${n0(ht.matches_with_ht_data)} matches with half-time scores, ${n0(st_)} with shots on target, and ${n0(d.red_cards_vs_win.matches_with_card_data)} with card data.</li>
-      <li>France's 2019–20 seasons were cut short by COVID-19: Ligue 1 has 279 of 380 scheduled matches and Ligue 2 has 280, so those two seasons are not full schedules. </li>
-      <li>The source file is missing some Ligue 2 fixtures: 32 matches in 2007–08 (348 of 380) and 1 in 2023–24 (379 of 380). They are absent from football-data.co.uk itself, not dropped by the cleaning step.</li>
+      <li>France's 2019-20 seasons were cut short by COVID-19: Ligue 1 has 279 of 380 scheduled matches and Ligue 2 has 280, so those two seasons are not full schedules. </li>
+      <li>The source file is missing some Ligue 2 fixtures: 32 matches in 2007-08 (348 of 380) and 1 in 2023-24 (379 of 380). They are absent from football-data.co.uk itself, not dropped by the cleaning step.</li>
+      <li>The source file is also missing some Segunda Division fixtures: 16 matches in 2007-08 (446 of 462). Every other season has the full 462 (22 teams × 21 rounds × 2), so the league total is 9,224 rather than 9,240. They are absent from football-data.co.uk itself, not dropped by the cleaning step.</li>
       <li>Team names are trimmed of stray spaces before counting clubs (two clubs, Kaiserslautern and Piacenza, were spelled with a trailing space in some rows), so each club is counted once per season.</li>
       <li>Team rankings only include clubs with at least ${d.results_by_team_top10_home_win_pct.min_home_matches_threshold} home matches (${d.results_by_team_top10_home_win_pct.teams_qualifying} clubs qualify), so a team with a short record cannot top a list.</li>
     </ul>
