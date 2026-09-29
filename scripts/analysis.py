@@ -440,7 +440,10 @@ decisive["LosingTeam"] = np.where(is_home_win, decisive["AwayTeam"], decisive["H
 decisive["WinningOdds"] = np.where(is_home_win, decisive["B365H"], decisive["B365A"])
 decisive["WinnerImpliedProbPct"] = round(100 / decisive["WinningOdds"], 1)
 
-upsets = decisive.sort_values("WinningOdds", ascending=False).head(20)
+# Several matches share the exact same odds value; break ties by date (then
+# team name) so the ranking is deterministic instead of depending on
+# incidental row order.
+upsets = decisive.sort_values(["WinningOdds", "Date", "WinningTeam"], ascending=[False, True, True]).head(20)
 biggest_upsets = [{
     "Date": r["Date"].strftime("%Y-%m-%d"), "League": r["League"],
     "WinningTeam": r["WinningTeam"], "LosingTeam": r["LosingTeam"],
