@@ -2142,6 +2142,335 @@
     "avg_implied_home_win_pct": 44.1,
     "actual_home_win_pct": 44.5
   },
+  "favorite_calibration_by_range": {
+    "overall_by_range": [
+      {
+        "matches": 49835,
+        "actual_favorite_win_pct": 42.4,
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 17025,
+        "actual_favorite_win_pct": 55.9,
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 7400,
+        "actual_favorite_win_pct": 66.6,
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 3184,
+        "actual_favorite_win_pct": 77.3,
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 1107,
+        "actual_favorite_win_pct": 87.0,
+        "FavoriteBucket": "80%+"
+      }
+    ],
+    "by_league_and_range": [
+      {
+        "matches": 4215,
+        "actual_favorite_win_pct": 42.2,
+        "League": "2. Bundesliga",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1366,
+        "actual_favorite_win_pct": 54.5,
+        "League": "2. Bundesliga",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 464,
+        "actual_favorite_win_pct": 66.2,
+        "League": "2. Bundesliga",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 71,
+        "actual_favorite_win_pct": 67.6,
+        "League": "2. Bundesliga",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 3265,
+        "actual_favorite_win_pct": 41.9,
+        "League": "Bundesliga",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1350,
+        "actual_favorite_win_pct": 54.2,
+        "League": "Bundesliga",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 868,
+        "actual_favorite_win_pct": 64.3,
+        "League": "Bundesliga",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 438,
+        "actual_favorite_win_pct": 76.3,
+        "League": "Bundesliga",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 199,
+        "actual_favorite_win_pct": 82.4,
+        "League": "Bundesliga",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 7746,
+        "actual_favorite_win_pct": 41.4,
+        "League": "Championship",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 2468,
+        "actual_favorite_win_pct": 55.8,
+        "League": "Championship",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 701,
+        "actual_favorite_win_pct": 64.1,
+        "League": "Championship",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 117,
+        "actual_favorite_win_pct": 76.1,
+        "League": "Championship",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 6,
+        "actual_favorite_win_pct": 100.0,
+        "League": "Championship",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 4080,
+        "actual_favorite_win_pct": 43.6,
+        "League": "La Liga",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1611,
+        "actual_favorite_win_pct": 56.4,
+        "League": "La Liga",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 982,
+        "actual_favorite_win_pct": 67.0,
+        "League": "La Liga",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 585,
+        "actual_favorite_win_pct": 78.8,
+        "League": "La Liga",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 342,
+        "actual_favorite_win_pct": 88.3,
+        "League": "La Liga",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 4424,
+        "actual_favorite_win_pct": 43.8,
+        "League": "Ligue 1",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1621,
+        "actual_favorite_win_pct": 54.2,
+        "League": "Ligue 1",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 857,
+        "actual_favorite_win_pct": 65.8,
+        "League": "Ligue 1",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 330,
+        "actual_favorite_win_pct": 78.8,
+        "League": "Ligue 1",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 116,
+        "actual_favorite_win_pct": 84.5,
+        "League": "Ligue 1",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 5552,
+        "actual_favorite_win_pct": 42.5,
+        "League": "Ligue 2",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1483,
+        "actual_favorite_win_pct": 55.7,
+        "League": "Ligue 2",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 311,
+        "actual_favorite_win_pct": 69.1,
+        "League": "Ligue 2",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 37,
+        "actual_favorite_win_pct": 81.1,
+        "League": "Ligue 2",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 1,
+        "actual_favorite_win_pct": 100.0,
+        "League": "Ligue 2",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 3640,
+        "actual_favorite_win_pct": 42.7,
+        "League": "Premier League",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1621,
+        "actual_favorite_win_pct": 57.2,
+        "League": "Premier League",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 1246,
+        "actual_favorite_win_pct": 68.1,
+        "League": "Premier League",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 810,
+        "actual_favorite_win_pct": 74.7,
+        "League": "Premier League",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 283,
+        "actual_favorite_win_pct": 88.7,
+        "League": "Premier League",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 6768,
+        "actual_favorite_win_pct": 42.4,
+        "League": "Segunda Division",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1948,
+        "actual_favorite_win_pct": 57.0,
+        "League": "Segunda Division",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 393,
+        "actual_favorite_win_pct": 66.4,
+        "League": "Segunda Division",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 68,
+        "actual_favorite_win_pct": 85.3,
+        "League": "Segunda Division",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 5,
+        "actual_favorite_win_pct": 80.0,
+        "League": "Segunda Division",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 3899,
+        "actual_favorite_win_pct": 43.3,
+        "League": "Serie A",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1757,
+        "actual_favorite_win_pct": 58.9,
+        "League": "Serie A",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 1153,
+        "actual_favorite_win_pct": 68.1,
+        "League": "Serie A",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 649,
+        "actual_favorite_win_pct": 78.4,
+        "League": "Serie A",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 134,
+        "actual_favorite_win_pct": 87.3,
+        "League": "Serie A",
+        "FavoriteBucket": "80%+"
+      },
+      {
+        "matches": 6246,
+        "actual_favorite_win_pct": 41.2,
+        "League": "Serie B",
+        "FavoriteBucket": "under 50%"
+      },
+      {
+        "matches": 1800,
+        "actual_favorite_win_pct": 54.2,
+        "League": "Serie B",
+        "FavoriteBucket": "50-60%"
+      },
+      {
+        "matches": 425,
+        "actual_favorite_win_pct": 66.1,
+        "League": "Serie B",
+        "FavoriteBucket": "60-70%"
+      },
+      {
+        "matches": 79,
+        "actual_favorite_win_pct": 84.8,
+        "League": "Serie B",
+        "FavoriteBucket": "70-80%"
+      },
+      {
+        "matches": 21,
+        "actual_favorite_win_pct": 95.2,
+        "League": "Serie B",
+        "FavoriteBucket": "80%+"
+      }
+    ],
+    "above_70pct_implied": {
+      "matches": 4291,
+      "actual_favorite_win_pct": 79.8
+    }
+  },
   "goals_per_game_by_league_season": [
     {
       "League": "2. Bundesliga",

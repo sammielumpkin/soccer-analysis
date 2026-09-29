@@ -291,6 +291,57 @@ for c in calibration:
     print(f"   Implied {c['bucket_low']*100:.0f}-{c['bucket_high']*100:.0f}%: actual {c['actual_home_win_pct']}%  (n={c['matches']})")
 
 # ---------------------------------------------------------------------------
+# 4b. Favorite's implied probability vs actual win rate, in named ranges,
+#     by league. (Different from section 4: this uses the FAVORITE's own
+#     implied probability -- H, D, or A, whichever side is favored -- not
+#     always the home team's.)
+# ---------------------------------------------------------------------------
+odds["FavoriteOdds"] = odds[["B365H", "B365D", "B365A"]].min(axis=1)
+odds["ImpliedFavoriteProb"] = (1 / odds["FavoriteOdds"]) / overround
+
+fav_bins = [0, 0.5, 0.6, 0.7, 0.8, 1.0]
+fav_labels = ["under 50%", "50-60%", "60-70%", "70-80%", "80%+"]
+odds["FavoriteBucket"] = pd.cut(odds["ImpliedFavoriteProb"], fav_bins, labels=fav_labels, include_lowest=True)
+
+
+def favorite_calibration(group_cols):
+    rows = []
+    for key, g in odds.groupby(group_cols, observed=True):
+        n = len(g)
+        if n == 0:
+            continue
+        row = {"matches": n, "actual_favorite_win_pct": pct(g["FavoriteWon"].sum(), n)}
+        if isinstance(group_cols, list):
+            row.update(dict(zip(group_cols, key)))
+        else:
+            row[group_cols] = key
+        rows.append(row)
+    return rows
+
+favorite_calibration_overall = favorite_calibration("FavoriteBucket")
+favorite_calibration_by_league = favorite_calibration(["League", "FavoriteBucket"])
+
+above_70 = odds[odds["ImpliedFavoriteProb"] >= 0.7]
+findings["favorite_calibration_by_range"] = {
+    "overall_by_range": favorite_calibration_overall,
+    "by_league_and_range": favorite_calibration_by_league,
+    "above_70pct_implied": {
+        "matches": len(above_70),
+        "actual_favorite_win_pct": pct(above_70["FavoriteWon"].sum(), len(above_70)),
+    },
+}
+
+print("\n4b) Favorite's implied probability vs actual win rate, by range")
+for r in favorite_calibration_overall:
+    print(f"   {r['FavoriteBucket']:<10} actual win rate {r['actual_favorite_win_pct']}%  (n={r['matches']:,})")
+print(f"   Above 70% implied: {findings['favorite_calibration_by_range']['above_70pct_implied']['actual_favorite_win_pct']}% actual win rate (n={len(above_70):,})")
+print("   By league:")
+for lg in sorted(odds["League"].unique()):
+    rows = [r for r in favorite_calibration_by_league if r["League"] == lg]
+    line = "  ".join(f"{r['FavoriteBucket']} {r['actual_favorite_win_pct']}% (n={r['matches']})" for r in rows)
+    print(f"     {lg:<20} {line}")
+
+# ---------------------------------------------------------------------------
 # 5. Goals per game by league over time
 # ---------------------------------------------------------------------------
 df["TotalGoals"] = df["FTHG"] + df["FTAG"]
