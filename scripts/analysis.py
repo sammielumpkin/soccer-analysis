@@ -199,6 +199,66 @@ for r in sorted(favorite_by_league, key=lambda r: r["favorite_win_pct"], reverse
     print(f"   {r['League']:<20} {r['favorite_win_pct']}%  (n={r['matches_with_odds']})")
 
 # ---------------------------------------------------------------------------
+# 3b. Flat $1 bet on the underdog (highest of the three B365 odds) every
+#     match -- would it have made or lost money, by league and by season?
+# ---------------------------------------------------------------------------
+def underdog_outcome(row):
+    vals = {"H": row["B365H"], "D": row["B365D"], "A": row["B365A"]}
+    return max(vals, key=vals.get)
+
+odds["Underdog"] = odds.apply(underdog_outcome, axis=1)
+odds["UnderdogOdds"] = odds.apply(lambda r: r[f"B365{r['Underdog']}"], axis=1)
+odds["UnderdogWon"] = odds["Underdog"] == odds["FTR"]
+# A $1 stake returns (odds - 1) profit if the underdog wins, or loses the $1 stake.
+odds["UnderdogProfit"] = np.where(odds["UnderdogWon"], odds["UnderdogOdds"] - 1, -1.0)
+
+
+def betting_pnl(group_col):
+    rows = []
+    for key, g in odds.groupby(group_col):
+        n = len(g)
+        profit = g["UnderdogProfit"].sum()
+        rows.append({
+            group_col: key, "bets": n,
+            "profit_usd": round(profit, 2),
+            "roi_pct": round(100 * profit / n, 1),
+        })
+    return rows
+
+underdog_pnl_by_league = betting_pnl("League")
+underdog_pnl_by_season = betting_pnl("Season")
+underdog_pnl_by_league_season = []
+for (lg, season), g in odds.groupby(["League", "Season"]):
+    n = len(g)
+    profit = g["UnderdogProfit"].sum()
+    underdog_pnl_by_league_season.append({
+        "League": lg, "Season": season, "bets": n,
+        "profit_usd": round(profit, 2), "roi_pct": round(100 * profit / n, 1),
+    })
+
+total_profit = odds["UnderdogProfit"].sum()
+findings["underdog_flat_bet_pnl"] = {
+    "stake_per_bet_usd": 1,
+    "total_bets": n_odds,
+    "total_profit_usd": round(total_profit, 2),
+    "overall_roi_pct": round(100 * total_profit / n_odds, 1),
+    "by_league": underdog_pnl_by_league,
+    "by_season": underdog_pnl_by_season,
+    "by_league_and_season": underdog_pnl_by_league_season,
+}
+
+print(f"\n3b) $1 flat bet on the underdog (highest-odds outcome), every match with valid odds ({n_odds:,} bets)")
+print(f"   Total profit: ${total_profit:,.2f}  |  ROI: {findings['underdog_flat_bet_pnl']['overall_roi_pct']}%")
+print("   By league:")
+for r in sorted(underdog_pnl_by_league, key=lambda r: r["roi_pct"], reverse=True):
+    sign = "+" if r["profit_usd"] >= 0 else ""
+    print(f"     {r['League']:<20} {sign}${r['profit_usd']:>8,.2f}  ROI {r['roi_pct']:>6}%  (n={r['bets']})")
+print("   By season:")
+for r in underdog_pnl_by_season:
+    sign = "+" if r["profit_usd"] >= 0 else ""
+    print(f"     {r['Season']:<10} {sign}${r['profit_usd']:>8,.2f}  ROI {r['roi_pct']:>6}%  (n={r['bets']})")
+
+# ---------------------------------------------------------------------------
 # 4. Implied probability (from odds) vs actual results - calibration
 # ---------------------------------------------------------------------------
 inv = 1 / odds[["B365H", "B365D", "B365A"]]

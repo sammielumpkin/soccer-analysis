@@ -474,6 +474,1598 @@
     "excluded_invalid_odds": 2,
     "favorite_win_pct": 49.6
   },
+  "underdog_flat_bet_pnl": {
+    "stake_per_bet_usd": 1,
+    "total_bets": 78551,
+    "total_profit_usd": -6972.44,
+    "overall_roi_pct": -8.9,
+    "by_league": [
+      {
+        "League": "2. Bundesliga",
+        "bets": 6116,
+        "profit_usd": -393.58,
+        "roi_pct": -6.4
+      },
+      {
+        "League": "Bundesliga",
+        "bets": 6120,
+        "profit_usd": -147.51,
+        "roi_pct": -2.4
+      },
+      {
+        "League": "Championship",
+        "bets": 11038,
+        "profit_usd": -580.1,
+        "roi_pct": -5.3
+      },
+      {
+        "League": "La Liga",
+        "bets": 7600,
+        "profit_usd": -648.02,
+        "roi_pct": -8.5
+      },
+      {
+        "League": "Ligue 1",
+        "bets": 7348,
+        "profit_usd": -814.57,
+        "roi_pct": -11.1
+      },
+      {
+        "League": "Ligue 2",
+        "bets": 7384,
+        "profit_usd": -834.0,
+        "roi_pct": -11.3
+      },
+      {
+        "League": "Premier League",
+        "bets": 7600,
+        "profit_usd": -366.6,
+        "roi_pct": -4.8
+      },
+      {
+        "League": "Segunda Division",
+        "bets": 9182,
+        "profit_usd": -917.59,
+        "roi_pct": -10.0
+      },
+      {
+        "League": "Serie A",
+        "bets": 7592,
+        "profit_usd": -1193.78,
+        "roi_pct": -15.7
+      },
+      {
+        "League": "Serie B",
+        "bets": 8571,
+        "profit_usd": -1076.69,
+        "roi_pct": -12.6
+      }
+    ],
+    "by_season": [
+      {
+        "Season": "2005-06",
+        "bets": 3983,
+        "profit_usd": -659.4,
+        "roi_pct": -16.6
+      },
+      {
+        "Season": "2006-07",
+        "bets": 3988,
+        "profit_usd": -519.39,
+        "roi_pct": -13.0
+      },
+      {
+        "Season": "2007-08",
+        "bets": 3938,
+        "profit_usd": -532.91,
+        "roi_pct": -13.5
+      },
+      {
+        "Season": "2008-09",
+        "bets": 3981,
+        "profit_usd": -438.21,
+        "roi_pct": -11.0
+      },
+      {
+        "Season": "2009-10",
+        "bets": 3967,
+        "profit_usd": -465.0,
+        "roi_pct": -11.7
+      },
+      {
+        "Season": "2010-11",
+        "bets": 3980,
+        "profit_usd": -354.69,
+        "roi_pct": -8.9
+      },
+      {
+        "Season": "2011-12",
+        "bets": 3986,
+        "profit_usd": -252.11,
+        "roi_pct": -6.3
+      },
+      {
+        "Season": "2012-13",
+        "bets": 3984,
+        "profit_usd": -308.34,
+        "roi_pct": -7.7
+      },
+      {
+        "Season": "2013-14",
+        "bets": 3987,
+        "profit_usd": -222.6,
+        "roi_pct": -5.6
+      },
+      {
+        "Season": "2014-15",
+        "bets": 3986,
+        "profit_usd": -333.28,
+        "roi_pct": -8.4
+      },
+      {
+        "Season": "2015-16",
+        "bets": 3987,
+        "profit_usd": -313.4,
+        "roi_pct": -7.9
+      },
+      {
+        "Season": "2016-17",
+        "bets": 3988,
+        "profit_usd": -471.73,
+        "roi_pct": -11.8
+      },
+      {
+        "Season": "2017-18",
+        "bets": 3987,
+        "profit_usd": -409.21,
+        "roi_pct": -10.3
+      },
+      {
+        "Season": "2018-19",
+        "bets": 3846,
+        "profit_usd": -220.36,
+        "roi_pct": -5.7
+      },
+      {
+        "Season": "2019-20",
+        "bets": 3696,
+        "profit_usd": 58.59,
+        "roi_pct": 1.6
+      },
+      {
+        "Season": "2020-21",
+        "bets": 3882,
+        "profit_usd": -218.15,
+        "roi_pct": -5.6
+      },
+      {
+        "Season": "2021-22",
+        "bets": 3899,
+        "profit_usd": -245.9,
+        "roi_pct": -6.3
+      },
+      {
+        "Season": "2022-23",
+        "bets": 3901,
+        "profit_usd": -284.96,
+        "roi_pct": -7.3
+      },
+      {
+        "Season": "2023-24",
+        "bets": 3827,
+        "profit_usd": -386.67,
+        "roi_pct": -10.1
+      },
+      {
+        "Season": "2024-25",
+        "bets": 3758,
+        "profit_usd": -394.72,
+        "roi_pct": -10.5
+      }
+    ],
+    "by_league_and_season": [
+      {
+        "League": "2. Bundesliga",
+        "Season": "2005-06",
+        "bets": 306,
+        "profit_usd": 21.31,
+        "roi_pct": 7.0
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2006-07",
+        "bets": 306,
+        "profit_usd": -19.65,
+        "roi_pct": -6.4
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2007-08",
+        "bets": 306,
+        "profit_usd": -30.94,
+        "roi_pct": -10.1
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2008-09",
+        "bets": 306,
+        "profit_usd": -22.47,
+        "roi_pct": -7.3
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2009-10",
+        "bets": 306,
+        "profit_usd": -26.18,
+        "roi_pct": -8.6
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2010-11",
+        "bets": 306,
+        "profit_usd": -68.58,
+        "roi_pct": -22.4
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2011-12",
+        "bets": 306,
+        "profit_usd": -4.54,
+        "roi_pct": -1.5
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2012-13",
+        "bets": 306,
+        "profit_usd": -33.47,
+        "roi_pct": -10.9
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2013-14",
+        "bets": 306,
+        "profit_usd": 59.23,
+        "roi_pct": 19.4
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2014-15",
+        "bets": 305,
+        "profit_usd": -7.26,
+        "roi_pct": -2.4
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2015-16",
+        "bets": 306,
+        "profit_usd": -66.29,
+        "roi_pct": -21.7
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2016-17",
+        "bets": 306,
+        "profit_usd": -24.44,
+        "roi_pct": -8.0
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2017-18",
+        "bets": 306,
+        "profit_usd": -37.76,
+        "roi_pct": -12.3
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2018-19",
+        "bets": 306,
+        "profit_usd": 23.43,
+        "roi_pct": 7.7
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2019-20",
+        "bets": 306,
+        "profit_usd": -10.63,
+        "roi_pct": -3.5
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2020-21",
+        "bets": 303,
+        "profit_usd": -33.87,
+        "roi_pct": -11.2
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2021-22",
+        "bets": 306,
+        "profit_usd": -39.64,
+        "roi_pct": -13.0
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2022-23",
+        "bets": 306,
+        "profit_usd": -34.15,
+        "roi_pct": -11.2
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2023-24",
+        "bets": 306,
+        "profit_usd": -23.8,
+        "roi_pct": -7.8
+      },
+      {
+        "League": "2. Bundesliga",
+        "Season": "2024-25",
+        "bets": 306,
+        "profit_usd": -13.88,
+        "roi_pct": -4.5
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2005-06",
+        "bets": 306,
+        "profit_usd": -26.94,
+        "roi_pct": -8.8
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2006-07",
+        "bets": 306,
+        "profit_usd": -0.2,
+        "roi_pct": -0.1
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2007-08",
+        "bets": 306,
+        "profit_usd": -28.22,
+        "roi_pct": -9.2
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2008-09",
+        "bets": 306,
+        "profit_usd": 1.84,
+        "roi_pct": 0.6
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2009-10",
+        "bets": 306,
+        "profit_usd": -0.57,
+        "roi_pct": -0.2
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2010-11",
+        "bets": 306,
+        "profit_usd": 24.96,
+        "roi_pct": 8.2
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2011-12",
+        "bets": 306,
+        "profit_usd": 1.95,
+        "roi_pct": 0.6
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2012-13",
+        "bets": 306,
+        "profit_usd": 1.98,
+        "roi_pct": 0.6
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2013-14",
+        "bets": 306,
+        "profit_usd": -61.84,
+        "roi_pct": -20.2
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2014-15",
+        "bets": 306,
+        "profit_usd": 16.16,
+        "roi_pct": 5.3
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2015-16",
+        "bets": 306,
+        "profit_usd": 19.76,
+        "roi_pct": 6.5
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2016-17",
+        "bets": 306,
+        "profit_usd": -12.19,
+        "roi_pct": -4.0
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2017-18",
+        "bets": 306,
+        "profit_usd": -12.67,
+        "roi_pct": -4.1
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2018-19",
+        "bets": 306,
+        "profit_usd": -29.2,
+        "roi_pct": -9.5
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2019-20",
+        "bets": 306,
+        "profit_usd": -22.54,
+        "roi_pct": -7.4
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2020-21",
+        "bets": 306,
+        "profit_usd": 11.11,
+        "roi_pct": 3.6
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2021-22",
+        "bets": 306,
+        "profit_usd": 43.15,
+        "roi_pct": 14.1
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2022-23",
+        "bets": 306,
+        "profit_usd": -31.29,
+        "roi_pct": -10.2
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2023-24",
+        "bets": 306,
+        "profit_usd": -25.94,
+        "roi_pct": -8.5
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2024-25",
+        "bets": 306,
+        "profit_usd": -16.82,
+        "roi_pct": -5.5
+      },
+      {
+        "League": "Championship",
+        "Season": "2005-06",
+        "bets": 552,
+        "profit_usd": -67.54,
+        "roi_pct": -12.2
+      },
+      {
+        "League": "Championship",
+        "Season": "2006-07",
+        "bets": 552,
+        "profit_usd": -77.82,
+        "roi_pct": -14.1
+      },
+      {
+        "League": "Championship",
+        "Season": "2007-08",
+        "bets": 552,
+        "profit_usd": 17.62,
+        "roi_pct": 3.2
+      },
+      {
+        "League": "Championship",
+        "Season": "2008-09",
+        "bets": 552,
+        "profit_usd": -19.29,
+        "roi_pct": -3.5
+      },
+      {
+        "League": "Championship",
+        "Season": "2009-10",
+        "bets": 552,
+        "profit_usd": -69.71,
+        "roi_pct": -12.6
+      },
+      {
+        "League": "Championship",
+        "Season": "2010-11",
+        "bets": 552,
+        "profit_usd": -37.9,
+        "roi_pct": -6.9
+      },
+      {
+        "League": "Championship",
+        "Season": "2011-12",
+        "bets": 552,
+        "profit_usd": -17.18,
+        "roi_pct": -3.1
+      },
+      {
+        "League": "Championship",
+        "Season": "2012-13",
+        "bets": 551,
+        "profit_usd": 18.77,
+        "roi_pct": 3.4
+      },
+      {
+        "League": "Championship",
+        "Season": "2013-14",
+        "bets": 552,
+        "profit_usd": -7.72,
+        "roi_pct": -1.4
+      },
+      {
+        "League": "Championship",
+        "Season": "2014-15",
+        "bets": 552,
+        "profit_usd": -29.74,
+        "roi_pct": -5.4
+      },
+      {
+        "League": "Championship",
+        "Season": "2015-16",
+        "bets": 552,
+        "profit_usd": -38.22,
+        "roi_pct": -6.9
+      },
+      {
+        "League": "Championship",
+        "Season": "2016-17",
+        "bets": 552,
+        "profit_usd": -30.64,
+        "roi_pct": -5.6
+      },
+      {
+        "League": "Championship",
+        "Season": "2017-18",
+        "bets": 552,
+        "profit_usd": -79.99,
+        "roi_pct": -14.5
+      },
+      {
+        "League": "Championship",
+        "Season": "2018-19",
+        "bets": 551,
+        "profit_usd": -55.99,
+        "roi_pct": -10.2
+      },
+      {
+        "League": "Championship",
+        "Season": "2019-20",
+        "bets": 552,
+        "profit_usd": 19.99,
+        "roi_pct": 3.6
+      },
+      {
+        "League": "Championship",
+        "Season": "2020-21",
+        "bets": 552,
+        "profit_usd": -16.87,
+        "roi_pct": -3.1
+      },
+      {
+        "League": "Championship",
+        "Season": "2021-22",
+        "bets": 552,
+        "profit_usd": -0.41,
+        "roi_pct": -0.1
+      },
+      {
+        "League": "Championship",
+        "Season": "2022-23",
+        "bets": 552,
+        "profit_usd": -29.34,
+        "roi_pct": -5.3
+      },
+      {
+        "League": "Championship",
+        "Season": "2023-24",
+        "bets": 552,
+        "profit_usd": -17.94,
+        "roi_pct": -3.2
+      },
+      {
+        "League": "Championship",
+        "Season": "2024-25",
+        "bets": 552,
+        "profit_usd": -40.18,
+        "roi_pct": -7.3
+      },
+      {
+        "League": "La Liga",
+        "Season": "2005-06",
+        "bets": 380,
+        "profit_usd": -8.56,
+        "roi_pct": -2.3
+      },
+      {
+        "League": "La Liga",
+        "Season": "2006-07",
+        "bets": 380,
+        "profit_usd": -4.03,
+        "roi_pct": -1.1
+      },
+      {
+        "League": "La Liga",
+        "Season": "2007-08",
+        "bets": 380,
+        "profit_usd": -5.75,
+        "roi_pct": -1.5
+      },
+      {
+        "League": "La Liga",
+        "Season": "2008-09",
+        "bets": 380,
+        "profit_usd": -44.4,
+        "roi_pct": -11.7
+      },
+      {
+        "League": "La Liga",
+        "Season": "2009-10",
+        "bets": 380,
+        "profit_usd": -106.47,
+        "roi_pct": -28.0
+      },
+      {
+        "League": "La Liga",
+        "Season": "2010-11",
+        "bets": 380,
+        "profit_usd": -48.16,
+        "roi_pct": -12.7
+      },
+      {
+        "League": "La Liga",
+        "Season": "2011-12",
+        "bets": 380,
+        "profit_usd": -62.24,
+        "roi_pct": -16.4
+      },
+      {
+        "League": "La Liga",
+        "Season": "2012-13",
+        "bets": 380,
+        "profit_usd": -4.06,
+        "roi_pct": -1.1
+      },
+      {
+        "League": "La Liga",
+        "Season": "2013-14",
+        "bets": 380,
+        "profit_usd": 33.55,
+        "roi_pct": 8.8
+      },
+      {
+        "League": "La Liga",
+        "Season": "2014-15",
+        "bets": 380,
+        "profit_usd": -28.57,
+        "roi_pct": -7.5
+      },
+      {
+        "League": "La Liga",
+        "Season": "2015-16",
+        "bets": 380,
+        "profit_usd": -49.06,
+        "roi_pct": -12.9
+      },
+      {
+        "League": "La Liga",
+        "Season": "2016-17",
+        "bets": 380,
+        "profit_usd": -62.74,
+        "roi_pct": -16.5
+      },
+      {
+        "League": "La Liga",
+        "Season": "2017-18",
+        "bets": 380,
+        "profit_usd": -33.33,
+        "roi_pct": -8.8
+      },
+      {
+        "League": "La Liga",
+        "Season": "2018-19",
+        "bets": 380,
+        "profit_usd": 34.63,
+        "roi_pct": 9.1
+      },
+      {
+        "League": "La Liga",
+        "Season": "2019-20",
+        "bets": 380,
+        "profit_usd": -25.53,
+        "roi_pct": -6.7
+      },
+      {
+        "League": "La Liga",
+        "Season": "2020-21",
+        "bets": 380,
+        "profit_usd": -1.02,
+        "roi_pct": -0.3
+      },
+      {
+        "League": "La Liga",
+        "Season": "2021-22",
+        "bets": 380,
+        "profit_usd": -33.69,
+        "roi_pct": -8.9
+      },
+      {
+        "League": "La Liga",
+        "Season": "2022-23",
+        "bets": 380,
+        "profit_usd": -27.24,
+        "roi_pct": -7.2
+      },
+      {
+        "League": "La Liga",
+        "Season": "2023-24",
+        "bets": 380,
+        "profit_usd": -120.92,
+        "roi_pct": -31.8
+      },
+      {
+        "League": "La Liga",
+        "Season": "2024-25",
+        "bets": 380,
+        "profit_usd": -50.43,
+        "roi_pct": -13.3
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2005-06",
+        "bets": 380,
+        "profit_usd": -76.18,
+        "roi_pct": -20.0
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2006-07",
+        "bets": 380,
+        "profit_usd": 4.31,
+        "roi_pct": 1.1
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2007-08",
+        "bets": 380,
+        "profit_usd": -39.05,
+        "roi_pct": -10.3
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2008-09",
+        "bets": 380,
+        "profit_usd": -84.72,
+        "roi_pct": -22.3
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2009-10",
+        "bets": 380,
+        "profit_usd": -10.51,
+        "roi_pct": -2.8
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2010-11",
+        "bets": 380,
+        "profit_usd": -60.32,
+        "roi_pct": -15.9
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2011-12",
+        "bets": 380,
+        "profit_usd": -56.08,
+        "roi_pct": -14.8
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2012-13",
+        "bets": 380,
+        "profit_usd": -60.77,
+        "roi_pct": -16.0
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2013-14",
+        "bets": 380,
+        "profit_usd": -102.72,
+        "roi_pct": -27.0
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2014-15",
+        "bets": 380,
+        "profit_usd": -56.09,
+        "roi_pct": -14.8
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2015-16",
+        "bets": 379,
+        "profit_usd": -14.62,
+        "roi_pct": -3.9
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2016-17",
+        "bets": 380,
+        "profit_usd": -27.74,
+        "roi_pct": -7.3
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2017-18",
+        "bets": 380,
+        "profit_usd": -52.89,
+        "roi_pct": -13.9
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2018-19",
+        "bets": 380,
+        "profit_usd": -38.3,
+        "roi_pct": -10.1
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2019-20",
+        "bets": 279,
+        "profit_usd": -18.88,
+        "roi_pct": -6.8
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2020-21",
+        "bets": 378,
+        "profit_usd": -5.87,
+        "roi_pct": -1.6
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2021-22",
+        "bets": 380,
+        "profit_usd": -1.84,
+        "roi_pct": -0.5
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2022-23",
+        "bets": 380,
+        "profit_usd": -38.48,
+        "roi_pct": -10.1
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2023-24",
+        "bets": 306,
+        "profit_usd": -40.58,
+        "roi_pct": -13.3
+      },
+      {
+        "League": "Ligue 1",
+        "Season": "2024-25",
+        "bets": 306,
+        "profit_usd": -33.24,
+        "roi_pct": -10.9
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2005-06",
+        "bets": 380,
+        "profit_usd": -103.38,
+        "roi_pct": -27.2
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2006-07",
+        "bets": 380,
+        "profit_usd": -111.21,
+        "roi_pct": -29.3
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2007-08",
+        "bets": 348,
+        "profit_usd": -105.47,
+        "roi_pct": -30.3
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2008-09",
+        "bets": 380,
+        "profit_usd": -27.63,
+        "roi_pct": -7.3
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2009-10",
+        "bets": 380,
+        "profit_usd": -51.44,
+        "roi_pct": -13.5
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2010-11",
+        "bets": 380,
+        "profit_usd": -56.61,
+        "roi_pct": -14.9
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2011-12",
+        "bets": 380,
+        "profit_usd": -59.63,
+        "roi_pct": -15.7
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2012-13",
+        "bets": 380,
+        "profit_usd": -87.79,
+        "roi_pct": -23.1
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2013-14",
+        "bets": 380,
+        "profit_usd": -38.37,
+        "roi_pct": -10.1
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2014-15",
+        "bets": 380,
+        "profit_usd": -66.31,
+        "roi_pct": -17.4
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2015-16",
+        "bets": 380,
+        "profit_usd": -57.12,
+        "roi_pct": -15.0
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2016-17",
+        "bets": 380,
+        "profit_usd": -27.44,
+        "roi_pct": -7.2
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2017-18",
+        "bets": 380,
+        "profit_usd": 0.62,
+        "roi_pct": 0.2
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2018-19",
+        "bets": 380,
+        "profit_usd": 19.58,
+        "roi_pct": 5.2
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2019-20",
+        "bets": 280,
+        "profit_usd": 45.11,
+        "roi_pct": 16.1
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2020-21",
+        "bets": 377,
+        "profit_usd": -69.36,
+        "roi_pct": -18.4
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2021-22",
+        "bets": 377,
+        "profit_usd": -53.33,
+        "roi_pct": -14.1
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2022-23",
+        "bets": 378,
+        "profit_usd": -9.38,
+        "roi_pct": -2.5
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2023-24",
+        "bets": 378,
+        "profit_usd": 48.54,
+        "roi_pct": 12.8
+      },
+      {
+        "League": "Ligue 2",
+        "Season": "2024-25",
+        "bets": 306,
+        "profit_usd": -23.38,
+        "roi_pct": -7.6
+      },
+      {
+        "League": "Premier League",
+        "Season": "2005-06",
+        "bets": 380,
+        "profit_usd": -99.26,
+        "roi_pct": -26.1
+      },
+      {
+        "League": "Premier League",
+        "Season": "2006-07",
+        "bets": 380,
+        "profit_usd": -40.93,
+        "roi_pct": -10.8
+      },
+      {
+        "League": "Premier League",
+        "Season": "2007-08",
+        "bets": 380,
+        "profit_usd": -104.51,
+        "roi_pct": -27.5
+      },
+      {
+        "League": "Premier League",
+        "Season": "2008-09",
+        "bets": 380,
+        "profit_usd": -47.39,
+        "roi_pct": -12.5
+      },
+      {
+        "League": "Premier League",
+        "Season": "2009-10",
+        "bets": 380,
+        "profit_usd": -72.37,
+        "roi_pct": -19.0
+      },
+      {
+        "League": "Premier League",
+        "Season": "2010-11",
+        "bets": 380,
+        "profit_usd": -22.95,
+        "roi_pct": -6.0
+      },
+      {
+        "League": "Premier League",
+        "Season": "2011-12",
+        "bets": 380,
+        "profit_usd": 31.78,
+        "roi_pct": 8.4
+      },
+      {
+        "League": "Premier League",
+        "Season": "2012-13",
+        "bets": 380,
+        "profit_usd": 6.16,
+        "roi_pct": 1.6
+      },
+      {
+        "League": "Premier League",
+        "Season": "2013-14",
+        "bets": 380,
+        "profit_usd": 8.17,
+        "roi_pct": 2.1
+      },
+      {
+        "League": "Premier League",
+        "Season": "2014-15",
+        "bets": 380,
+        "profit_usd": 32.81,
+        "roi_pct": 8.6
+      },
+      {
+        "League": "Premier League",
+        "Season": "2015-16",
+        "bets": 380,
+        "profit_usd": 78.71,
+        "roi_pct": 20.7
+      },
+      {
+        "League": "Premier League",
+        "Season": "2016-17",
+        "bets": 380,
+        "profit_usd": -52.0,
+        "roi_pct": -13.7
+      },
+      {
+        "League": "Premier League",
+        "Season": "2017-18",
+        "bets": 380,
+        "profit_usd": -4.3,
+        "roi_pct": -1.1
+      },
+      {
+        "League": "Premier League",
+        "Season": "2018-19",
+        "bets": 380,
+        "profit_usd": -12.99,
+        "roi_pct": -3.4
+      },
+      {
+        "League": "Premier League",
+        "Season": "2019-20",
+        "bets": 380,
+        "profit_usd": 49.85,
+        "roi_pct": 13.1
+      },
+      {
+        "League": "Premier League",
+        "Season": "2020-21",
+        "bets": 380,
+        "profit_usd": 52.61,
+        "roi_pct": 13.8
+      },
+      {
+        "League": "Premier League",
+        "Season": "2021-22",
+        "bets": 380,
+        "profit_usd": -40.09,
+        "roi_pct": -10.5
+      },
+      {
+        "League": "Premier League",
+        "Season": "2022-23",
+        "bets": 380,
+        "profit_usd": -36.24,
+        "roi_pct": -9.5
+      },
+      {
+        "League": "Premier League",
+        "Season": "2023-24",
+        "bets": 380,
+        "profit_usd": -48.04,
+        "roi_pct": -12.6
+      },
+      {
+        "League": "Premier League",
+        "Season": "2024-25",
+        "bets": 380,
+        "profit_usd": -45.62,
+        "roi_pct": -12.0
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2005-06",
+        "bets": 462,
+        "profit_usd": -52.28,
+        "roi_pct": -11.3
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2006-07",
+        "bets": 462,
+        "profit_usd": -62.28,
+        "roi_pct": -13.5
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2007-08",
+        "bets": 446,
+        "profit_usd": -65.3,
+        "roi_pct": -14.6
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2008-09",
+        "bets": 462,
+        "profit_usd": -84.06,
+        "roi_pct": -18.2
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2009-10",
+        "bets": 462,
+        "profit_usd": -42.2,
+        "roi_pct": -9.1
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2010-11",
+        "bets": 461,
+        "profit_usd": -14.27,
+        "roi_pct": -3.1
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2011-12",
+        "bets": 460,
+        "profit_usd": -18.91,
+        "roi_pct": -4.1
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2012-13",
+        "bets": 461,
+        "profit_usd": -60.43,
+        "roi_pct": -13.1
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2013-14",
+        "bets": 462,
+        "profit_usd": 16.06,
+        "roi_pct": 3.5
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2014-15",
+        "bets": 462,
+        "profit_usd": -71.2,
+        "roi_pct": -15.4
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2015-16",
+        "bets": 462,
+        "profit_usd": -61.74,
+        "roi_pct": -13.4
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2016-17",
+        "bets": 462,
+        "profit_usd": -59.49,
+        "roi_pct": -12.9
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2017-18",
+        "bets": 461,
+        "profit_usd": -76.29,
+        "roi_pct": -16.5
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2018-19",
+        "bets": 441,
+        "profit_usd": -37.93,
+        "roi_pct": -8.6
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2019-20",
+        "bets": 460,
+        "profit_usd": 5.62,
+        "roi_pct": 1.2
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2020-21",
+        "bets": 454,
+        "profit_usd": -33.31,
+        "roi_pct": -7.3
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2021-22",
+        "bets": 460,
+        "profit_usd": -48.38,
+        "roi_pct": -10.5
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2022-23",
+        "bets": 459,
+        "profit_usd": -49.14,
+        "roi_pct": -10.7
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2023-24",
+        "bets": 461,
+        "profit_usd": -27.0,
+        "roi_pct": -5.9
+      },
+      {
+        "League": "Segunda Division",
+        "Season": "2024-25",
+        "bets": 462,
+        "profit_usd": -75.06,
+        "roi_pct": -16.2
+      },
+      {
+        "League": "Serie A",
+        "Season": "2005-06",
+        "bets": 378,
+        "profit_usd": -99.73,
+        "roi_pct": -26.4
+      },
+      {
+        "League": "Serie A",
+        "Season": "2006-07",
+        "bets": 380,
+        "profit_usd": -84.83,
+        "roi_pct": -22.3
+      },
+      {
+        "League": "Serie A",
+        "Season": "2007-08",
+        "bets": 380,
+        "profit_usd": -70.72,
+        "roi_pct": -18.6
+      },
+      {
+        "League": "Serie A",
+        "Season": "2008-09",
+        "bets": 380,
+        "profit_usd": -59.37,
+        "roi_pct": -15.6
+      },
+      {
+        "League": "Serie A",
+        "Season": "2009-10",
+        "bets": 379,
+        "profit_usd": -93.77,
+        "roi_pct": -24.7
+      },
+      {
+        "League": "Serie A",
+        "Season": "2010-11",
+        "bets": 378,
+        "profit_usd": -29.79,
+        "roi_pct": -7.9
+      },
+      {
+        "League": "Serie A",
+        "Season": "2011-12",
+        "bets": 380,
+        "profit_usd": -32.57,
+        "roi_pct": -8.6
+      },
+      {
+        "League": "Serie A",
+        "Season": "2012-13",
+        "bets": 380,
+        "profit_usd": -41.87,
+        "roi_pct": -11.0
+      },
+      {
+        "League": "Serie A",
+        "Season": "2013-14",
+        "bets": 380,
+        "profit_usd": -125.88,
+        "roi_pct": -33.1
+      },
+      {
+        "League": "Serie A",
+        "Season": "2014-15",
+        "bets": 380,
+        "profit_usd": -48.5,
+        "roi_pct": -12.8
+      },
+      {
+        "League": "Serie A",
+        "Season": "2015-16",
+        "bets": 380,
+        "profit_usd": -62.85,
+        "roi_pct": -16.5
+      },
+      {
+        "League": "Serie A",
+        "Season": "2016-17",
+        "bets": 380,
+        "profit_usd": -71.77,
+        "roi_pct": -18.9
+      },
+      {
+        "League": "Serie A",
+        "Season": "2017-18",
+        "bets": 380,
+        "profit_usd": -61.27,
+        "roi_pct": -16.1
+      },
+      {
+        "League": "Serie A",
+        "Season": "2018-19",
+        "bets": 380,
+        "profit_usd": -57.32,
+        "roi_pct": -15.1
+      },
+      {
+        "League": "Serie A",
+        "Season": "2019-20",
+        "bets": 380,
+        "profit_usd": 16.83,
+        "roi_pct": 4.4
+      },
+      {
+        "League": "Serie A",
+        "Season": "2020-21",
+        "bets": 378,
+        "profit_usd": -57.23,
+        "roi_pct": -15.1
+      },
+      {
+        "League": "Serie A",
+        "Season": "2021-22",
+        "bets": 379,
+        "profit_usd": -0.22,
+        "roi_pct": -0.1
+      },
+      {
+        "League": "Serie A",
+        "Season": "2022-23",
+        "bets": 380,
+        "profit_usd": -36.5,
+        "roi_pct": -9.6
+      },
+      {
+        "League": "Serie A",
+        "Season": "2023-24",
+        "bets": 380,
+        "profit_usd": -104.42,
+        "roi_pct": -27.5
+      },
+      {
+        "League": "Serie A",
+        "Season": "2024-25",
+        "bets": 380,
+        "profit_usd": -72.0,
+        "roi_pct": -18.9
+      },
+      {
+        "League": "Serie B",
+        "Season": "2005-06",
+        "bets": 459,
+        "profit_usd": -146.84,
+        "roi_pct": -32.0
+      },
+      {
+        "League": "Serie B",
+        "Season": "2006-07",
+        "bets": 462,
+        "profit_usd": -122.75,
+        "roi_pct": -26.6
+      },
+      {
+        "League": "Serie B",
+        "Season": "2007-08",
+        "bets": 460,
+        "profit_usd": -100.57,
+        "roi_pct": -21.9
+      },
+      {
+        "League": "Serie B",
+        "Season": "2008-09",
+        "bets": 455,
+        "profit_usd": -50.72,
+        "roi_pct": -11.1
+      },
+      {
+        "League": "Serie B",
+        "Season": "2009-10",
+        "bets": 442,
+        "profit_usd": 8.22,
+        "roi_pct": 1.9
+      },
+      {
+        "League": "Serie B",
+        "Season": "2010-11",
+        "bets": 457,
+        "profit_usd": -41.07,
+        "roi_pct": -9.0
+      },
+      {
+        "League": "Serie B",
+        "Season": "2011-12",
+        "bets": 462,
+        "profit_usd": -34.69,
+        "roi_pct": -7.5
+      },
+      {
+        "League": "Serie B",
+        "Season": "2012-13",
+        "bets": 460,
+        "profit_usd": -46.86,
+        "roi_pct": -10.2
+      },
+      {
+        "League": "Serie B",
+        "Season": "2013-14",
+        "bets": 461,
+        "profit_usd": -3.08,
+        "roi_pct": -0.7
+      },
+      {
+        "League": "Serie B",
+        "Season": "2014-15",
+        "bets": 461,
+        "profit_usd": -74.58,
+        "roi_pct": -16.2
+      },
+      {
+        "League": "Serie B",
+        "Season": "2015-16",
+        "bets": 462,
+        "profit_usd": -61.97,
+        "roi_pct": -13.4
+      },
+      {
+        "League": "Serie B",
+        "Season": "2016-17",
+        "bets": 462,
+        "profit_usd": -103.28,
+        "roi_pct": -22.4
+      },
+      {
+        "League": "Serie B",
+        "Season": "2017-18",
+        "bets": 462,
+        "profit_usd": -51.33,
+        "roi_pct": -11.1
+      },
+      {
+        "League": "Serie B",
+        "Season": "2018-19",
+        "bets": 342,
+        "profit_usd": -66.27,
+        "roi_pct": -19.4
+      },
+      {
+        "League": "Serie B",
+        "Season": "2019-20",
+        "bets": 373,
+        "profit_usd": -1.23,
+        "roi_pct": -0.3
+      },
+      {
+        "League": "Serie B",
+        "Season": "2020-21",
+        "bets": 374,
+        "profit_usd": -64.34,
+        "roi_pct": -17.2
+      },
+      {
+        "League": "Serie B",
+        "Season": "2021-22",
+        "bets": 379,
+        "profit_usd": -71.45,
+        "roi_pct": -18.9
+      },
+      {
+        "League": "Serie B",
+        "Season": "2022-23",
+        "bets": 380,
+        "profit_usd": 6.8,
+        "roi_pct": 1.8
+      },
+      {
+        "League": "Serie B",
+        "Season": "2023-24",
+        "bets": 378,
+        "profit_usd": -26.57,
+        "roi_pct": -7.0
+      },
+      {
+        "League": "Serie B",
+        "Season": "2024-25",
+        "bets": 380,
+        "profit_usd": -24.11,
+        "roi_pct": -6.3
+      }
+    ]
+  },
   "odds_calibration": [
     {
       "bucket_low": 0.0,
