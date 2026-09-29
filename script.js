@@ -333,7 +333,7 @@ function render(d) {
   });
 
   // ---- closing: data + methods
-  const st_ = d.shots_on_target_vs_win.matches_with_shot_data;
+  const st_ = d.shots_on_target_vs_win.matches_with_shot_data, cl = d.cleaning;
   document.querySelector("#data .text").innerHTML = `
     <h3>Where the data comes from</h3>
     <p>Match data was downloaded from <a href="https://www.football-data.co.uk/">football-data.co.uk</a>: ${leagues.length} leagues (${leagues.map(r => esc(r.League)).join(", ")}) for the ${seasons.length} seasons from ${firstSeason} to ${lastSeason}. Betting odds are the pre-match Bet365 decimal odds recorded in that source.</p>
@@ -343,7 +343,7 @@ function render(d) {
 
     <h3>Rows that were dropped or left out</h3>
     <ul>
-      <li>The cleaning step is set to drop any row with a missing or unreadable date or with no final score, because a match with no result cannot be counted. It found none, so all ${n0(d.n_matches_total)} downloaded matches are kept.</li>
+      <li>The downloaded file had ${n0(cl.raw_rows)} rows. The cleaning step drops any row with a missing or unreadable date (${n0(cl.dropped_unparseable_date)} found) or with no final score (${n0(cl.dropped_missing_score)} found), because a match with no result cannot be counted. That is ${n0(cl.rows_dropped_total)} rows dropped, so all ${n0(d.n_matches_total)} matches are kept.</li>
       <li>${n0(d.favorite_win_rate_overall.excluded_invalid_odds)} matches were left out of every odds-based number because a recorded odd was corrupted (a value of 1.0 or below is impossible for decimal odds). That leaves ${n0(d.favorite_win_rate_overall.matches_with_odds)} matches with usable odds.</li>
       <li>Some statistics are only recorded in some leagues and seasons, so those sections use a subset: ${n0(ht.matches_with_ht_data)} matches with half-time scores, ${n0(st_)} with shots on target, and ${n0(d.red_cards_vs_win.matches_with_card_data)} with card data.</li>
       <li>Team rankings only include clubs with at least ${d.results_by_team_top10_home_win_pct.min_home_matches_threshold} home matches (${d.results_by_team_top10_home_win_pct.teams_qualifying} clubs qualify), so a team with a short record cannot top a list.</li>
