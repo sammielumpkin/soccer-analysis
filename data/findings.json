@@ -316,7 +316,7 @@
     },
     {
       "League": "Championship",
-      "matches_with_odds": 11040,
+      "matches_with_odds": 11038,
       "favorite_win_pct": 46.5
     },
     {
@@ -356,7 +356,8 @@
     }
   ],
   "favorite_win_rate_overall": {
-    "matches_with_odds": 78553,
+    "matches_with_odds": 78551,
+    "excluded_invalid_odds": 2,
     "favorite_win_pct": 49.6
   },
   "odds_calibration": [

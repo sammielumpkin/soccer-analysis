@@ -130,6 +130,12 @@ print(f"   Recovered after: {findings['home_advantage_covid']['recovered_after']
 # 3. Favorite (lowest B365 odds) win rate, by league
 # ---------------------------------------------------------------------------
 odds = df.dropna(subset=["B365H", "B365D", "B365A"]).copy()
+# Decimal odds must be > 1.0 by definition; a small number of rows in the
+# source data have a corrupted 0.0 value (e.g. Blackpool vs Derby 2013-04-27),
+# which would divide by zero when computing implied probability. Drop those.
+invalid_odds = (odds[["B365H", "B365D", "B365A"]] <= 1.0).any(axis=1)
+n_invalid_odds = int(invalid_odds.sum())
+odds = odds.loc[~invalid_odds].copy()
 n_odds = len(odds)
 
 
@@ -150,10 +156,11 @@ for key, g in odds.groupby("League"):
 findings["favorite_win_rate_by_league"] = favorite_by_league
 findings["favorite_win_rate_overall"] = {
     "matches_with_odds": n_odds,
+    "excluded_invalid_odds": n_invalid_odds,
     "favorite_win_pct": pct(odds["FavoriteWon"].sum(), n_odds),
 }
 
-print(f"\n3) Bookmaker favorite win rate (matches with odds: {n_odds:,})")
+print(f"\n3) Bookmaker favorite win rate (matches with valid odds: {n_odds:,}; excluded {n_invalid_odds} with a corrupted 0.0 odd)")
 print(f"   Overall favorite win rate: {findings['favorite_win_rate_overall']['favorite_win_pct']}%")
 for r in sorted(favorite_by_league, key=lambda r: r["favorite_win_pct"], reverse=True):
     print(f"   {r['League']:<20} {r['favorite_win_pct']}%  (n={r['matches_with_odds']})")
