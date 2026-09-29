@@ -13,6 +13,24 @@ const shortSeason = s => s.slice(2);
 const maxBy = (arr, f) => arr.reduce((a, b) => (f(b) > f(a) ? b : a));
 const minBy = (arr, f) => arr.reduce((a, b) => (f(b) < f(a) ? b : a));
 
+// ---------------------------------------------------------------- flags
+const FLAG_OF = {
+  England: "england", "Premier League": "england", Championship: "england",
+  France: "france", "Ligue 1": "france", "Ligue 2": "france",
+  Germany: "germany", Bundesliga: "germany", "2. Bundesliga": "germany",
+  Italy: "italy", "Serie A": "italy", "Serie B": "italy",
+  Spain: "spain", "La Liga": "spain", "Segunda Division": "spain",
+};
+const flagSrc = name => (FLAG_OF[name] ? `img/flags/${FLAG_OF[name]}.svg` : "");
+/* Inline flag followed by the name, for text; empty flag if the name has none. */
+const withFlag = name => (flagSrc(name) ? `<img class="flag" src="${flagSrc(name)}" alt="" width="18" height="12"> ${esc(name)}` : esc(name));
+/* Row label inside an SVG chart. With flags, labels are left-aligned after the flag. */
+function rowLabel(it, labelW, y, dy, useFlags) {
+  if (!useFlags) return `<text x="${labelW - 8}" y="${y + dy}" text-anchor="end">${esc(it.label)}</text>`;
+  const src = it.flag ? `<image href="${it.flag}" x="0" y="${y + dy - 10}" width="18" height="12"/>` : "";
+  return `${src}<text x="24" y="${y + dy}">${esc(it.label)}</text>`;
+}
+
 function niceStep(x) {
   const p = Math.pow(10, Math.floor(Math.log10(x)));
   const f = x / p;
@@ -41,13 +59,14 @@ function hbar(items, { unit = "%", dec = 1, labelW = 150, max, label = "Bar char
   const scale = barW / ((hi - lo) || 1);
   const zeroX = labelW + (0 - lo) * scale;
   const H = top * 2 + rowH * items.length;
+  const useFlags = items.some(it => it.flag);
   const rows = items.map((it, i) => {
     const y = top + i * rowH;
     const neg = it.value < 0;
     const w = Math.max(1, Math.abs(it.value) * scale);
     const x = neg ? zeroX - w : zeroX;
     const shown = it.text ?? `${it.value.toFixed(dec)}${unit}`;
-    return `<text x="${labelW - 8}" y="${y + 18}" text-anchor="end">${esc(it.label)}</text>
+    return `${rowLabel(it, labelW, y, 18, useFlags)}
       <rect class="${it.cls || (neg ? "neg" : "c1")}" x="${x}" y="${y + 4}" width="${w}" height="${rowH - 8}" rx="3"><title>${esc(it.label)}: ${esc(shown)}</title></rect>
       <text class="val" x="${neg ? zeroX + 6 : x + w + 6}" y="${y + 18}">${esc(shown)}</text>`;
   }).join("");
@@ -60,6 +79,7 @@ function stacked(items, { labelW = 130, rowH = 30, label = "Stacked bar chart" }
   const W = 640, top = 6, right = 12;
   const barW = W - labelW - right;
   const H = top * 2 + rowH * items.length;
+  const useFlags = items.some(it => it.flag);
   const rows = items.map((it, i) => {
     const y = top + i * rowH;
     let x = labelW;
@@ -70,7 +90,7 @@ function stacked(items, { labelW = 130, rowH = 30, label = "Stacked bar chart" }
       x += w;
       return seg;
     }).join("");
-    return `<text x="${labelW - 8}" y="${y + rowH / 2 + 4}" text-anchor="end">${esc(it.label)}</text>${segs}`;
+    return `${rowLabel(it, labelW, y, rowH / 2 + 4, useFlags)}${segs}`;
   }).join("");
   return svg(W, H, label, rows);
 }

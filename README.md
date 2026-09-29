@@ -26,6 +26,8 @@ Some statistics are only recorded for some leagues and seasons, so those columns
 | `index.html` | The report page, and the page that opens at the site URL. Holds the title, summary, headline numbers, 10 finding sections and the data/methods section. `script.js` fills in the text and charts. |
 | `dashboard.html` | The dashboard page: filters, summary numbers, switches, four charts, the table and the reset button. `dashboard.js` fills it in. |
 | `style.css` | The one stylesheet both pages share: soccer theme (pitch background, colors, fonts, animations), nav bar, layout, chart colors and dashboard controls. |
+| `img/ball.svg` | Black-and-white soccer ball drawn as an SVG. `style.css` uses it for the ball that bounces next to each page title and the one that rolls along the nav bar. |
+| `img/flags/*.svg` | Small SVG flags (`england.svg`, `france.svg`, `germany.svg`, `italy.svg`, `spain.svg`) shown next to country and league names. England's flag is St George's cross, used for the English leagues. `charts.js` maps each league and country to its flag. |
 | `charts.js` | Shared code for both pages: number formatters and the functions that draw the SVG charts (horizontal bars, stacked bars, vertical bars, lines). |
 | `script.js` | Report logic. Loads `data/findings.json` and writes every number, sentence and chart on `index.html`. No number on the report is typed by hand. |
 | `dashboard.js` | Dashboard logic. Loads `data/matches.csv`, applies the filters, computes every measure in the browser, and draws the charts and table. The current view is kept in the URL so it can be shared. |

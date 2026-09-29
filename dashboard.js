@@ -162,6 +162,16 @@ function fillSelect(el, options, selected) {
   el.value = String(selected);
 }
 
+/* A native select cannot hold images, so the chosen country or league's flag sits inside the box. */
+function showSelectFlag(id, name) {
+  const sel = $(id), src = name ? flagSrc(name) : "";
+  let img = sel.parentNode.querySelector(".select-flag");
+  if (!src) { if (img) img.remove(); sel.classList.remove("has-flag"); return; }
+  if (!img) { img = document.createElement("img"); img.className = "flag select-flag"; img.alt = ""; img.width = 18; img.height = 12; sel.after(img); }
+  img.src = src;
+  sel.classList.add("has-flag");
+}
+
 function teamInScope(t) {
   for (const L of D.teamLeagues[t]) {
     if ((state.league < 0 || L === state.league) && (state.country < 0 || D.leagueCountry[L] === state.country)) return true;
@@ -183,6 +193,8 @@ function refreshOptions() {
 
   const teamOpts = D.teams.map((t, i) => [i, t]).filter(([i]) => teamInScope(i));
   if (state.team >= 0 && !teamOpts.some(([i]) => i === state.team)) state.team = -1;
+  showSelectFlag("f-country", D.countries[state.country]);
+  showSelectFlag("f-league", D.leagues[state.league]);
   fillSelect($("f-team"), [[-1, "All teams"], ...teamOpts], state.team);
 
   fillSelect($("f-role"), [["any", "Home or away"], ["home", "Home matches only"], ["away", "Away matches only"]], state.role);
@@ -270,7 +282,7 @@ function groupRows(rows, B) {
 function renderMain(groups, B, M) {
   $("t-main").textContent = `${M.label} by ${B.label.toLowerCase()}`;
   $("s-main").textContent = M.note || "Switch the measure and the breakdown above.";
-  const items = groups.map(g => ({ label: g.name, value: M.val(g.acc) })).filter(x => x.value !== null);
+  const items = groups.map(g => ({ label: g.name, flag: flagSrc(g.name), value: M.val(g.acc) })).filter(x => x.value !== null);
   if (!items.length) { $("c-main").innerHTML = empty("No matches in this view."); return; }
   const label = `${M.label} by ${B.label.toLowerCase()}`;
   if (state.by === "season") {
@@ -285,7 +297,7 @@ function renderMix(groups, B) {
   $("t-mix").textContent = `Home, draw and away results by ${B.label.toLowerCase()}`;
   $("s-mix").textContent = "Share of matches in each group. Follows the filters and the breakdown, not the measure.";
   const items = groups.map(g => ({
-    label: g.name, names: RESULT_LABELS,
+    label: g.name, flag: flagSrc(g.name), names: RESULT_LABELS,
     parts: [100 * g.acc.h / g.acc.n, 100 * g.acc.d / g.acc.n, 100 * g.acc.a / g.acc.n],
   }));
   if (!items.length) { $("c-mix").innerHTML = empty("No matches in this view."); return; }
@@ -352,7 +364,7 @@ function renderTable(groups, total, B) {
     const active = sort.key === c.key;
     return `<th scope="col"${active ? ` aria-sort="${sort.dir > 0 ? "ascending" : "descending"}"` : ""}><button type="button" data-key="${c.key}">${esc(label)}${active ? (sort.dir > 0 ? " ▲" : " ▼") : ""}</button></th>`;
   }).join("");
-  const body = sorted.map(g => `<tr><td>${esc(g.name)}</td>${TABLE_COLS.slice(1).map(c => `<td>${cell(c.key, g.acc)}</td>`).join("")}</tr>`).join("");
+  const body = sorted.map(g => `<tr><td>${withFlag(g.name)}</td>${TABLE_COLS.slice(1).map(c => `<td>${cell(c.key, g.acc)}</td>`).join("")}</tr>`).join("");
   const foot = `<tr><td>All in view</td>${TABLE_COLS.slice(1).map(c => `<td>${total.n ? cell(c.key, total) : "—"}</td>`).join("")}</tr>`;
   $("table").innerHTML = `<thead><tr>${head}</tr></thead><tbody>${body}</tbody><tfoot>${foot}</tfoot>`;
   const noun = B.label.toLowerCase();

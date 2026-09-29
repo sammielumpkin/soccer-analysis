@@ -121,12 +121,13 @@ body::before {
 
 /* A ball rolls along the touchline of the nav bar */
 .nav::after {
-  content: "⚽";
+  content: "";
   position: absolute;
   left: 0;
   bottom: 2px;
-  font-size: 14px;
-  line-height: 1;
+  width: 14px;
+  height: 14px;
+  background: url("img/ball.svg") center / contain no-repeat;
   pointer-events: none;
   animation: roll 18s linear 1s infinite;
 }
@@ -182,11 +183,12 @@ header.hero h1, .dash-head h1 {
 }
 /* the ball bouncing next to each page title */
 header.hero h1::after, .dash-head h1::after {
-  content: "⚽";
+  content: "";
   display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
   margin-left: 0.2em;
-  font-size: 0.7em;
-  font-style: normal;
+  background: url("img/ball.svg") center / contain no-repeat;
   vertical-align: 0.05em;
   animation: bounce 1.3s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
 }
@@ -392,3 +394,10 @@ tfoot td { font-weight: 700; border-bottom: 0; background: var(--accent-soft); }
   header.hero h1::after, .dash-head h1::after, .hero .stat { animation: none; }
   .stat, button { transition: none; }
 }
+
+/* ---------- country and league flags ---------- */
+img.flag { width: 18px; height: 12px; vertical-align: -1px; outline: 1px solid rgba(0, 0, 0, 0.25); outline-offset: -1px; }
+svg image { outline: none; }
+.field { position: relative; }
+.field .select-flag { position: absolute; left: 10px; bottom: 14px; pointer-events: none; }
+select.has-flag { padding-left: 36px; }
