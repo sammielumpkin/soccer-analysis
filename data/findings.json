@@ -1,0 +1,1890 @@
+{
+  "n_matches_total": 78676,
+  "results_by_league": [
+    {
+      "League": "2. Bundesliga",
+      "matches": 6120,
+      "home_win_pct": 44.1,
+      "draw_pct": 27.4,
+      "away_win_pct": 28.5
+    },
+    {
+      "League": "Bundesliga",
+      "matches": 6120,
+      "home_win_pct": 44.7,
+      "draw_pct": 25.1,
+      "away_win_pct": 30.2
+    },
+    {
+      "League": "Championship",
+      "matches": 11040,
+      "home_win_pct": 43.5,
+      "draw_pct": 27.4,
+      "away_win_pct": 29.1
+    },
+    {
+      "League": "La Liga",
+      "matches": 7600,
+      "home_win_pct": 46.6,
+      "draw_pct": 25.0,
+      "away_win_pct": 28.4
+    },
+    {
+      "League": "Ligue 1",
+      "matches": 7351,
+      "home_win_pct": 44.4,
+      "draw_pct": 27.4,
+      "away_win_pct": 28.2
+    },
+    {
+      "League": "Ligue 2",
+      "matches": 7393,
+      "home_win_pct": 44.0,
+      "draw_pct": 30.1,
+      "away_win_pct": 25.9
+    },
+    {
+      "League": "Premier League",
+      "matches": 7600,
+      "home_win_pct": 45.7,
+      "draw_pct": 24.2,
+      "away_win_pct": 30.1
+    },
+    {
+      "League": "Segunda Division",
+      "matches": 9224,
+      "home_win_pct": 45.5,
+      "draw_pct": 29.6,
+      "away_win_pct": 24.9
+    },
+    {
+      "League": "Serie A",
+      "matches": 7600,
+      "home_win_pct": 44.5,
+      "draw_pct": 26.5,
+      "away_win_pct": 29.0
+    },
+    {
+      "League": "Serie B",
+      "matches": 8628,
+      "home_win_pct": 42.8,
+      "draw_pct": 31.9,
+      "away_win_pct": 25.3
+    }
+  ],
+  "results_by_season": [
+    {
+      "Season": "2005-06",
+      "matches": 3988,
+      "home_win_pct": 45.4,
+      "draw_pct": 28.9,
+      "away_win_pct": 25.7
+    },
+    {
+      "Season": "2006-07",
+      "matches": 3988,
+      "home_win_pct": 46.6,
+      "draw_pct": 27.3,
+      "away_win_pct": 26.1
+    },
+    {
+      "Season": "2007-08",
+      "matches": 3940,
+      "home_win_pct": 45.3,
+      "draw_pct": 29.3,
+      "away_win_pct": 25.4
+    },
+    {
+      "Season": "2008-09",
+      "matches": 3988,
+      "home_win_pct": 46.1,
+      "draw_pct": 27.8,
+      "away_win_pct": 26.2
+    },
+    {
+      "Season": "2009-10",
+      "matches": 3988,
+      "home_win_pct": 46.4,
+      "draw_pct": 28.0,
+      "away_win_pct": 25.6
+    },
+    {
+      "Season": "2010-11",
+      "matches": 3988,
+      "home_win_pct": 46.4,
+      "draw_pct": 27.7,
+      "away_win_pct": 25.9
+    },
+    {
+      "Season": "2011-12",
+      "matches": 3988,
+      "home_win_pct": 45.2,
+      "draw_pct": 27.3,
+      "away_win_pct": 27.5
+    },
+    {
+      "Season": "2012-13",
+      "matches": 3988,
+      "home_win_pct": 44.8,
+      "draw_pct": 27.6,
+      "away_win_pct": 27.6
+    },
+    {
+      "Season": "2013-14",
+      "matches": 3988,
+      "home_win_pct": 44.4,
+      "draw_pct": 27.0,
+      "away_win_pct": 28.7
+    },
+    {
+      "Season": "2014-15",
+      "matches": 3988,
+      "home_win_pct": 44.1,
+      "draw_pct": 28.8,
+      "away_win_pct": 27.2
+    },
+    {
+      "Season": "2015-16",
+      "matches": 3988,
+      "home_win_pct": 43.8,
+      "draw_pct": 28.4,
+      "away_win_pct": 27.8
+    },
+    {
+      "Season": "2016-17",
+      "matches": 3988,
+      "home_win_pct": 46.7,
+      "draw_pct": 26.6,
+      "away_win_pct": 26.7
+    },
+    {
+      "Season": "2017-18",
+      "matches": 3988,
+      "home_win_pct": 44.7,
+      "draw_pct": 26.6,
+      "away_win_pct": 28.7
+    },
+    {
+      "Season": "2018-19",
+      "matches": 3868,
+      "home_win_pct": 44.0,
+      "draw_pct": 28.1,
+      "away_win_pct": 27.9
+    },
+    {
+      "Season": "2019-20",
+      "matches": 3705,
+      "home_win_pct": 42.8,
+      "draw_pct": 27.3,
+      "away_win_pct": 30.0
+    },
+    {
+      "Season": "2020-21",
+      "matches": 3906,
+      "home_win_pct": 40.8,
+      "draw_pct": 27.3,
+      "away_win_pct": 31.8
+    },
+    {
+      "Season": "2021-22",
+      "matches": 3906,
+      "home_win_pct": 42.4,
+      "draw_pct": 27.1,
+      "away_win_pct": 30.5
+    },
+    {
+      "Season": "2022-23",
+      "matches": 3906,
+      "home_win_pct": 44.3,
+      "draw_pct": 26.7,
+      "away_win_pct": 29.0
+    },
+    {
+      "Season": "2023-24",
+      "matches": 3831,
+      "home_win_pct": 43.0,
+      "draw_pct": 27.0,
+      "away_win_pct": 30.0
+    },
+    {
+      "Season": "2024-25",
+      "matches": 3758,
+      "home_win_pct": 43.3,
+      "draw_pct": 26.9,
+      "away_win_pct": 29.8
+    }
+  ],
+  "overall_result_rates": {
+    "home_win_pct": 44.5,
+    "draw_pct": 27.6,
+    "away_win_pct": 27.9
+  },
+  "home_advantage_covid": {
+    "season": "2020-21",
+    "home_win_pct_2020_21": 40.8,
+    "avg_home_win_pct_before": 45.1,
+    "avg_home_win_pct_after": 43.2,
+    "drop_vs_before_pct_points": -4.3,
+    "recovered_after": true
+  },
+  "favorite_win_rate_by_league": [
+    {
+      "League": "2. Bundesliga",
+      "matches_with_odds": 6116,
+      "favorite_win_pct": 47.1
+    },
+    {
+      "League": "Bundesliga",
+      "matches_with_odds": 6120,
+      "favorite_win_pct": 51.6
+    },
+    {
+      "League": "Championship",
+      "matches_with_odds": 11040,
+      "favorite_win_pct": 46.5
+    },
+    {
+      "League": "La Liga",
+      "matches_with_odds": 7600,
+      "favorite_win_pct": 54.0
+    },
+    {
+      "League": "Ligue 1",
+      "matches_with_odds": 7348,
+      "favorite_win_pct": 50.9
+    },
+    {
+      "League": "Ligue 2",
+      "matches_with_odds": 7384,
+      "favorite_win_pct": 46.5
+    },
+    {
+      "League": "Premier League",
+      "matches_with_odds": 7600,
+      "favorite_win_pct": 55.1
+    },
+    {
+      "League": "Segunda Division",
+      "matches_with_odds": 9182,
+      "favorite_win_pct": 46.9
+    },
+    {
+      "League": "Serie A",
+      "matches_with_odds": 7592,
+      "favorite_win_pct": 54.5
+    },
+    {
+      "League": "Serie B",
+      "matches_with_odds": 8571,
+      "favorite_win_pct": 45.7
+    }
+  ],
+  "favorite_win_rate_overall": {
+    "matches_with_odds": 78553,
+    "favorite_win_pct": 49.6
+  },
+  "odds_calibration": [
+    {
+      "bucket_low": 0.0,
+      "bucket_high": 0.1,
+      "matches": 526,
+      "avg_implied_home_win_pct": 8.0,
+      "actual_home_win_pct": 7.2
+    },
+    {
+      "bucket_low": 0.1,
+      "bucket_high": 0.2,
+      "matches": 3223,
+      "avg_implied_home_win_pct": 15.8,
+      "actual_home_win_pct": 16.0
+    },
+    {
+      "bucket_low": 0.2,
+      "bucket_high": 0.3,
+      "matches": 7645,
+      "avg_implied_home_win_pct": 25.9,
+      "actual_home_win_pct": 25.4
+    },
+    {
+      "bucket_low": 0.3,
+      "bucket_high": 0.4,
+      "matches": 19127,
+      "avg_implied_home_win_pct": 35.8,
+      "actual_home_win_pct": 35.4
+    },
+    {
+      "bucket_low": 0.4,
+      "bucket_high": 0.5,
+      "matches": 24377,
+      "avg_implied_home_win_pct": 44.9,
+      "actual_home_win_pct": 45.1
+    },
+    {
+      "bucket_low": 0.5,
+      "bucket_high": 0.6,
+      "matches": 14160,
+      "avg_implied_home_win_pct": 54.6,
+      "actual_home_win_pct": 56.0
+    },
+    {
+      "bucket_low": 0.6,
+      "bucket_high": 0.7,
+      "matches": 5889,
+      "avg_implied_home_win_pct": 64.5,
+      "actual_home_win_pct": 66.8
+    },
+    {
+      "bucket_low": 0.7,
+      "bucket_high": 0.8,
+      "matches": 2601,
+      "avg_implied_home_win_pct": 74.5,
+      "actual_home_win_pct": 77.0
+    },
+    {
+      "bucket_low": 0.8,
+      "bucket_high": 0.9,
+      "matches": 971,
+      "avg_implied_home_win_pct": 83.6,
+      "actual_home_win_pct": 87.0
+    },
+    {
+      "bucket_low": 0.9,
+      "bucket_high": 1.0,
+      "matches": 32,
+      "avg_implied_home_win_pct": 91.0,
+      "actual_home_win_pct": 96.9
+    }
+  ],
+  "odds_calibration_overall": {
+    "avg_implied_home_win_pct": 44.1,
+    "actual_home_win_pct": 44.5
+  },
+  "goals_per_game_by_league_season": [
+    {
+      "League": "2. Bundesliga",
+      "Season": "2005-06",
+      "matches": 306,
+      "avg_goals_per_game": 2.59
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2006-07",
+      "matches": 306,
+      "avg_goals_per_game": 2.63
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2007-08",
+      "matches": 306,
+      "avg_goals_per_game": 2.85
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2008-09",
+      "matches": 306,
+      "avg_goals_per_game": 2.78
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2009-10",
+      "matches": 306,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2010-11",
+      "matches": 306,
+      "avg_goals_per_game": 2.73
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2011-12",
+      "matches": 306,
+      "avg_goals_per_game": 2.79
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2012-13",
+      "matches": 306,
+      "avg_goals_per_game": 2.58
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2013-14",
+      "matches": 306,
+      "avg_goals_per_game": 2.57
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2014-15",
+      "matches": 306,
+      "avg_goals_per_game": 2.49
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2015-16",
+      "matches": 306,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2016-17",
+      "matches": 306,
+      "avg_goals_per_game": 2.49
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2017-18",
+      "matches": 306,
+      "avg_goals_per_game": 2.75
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2018-19",
+      "matches": 306,
+      "avg_goals_per_game": 2.95
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2019-20",
+      "matches": 306,
+      "avg_goals_per_game": 2.88
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2020-21",
+      "matches": 306,
+      "avg_goals_per_game": 2.97
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2021-22",
+      "matches": 306,
+      "avg_goals_per_game": 2.92
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2022-23",
+      "matches": 306,
+      "avg_goals_per_game": 2.94
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2023-24",
+      "matches": 306,
+      "avg_goals_per_game": 3.09
+    },
+    {
+      "League": "2. Bundesliga",
+      "Season": "2024-25",
+      "matches": 306,
+      "avg_goals_per_game": 3.02
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2005-06",
+      "matches": 306,
+      "avg_goals_per_game": 2.81
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2006-07",
+      "matches": 306,
+      "avg_goals_per_game": 2.74
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2007-08",
+      "matches": 306,
+      "avg_goals_per_game": 2.81
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2008-09",
+      "matches": 306,
+      "avg_goals_per_game": 2.92
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2009-10",
+      "matches": 306,
+      "avg_goals_per_game": 2.83
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2010-11",
+      "matches": 306,
+      "avg_goals_per_game": 2.92
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2011-12",
+      "matches": 306,
+      "avg_goals_per_game": 2.86
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2012-13",
+      "matches": 306,
+      "avg_goals_per_game": 2.93
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2013-14",
+      "matches": 306,
+      "avg_goals_per_game": 3.16
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2014-15",
+      "matches": 306,
+      "avg_goals_per_game": 2.75
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2015-16",
+      "matches": 306,
+      "avg_goals_per_game": 2.83
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2016-17",
+      "matches": 306,
+      "avg_goals_per_game": 2.87
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2017-18",
+      "matches": 306,
+      "avg_goals_per_game": 2.79
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2018-19",
+      "matches": 306,
+      "avg_goals_per_game": 3.18
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2019-20",
+      "matches": 306,
+      "avg_goals_per_game": 3.21
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2020-21",
+      "matches": 306,
+      "avg_goals_per_game": 3.03
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2021-22",
+      "matches": 306,
+      "avg_goals_per_game": 3.12
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2022-23",
+      "matches": 306,
+      "avg_goals_per_game": 3.17
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2023-24",
+      "matches": 306,
+      "avg_goals_per_game": 3.22
+    },
+    {
+      "League": "Bundesliga",
+      "Season": "2024-25",
+      "matches": 306,
+      "avg_goals_per_game": 3.13
+    },
+    {
+      "League": "Championship",
+      "Season": "2005-06",
+      "matches": 552,
+      "avg_goals_per_game": 2.43
+    },
+    {
+      "League": "Championship",
+      "Season": "2006-07",
+      "matches": 552,
+      "avg_goals_per_game": 2.61
+    },
+    {
+      "League": "Championship",
+      "Season": "2007-08",
+      "matches": 552,
+      "avg_goals_per_game": 2.53
+    },
+    {
+      "League": "Championship",
+      "Season": "2008-09",
+      "matches": 552,
+      "avg_goals_per_game": 2.45
+    },
+    {
+      "League": "Championship",
+      "Season": "2009-10",
+      "matches": 552,
+      "avg_goals_per_game": 2.58
+    },
+    {
+      "League": "Championship",
+      "Season": "2010-11",
+      "matches": 552,
+      "avg_goals_per_game": 2.74
+    },
+    {
+      "League": "Championship",
+      "Season": "2011-12",
+      "matches": 552,
+      "avg_goals_per_game": 2.57
+    },
+    {
+      "League": "Championship",
+      "Season": "2012-13",
+      "matches": 552,
+      "avg_goals_per_game": 2.71
+    },
+    {
+      "League": "Championship",
+      "Season": "2013-14",
+      "matches": 552,
+      "avg_goals_per_game": 2.6
+    },
+    {
+      "League": "Championship",
+      "Season": "2014-15",
+      "matches": 552,
+      "avg_goals_per_game": 2.67
+    },
+    {
+      "League": "Championship",
+      "Season": "2015-16",
+      "matches": 552,
+      "avg_goals_per_game": 2.42
+    },
+    {
+      "League": "Championship",
+      "Season": "2016-17",
+      "matches": 552,
+      "avg_goals_per_game": 2.61
+    },
+    {
+      "League": "Championship",
+      "Season": "2017-18",
+      "matches": 552,
+      "avg_goals_per_game": 2.55
+    },
+    {
+      "League": "Championship",
+      "Season": "2018-19",
+      "matches": 552,
+      "avg_goals_per_game": 2.67
+    },
+    {
+      "League": "Championship",
+      "Season": "2019-20",
+      "matches": 552,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "Championship",
+      "Season": "2020-21",
+      "matches": 552,
+      "avg_goals_per_game": 2.31
+    },
+    {
+      "League": "Championship",
+      "Season": "2021-22",
+      "matches": 552,
+      "avg_goals_per_game": 2.51
+    },
+    {
+      "League": "Championship",
+      "Season": "2022-23",
+      "matches": 552,
+      "avg_goals_per_game": 2.43
+    },
+    {
+      "League": "Championship",
+      "Season": "2023-24",
+      "matches": 552,
+      "avg_goals_per_game": 2.68
+    },
+    {
+      "League": "Championship",
+      "Season": "2024-25",
+      "matches": 552,
+      "avg_goals_per_game": 2.45
+    },
+    {
+      "League": "La Liga",
+      "Season": "2005-06",
+      "matches": 380,
+      "avg_goals_per_game": 2.46
+    },
+    {
+      "League": "La Liga",
+      "Season": "2006-07",
+      "matches": 380,
+      "avg_goals_per_game": 2.48
+    },
+    {
+      "League": "La Liga",
+      "Season": "2007-08",
+      "matches": 380,
+      "avg_goals_per_game": 2.69
+    },
+    {
+      "League": "La Liga",
+      "Season": "2008-09",
+      "matches": 380,
+      "avg_goals_per_game": 2.9
+    },
+    {
+      "League": "La Liga",
+      "Season": "2009-10",
+      "matches": 380,
+      "avg_goals_per_game": 2.71
+    },
+    {
+      "League": "La Liga",
+      "Season": "2010-11",
+      "matches": 380,
+      "avg_goals_per_game": 2.74
+    },
+    {
+      "League": "La Liga",
+      "Season": "2011-12",
+      "matches": 380,
+      "avg_goals_per_game": 2.76
+    },
+    {
+      "League": "La Liga",
+      "Season": "2012-13",
+      "matches": 380,
+      "avg_goals_per_game": 2.87
+    },
+    {
+      "League": "La Liga",
+      "Season": "2013-14",
+      "matches": 380,
+      "avg_goals_per_game": 2.75
+    },
+    {
+      "League": "La Liga",
+      "Season": "2014-15",
+      "matches": 380,
+      "avg_goals_per_game": 2.66
+    },
+    {
+      "League": "La Liga",
+      "Season": "2015-16",
+      "matches": 380,
+      "avg_goals_per_game": 2.74
+    },
+    {
+      "League": "La Liga",
+      "Season": "2016-17",
+      "matches": 380,
+      "avg_goals_per_game": 2.94
+    },
+    {
+      "League": "La Liga",
+      "Season": "2017-18",
+      "matches": 380,
+      "avg_goals_per_game": 2.69
+    },
+    {
+      "League": "La Liga",
+      "Season": "2018-19",
+      "matches": 380,
+      "avg_goals_per_game": 2.59
+    },
+    {
+      "League": "La Liga",
+      "Season": "2019-20",
+      "matches": 380,
+      "avg_goals_per_game": 2.48
+    },
+    {
+      "League": "La Liga",
+      "Season": "2020-21",
+      "matches": 380,
+      "avg_goals_per_game": 2.51
+    },
+    {
+      "League": "La Liga",
+      "Season": "2021-22",
+      "matches": 380,
+      "avg_goals_per_game": 2.5
+    },
+    {
+      "League": "La Liga",
+      "Season": "2022-23",
+      "matches": 380,
+      "avg_goals_per_game": 2.51
+    },
+    {
+      "League": "La Liga",
+      "Season": "2023-24",
+      "matches": 380,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "La Liga",
+      "Season": "2024-25",
+      "matches": 380,
+      "avg_goals_per_game": 2.62
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2005-06",
+      "matches": 380,
+      "avg_goals_per_game": 2.13
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2006-07",
+      "matches": 380,
+      "avg_goals_per_game": 2.25
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2007-08",
+      "matches": 380,
+      "avg_goals_per_game": 2.28
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2008-09",
+      "matches": 380,
+      "avg_goals_per_game": 2.26
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2009-10",
+      "matches": 380,
+      "avg_goals_per_game": 2.41
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2010-11",
+      "matches": 380,
+      "avg_goals_per_game": 2.34
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2011-12",
+      "matches": 380,
+      "avg_goals_per_game": 2.52
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2012-13",
+      "matches": 380,
+      "avg_goals_per_game": 2.54
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2013-14",
+      "matches": 380,
+      "avg_goals_per_game": 2.46
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2014-15",
+      "matches": 380,
+      "avg_goals_per_game": 2.49
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2015-16",
+      "matches": 380,
+      "avg_goals_per_game": 2.53
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2016-17",
+      "matches": 380,
+      "avg_goals_per_game": 2.62
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2017-18",
+      "matches": 380,
+      "avg_goals_per_game": 2.72
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2018-19",
+      "matches": 380,
+      "avg_goals_per_game": 2.56
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2019-20",
+      "matches": 279,
+      "avg_goals_per_game": 2.52
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2020-21",
+      "matches": 380,
+      "avg_goals_per_game": 2.76
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2021-22",
+      "matches": 380,
+      "avg_goals_per_game": 2.81
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2022-23",
+      "matches": 380,
+      "avg_goals_per_game": 2.81
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2023-24",
+      "matches": 306,
+      "avg_goals_per_game": 2.7
+    },
+    {
+      "League": "Ligue 1",
+      "Season": "2024-25",
+      "matches": 306,
+      "avg_goals_per_game": 2.98
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2005-06",
+      "matches": 380,
+      "avg_goals_per_game": 2.15
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2006-07",
+      "matches": 380,
+      "avg_goals_per_game": 2.37
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2007-08",
+      "matches": 348,
+      "avg_goals_per_game": 2.31
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2008-09",
+      "matches": 380,
+      "avg_goals_per_game": 2.32
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2009-10",
+      "matches": 380,
+      "avg_goals_per_game": 2.33
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2010-11",
+      "matches": 380,
+      "avg_goals_per_game": 2.34
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2011-12",
+      "matches": 380,
+      "avg_goals_per_game": 2.29
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2012-13",
+      "matches": 380,
+      "avg_goals_per_game": 2.41
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2013-14",
+      "matches": 380,
+      "avg_goals_per_game": 2.47
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2014-15",
+      "matches": 380,
+      "avg_goals_per_game": 2.25
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2015-16",
+      "matches": 380,
+      "avg_goals_per_game": 2.3
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2016-17",
+      "matches": 380,
+      "avg_goals_per_game": 2.48
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2017-18",
+      "matches": 380,
+      "avg_goals_per_game": 2.72
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2018-19",
+      "matches": 380,
+      "avg_goals_per_game": 2.19
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2019-20",
+      "matches": 280,
+      "avg_goals_per_game": 2.22
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2020-21",
+      "matches": 380,
+      "avg_goals_per_game": 2.39
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2021-22",
+      "matches": 380,
+      "avg_goals_per_game": 2.28
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2022-23",
+      "matches": 380,
+      "avg_goals_per_game": 2.41
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2023-24",
+      "matches": 379,
+      "avg_goals_per_game": 2.46
+    },
+    {
+      "League": "Ligue 2",
+      "Season": "2024-25",
+      "matches": 306,
+      "avg_goals_per_game": 2.58
+    },
+    {
+      "League": "Premier League",
+      "Season": "2005-06",
+      "matches": 380,
+      "avg_goals_per_game": 2.48
+    },
+    {
+      "League": "Premier League",
+      "Season": "2006-07",
+      "matches": 380,
+      "avg_goals_per_game": 2.45
+    },
+    {
+      "League": "Premier League",
+      "Season": "2007-08",
+      "matches": 380,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "Premier League",
+      "Season": "2008-09",
+      "matches": 380,
+      "avg_goals_per_game": 2.48
+    },
+    {
+      "League": "Premier League",
+      "Season": "2009-10",
+      "matches": 380,
+      "avg_goals_per_game": 2.77
+    },
+    {
+      "League": "Premier League",
+      "Season": "2010-11",
+      "matches": 380,
+      "avg_goals_per_game": 2.8
+    },
+    {
+      "League": "Premier League",
+      "Season": "2011-12",
+      "matches": 380,
+      "avg_goals_per_game": 2.81
+    },
+    {
+      "League": "Premier League",
+      "Season": "2012-13",
+      "matches": 380,
+      "avg_goals_per_game": 2.8
+    },
+    {
+      "League": "Premier League",
+      "Season": "2013-14",
+      "matches": 380,
+      "avg_goals_per_game": 2.77
+    },
+    {
+      "League": "Premier League",
+      "Season": "2014-15",
+      "matches": 380,
+      "avg_goals_per_game": 2.57
+    },
+    {
+      "League": "Premier League",
+      "Season": "2015-16",
+      "matches": 380,
+      "avg_goals_per_game": 2.7
+    },
+    {
+      "League": "Premier League",
+      "Season": "2016-17",
+      "matches": 380,
+      "avg_goals_per_game": 2.8
+    },
+    {
+      "League": "Premier League",
+      "Season": "2017-18",
+      "matches": 380,
+      "avg_goals_per_game": 2.68
+    },
+    {
+      "League": "Premier League",
+      "Season": "2018-19",
+      "matches": 380,
+      "avg_goals_per_game": 2.82
+    },
+    {
+      "League": "Premier League",
+      "Season": "2019-20",
+      "matches": 380,
+      "avg_goals_per_game": 2.72
+    },
+    {
+      "League": "Premier League",
+      "Season": "2020-21",
+      "matches": 380,
+      "avg_goals_per_game": 2.69
+    },
+    {
+      "League": "Premier League",
+      "Season": "2021-22",
+      "matches": 380,
+      "avg_goals_per_game": 2.82
+    },
+    {
+      "League": "Premier League",
+      "Season": "2022-23",
+      "matches": 380,
+      "avg_goals_per_game": 2.85
+    },
+    {
+      "League": "Premier League",
+      "Season": "2023-24",
+      "matches": 380,
+      "avg_goals_per_game": 3.28
+    },
+    {
+      "League": "Premier League",
+      "Season": "2024-25",
+      "matches": 380,
+      "avg_goals_per_game": 2.93
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2005-06",
+      "matches": 462,
+      "avg_goals_per_game": 2.3
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2006-07",
+      "matches": 462,
+      "avg_goals_per_game": 2.45
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2007-08",
+      "matches": 446,
+      "avg_goals_per_game": 2.32
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2008-09",
+      "matches": 462,
+      "avg_goals_per_game": 2.51
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2009-10",
+      "matches": 462,
+      "avg_goals_per_game": 2.41
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2010-11",
+      "matches": 462,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2011-12",
+      "matches": 462,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2012-13",
+      "matches": 462,
+      "avg_goals_per_game": 2.6
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2013-14",
+      "matches": 462,
+      "avg_goals_per_game": 2.33
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2014-15",
+      "matches": 462,
+      "avg_goals_per_game": 2.46
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2015-16",
+      "matches": 462,
+      "avg_goals_per_game": 2.26
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2016-17",
+      "matches": 462,
+      "avg_goals_per_game": 2.25
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2017-18",
+      "matches": 462,
+      "avg_goals_per_game": 2.31
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2018-19",
+      "matches": 462,
+      "avg_goals_per_game": 2.18
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2019-20",
+      "matches": 462,
+      "avg_goals_per_game": 2.29
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2020-21",
+      "matches": 462,
+      "avg_goals_per_game": 2.05
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2021-22",
+      "matches": 462,
+      "avg_goals_per_game": 2.43
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2022-23",
+      "matches": 462,
+      "avg_goals_per_game": 2.02
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2023-24",
+      "matches": 462,
+      "avg_goals_per_game": 2.25
+    },
+    {
+      "League": "Segunda Division",
+      "Season": "2024-25",
+      "matches": 462,
+      "avg_goals_per_game": 2.53
+    },
+    {
+      "League": "Serie A",
+      "Season": "2005-06",
+      "matches": 380,
+      "avg_goals_per_game": 2.61
+    },
+    {
+      "League": "Serie A",
+      "Season": "2006-07",
+      "matches": 380,
+      "avg_goals_per_game": 2.55
+    },
+    {
+      "League": "Serie A",
+      "Season": "2007-08",
+      "matches": 380,
+      "avg_goals_per_game": 2.55
+    },
+    {
+      "League": "Serie A",
+      "Season": "2008-09",
+      "matches": 380,
+      "avg_goals_per_game": 2.6
+    },
+    {
+      "League": "Serie A",
+      "Season": "2009-10",
+      "matches": 380,
+      "avg_goals_per_game": 2.61
+    },
+    {
+      "League": "Serie A",
+      "Season": "2010-11",
+      "matches": 380,
+      "avg_goals_per_game": 2.51
+    },
+    {
+      "League": "Serie A",
+      "Season": "2011-12",
+      "matches": 380,
+      "avg_goals_per_game": 2.56
+    },
+    {
+      "League": "Serie A",
+      "Season": "2012-13",
+      "matches": 380,
+      "avg_goals_per_game": 2.64
+    },
+    {
+      "League": "Serie A",
+      "Season": "2013-14",
+      "matches": 380,
+      "avg_goals_per_game": 2.72
+    },
+    {
+      "League": "Serie A",
+      "Season": "2014-15",
+      "matches": 380,
+      "avg_goals_per_game": 2.69
+    },
+    {
+      "League": "Serie A",
+      "Season": "2015-16",
+      "matches": 380,
+      "avg_goals_per_game": 2.58
+    },
+    {
+      "League": "Serie A",
+      "Season": "2016-17",
+      "matches": 380,
+      "avg_goals_per_game": 2.96
+    },
+    {
+      "League": "Serie A",
+      "Season": "2017-18",
+      "matches": 380,
+      "avg_goals_per_game": 2.68
+    },
+    {
+      "League": "Serie A",
+      "Season": "2018-19",
+      "matches": 380,
+      "avg_goals_per_game": 2.68
+    },
+    {
+      "League": "Serie A",
+      "Season": "2019-20",
+      "matches": 380,
+      "avg_goals_per_game": 3.04
+    },
+    {
+      "League": "Serie A",
+      "Season": "2020-21",
+      "matches": 380,
+      "avg_goals_per_game": 3.05
+    },
+    {
+      "League": "Serie A",
+      "Season": "2021-22",
+      "matches": 380,
+      "avg_goals_per_game": 2.87
+    },
+    {
+      "League": "Serie A",
+      "Season": "2022-23",
+      "matches": 380,
+      "avg_goals_per_game": 2.56
+    },
+    {
+      "League": "Serie A",
+      "Season": "2023-24",
+      "matches": 380,
+      "avg_goals_per_game": 2.61
+    },
+    {
+      "League": "Serie A",
+      "Season": "2024-25",
+      "matches": 380,
+      "avg_goals_per_game": 2.56
+    },
+    {
+      "League": "Serie B",
+      "Season": "2005-06",
+      "matches": 462,
+      "avg_goals_per_game": 2.26
+    },
+    {
+      "League": "Serie B",
+      "Season": "2006-07",
+      "matches": 462,
+      "avg_goals_per_game": 2.3
+    },
+    {
+      "League": "Serie B",
+      "Season": "2007-08",
+      "matches": 462,
+      "avg_goals_per_game": 2.57
+    },
+    {
+      "League": "Serie B",
+      "Season": "2008-09",
+      "matches": 462,
+      "avg_goals_per_game": 2.38
+    },
+    {
+      "League": "Serie B",
+      "Season": "2009-10",
+      "matches": 462,
+      "avg_goals_per_game": 2.48
+    },
+    {
+      "League": "Serie B",
+      "Season": "2010-11",
+      "matches": 462,
+      "avg_goals_per_game": 2.33
+    },
+    {
+      "League": "Serie B",
+      "Season": "2011-12",
+      "matches": 462,
+      "avg_goals_per_game": 2.52
+    },
+    {
+      "League": "Serie B",
+      "Season": "2012-13",
+      "matches": 462,
+      "avg_goals_per_game": 2.54
+    },
+    {
+      "League": "Serie B",
+      "Season": "2013-14",
+      "matches": 462,
+      "avg_goals_per_game": 2.38
+    },
+    {
+      "League": "Serie B",
+      "Season": "2014-15",
+      "matches": 462,
+      "avg_goals_per_game": 2.32
+    },
+    {
+      "League": "Serie B",
+      "Season": "2015-16",
+      "matches": 462,
+      "avg_goals_per_game": 2.43
+    },
+    {
+      "League": "Serie B",
+      "Season": "2016-17",
+      "matches": 462,
+      "avg_goals_per_game": 2.21
+    },
+    {
+      "League": "Serie B",
+      "Season": "2017-18",
+      "matches": 462,
+      "avg_goals_per_game": 2.56
+    },
+    {
+      "League": "Serie B",
+      "Season": "2018-19",
+      "matches": 342,
+      "avg_goals_per_game": 2.59
+    },
+    {
+      "League": "Serie B",
+      "Season": "2019-20",
+      "matches": 380,
+      "avg_goals_per_game": 2.51
+    },
+    {
+      "League": "Serie B",
+      "Season": "2020-21",
+      "matches": 380,
+      "avg_goals_per_game": 2.4
+    },
+    {
+      "League": "Serie B",
+      "Season": "2021-22",
+      "matches": 380,
+      "avg_goals_per_game": 2.48
+    },
+    {
+      "League": "Serie B",
+      "Season": "2022-23",
+      "matches": 380,
+      "avg_goals_per_game": 2.34
+    },
+    {
+      "League": "Serie B",
+      "Season": "2023-24",
+      "matches": 380,
+      "avg_goals_per_game": 2.52
+    },
+    {
+      "League": "Serie B",
+      "Season": "2024-25",
+      "matches": 380,
+      "avg_goals_per_game": 2.46
+    }
+  ],
+  "predictability": {
+    "most_predictable_league": "Premier League",
+    "most_predictable_favorite_win_pct": 55.1,
+    "most_upsets_league": "Serie B",
+    "most_upsets_favorite_win_pct": 45.7,
+    "most_upsets_upset_pct": 54.3
+  },
+  "home_away_gap_by_team": {
+    "min_matches_threshold": 150,
+    "teams_qualifying": 222,
+    "biggest_home_fortress": [
+      {
+        "Team": "Catania",
+        "home_matches": 194,
+        "away_matches": 194,
+        "home_ppg": 1.76,
+        "away_ppg": 0.69,
+        "gap": 1.07
+      },
+      {
+        "Team": "Avellino",
+        "home_matches": 168,
+        "away_matches": 168,
+        "home_ppg": 1.58,
+        "away_ppg": 0.74,
+        "gap": 0.84
+      },
+      {
+        "Team": "Numancia",
+        "home_matches": 312,
+        "away_matches": 313,
+        "home_ppg": 1.75,
+        "away_ppg": 0.93,
+        "gap": 0.82
+      },
+      {
+        "Team": "Union Berlin",
+        "home_matches": 272,
+        "away_matches": 272,
+        "home_ppg": 1.82,
+        "away_ppg": 1.01,
+        "gap": 0.82
+      },
+      {
+        "Team": "Bastia",
+        "home_matches": 281,
+        "away_matches": 283,
+        "home_ppg": 1.72,
+        "away_ppg": 0.92,
+        "gap": 0.8
+      },
+      {
+        "Team": "Oviedo",
+        "home_matches": 210,
+        "away_matches": 210,
+        "home_ppg": 1.88,
+        "away_ppg": 1.07,
+        "gap": 0.8
+      },
+      {
+        "Team": "Mallorca",
+        "home_matches": 373,
+        "away_matches": 373,
+        "home_ppg": 1.66,
+        "away_ppg": 0.88,
+        "gap": 0.78
+      },
+      {
+        "Team": "Tenerife",
+        "home_matches": 375,
+        "away_matches": 375,
+        "home_ppg": 1.68,
+        "away_ppg": 0.91,
+        "gap": 0.76
+      },
+      {
+        "Team": "Almeria",
+        "home_matches": 404,
+        "away_matches": 404,
+        "home_ppg": 1.72,
+        "away_ppg": 0.98,
+        "gap": 0.74
+      },
+      {
+        "Team": "Crotone",
+        "home_matches": 302,
+        "away_matches": 302,
+        "home_ppg": 1.6,
+        "away_ppg": 0.86,
+        "gap": 0.74
+      }
+    ],
+    "biggest_away_specialists": [
+      {
+        "Team": "Ingolstadt",
+        "home_matches": 187,
+        "away_matches": 187,
+        "home_ppg": 1.21,
+        "away_ppg": 1.07,
+        "gap": 0.14
+      },
+      {
+        "Team": "Duisburg",
+        "home_matches": 187,
+        "away_matches": 187,
+        "home_ppg": 1.34,
+        "away_ppg": 1.14,
+        "gap": 0.2
+      },
+      {
+        "Team": "Leverkusen",
+        "home_matches": 340,
+        "away_matches": 340,
+        "home_ppg": 1.84,
+        "away_ppg": 1.61,
+        "gap": 0.22
+      },
+      {
+        "Team": "Sassuolo",
+        "home_matches": 333,
+        "away_matches": 333,
+        "home_ppg": 1.53,
+        "away_ppg": 1.29,
+        "gap": 0.24
+      },
+      {
+        "Team": "Cittadella",
+        "home_matches": 321,
+        "away_matches": 321,
+        "home_ppg": 1.42,
+        "away_ppg": 1.17,
+        "gap": 0.26
+      },
+      {
+        "Team": "Vicenza",
+        "home_matches": 269,
+        "away_matches": 269,
+        "home_ppg": 1.3,
+        "away_ppg": 1.04,
+        "gap": 0.26
+      },
+      {
+        "Team": "Werder Bremen",
+        "home_matches": 340,
+        "away_matches": 340,
+        "home_ppg": 1.52,
+        "away_ppg": 1.24,
+        "gap": 0.27
+      },
+      {
+        "Team": "FC Koln",
+        "home_matches": 340,
+        "away_matches": 340,
+        "home_ppg": 1.43,
+        "away_ppg": 1.15,
+        "gap": 0.29
+      },
+      {
+        "Team": "Wolves",
+        "home_matches": 397,
+        "away_matches": 397,
+        "home_ppg": 1.52,
+        "away_ppg": 1.22,
+        "gap": 0.3
+      },
+      {
+        "Team": "Cremonese",
+        "home_matches": 174,
+        "away_matches": 174,
+        "home_ppg": 1.44,
+        "away_ppg": 1.13,
+        "gap": 0.31
+      }
+    ]
+  },
+  "halftime_leads": {
+    "matches_with_ht_data": 78644,
+    "matches_with_a_ht_leader": 44639,
+    "lead_held_pct": 73.6,
+    "lead_drawn_pct": 18.5,
+    "lead_reversed_pct": 7.9,
+    "level_at_half_time": {
+      "matches": 34005,
+      "home_win_pct": 36.1,
+      "draw_pct": 39.6,
+      "away_win_pct": 24.3
+    }
+  },
+  "shots_on_target_vs_win": {
+    "matches_with_shot_data": 59359,
+    "overall": {
+      "away_more": {
+        "matches": 19960,
+        "home_win_pct": 21.2
+      },
+      "equal": {
+        "matches": 6688,
+        "home_win_pct": 36.5
+      },
+      "home_more": {
+        "matches": 32711,
+        "home_win_pct": 60.2
+      }
+    },
+    "by_league": [
+      {
+        "League": "2. Bundesliga",
+        "matches": 2754,
+        "home_win_pct_when_away_more": 21.0,
+        "n_away_more": 958,
+        "home_win_pct_when_equal": 35.7,
+        "n_equal": 305,
+        "home_win_pct_when_home_more": 58.4,
+        "n_home_more": 1491
+      },
+      {
+        "League": "Bundesliga",
+        "matches": 5813,
+        "home_win_pct_when_away_more": 21.0,
+        "n_away_more": 2034,
+        "home_win_pct_when_equal": 31.8,
+        "n_equal": 585,
+        "home_win_pct_when_home_more": 62.3,
+        "n_home_more": 3194
+      },
+      {
+        "League": "Championship",
+        "matches": 11039,
+        "home_win_pct_when_away_more": 23.2,
+        "n_away_more": 3611,
+        "home_win_pct_when_equal": 37.4,
+        "n_equal": 1301,
+        "home_win_pct_when_home_more": 56.8,
+        "n_home_more": 6127
+      },
+      {
+        "League": "La Liga",
+        "matches": 7600,
+        "home_win_pct_when_away_more": 20.7,
+        "n_away_more": 2453,
+        "home_win_pct_when_equal": 36.0,
+        "n_equal": 869,
+        "home_win_pct_when_home_more": 63.7,
+        "n_home_more": 4278
+      },
+      {
+        "League": "Ligue 1",
+        "matches": 7349,
+        "home_win_pct_when_away_more": 19.5,
+        "n_away_more": 2393,
+        "home_win_pct_when_equal": 40.3,
+        "n_equal": 856,
+        "home_win_pct_when_home_more": 59.8,
+        "n_home_more": 4100
+      },
+      {
+        "League": "Ligue 2",
+        "matches": 2862,
+        "home_win_pct_when_away_more": 21.2,
+        "n_away_more": 1013,
+        "home_win_pct_when_equal": 37.8,
+        "n_equal": 362,
+        "home_win_pct_when_home_more": 58.4,
+        "n_home_more": 1487
+      },
+      {
+        "League": "Premier League",
+        "matches": 7600,
+        "home_win_pct_when_away_more": 21.8,
+        "n_away_more": 2674,
+        "home_win_pct_when_equal": 36.5,
+        "n_equal": 699,
+        "home_win_pct_when_home_more": 62.4,
+        "n_home_more": 4227
+      },
+      {
+        "League": "Segunda Division",
+        "matches": 3675,
+        "home_win_pct_when_away_more": 22.6,
+        "n_away_more": 1174,
+        "home_win_pct_when_equal": 38.7,
+        "n_equal": 462,
+        "home_win_pct_when_home_more": 58.8,
+        "n_home_more": 2039
+      },
+      {
+        "League": "Serie A",
+        "matches": 7585,
+        "home_win_pct_when_away_more": 19.4,
+        "n_away_more": 2594,
+        "home_win_pct_when_equal": 33.7,
+        "n_equal": 810,
+        "home_win_pct_when_home_more": 62.2,
+        "n_home_more": 4181
+      },
+      {
+        "League": "Serie B",
+        "matches": 3082,
+        "home_win_pct_when_away_more": 21.5,
+        "n_away_more": 1056,
+        "home_win_pct_when_equal": 35.8,
+        "n_equal": 439,
+        "home_win_pct_when_home_more": 54.8,
+        "n_home_more": 1587
+      }
+    ]
+  },
+  "red_cards_vs_win": {
+    "matches_with_card_data": 59680,
+    "home_team_sole_red_card": {
+      "matches": 4238,
+      "still_won_pct": 22.9
+    },
+    "away_team_sole_red_card": {
+      "matches": 5854,
+      "still_won_pct": 14.0
+    },
+    "either_team_sole_red_card_combined": {
+      "matches": 10092,
+      "still_won_pct": 17.7
+    },
+    "no_red_card_baseline_home_win_pct": {
+      "matches": 48635,
+      "home_win_pct": 44.4
+    }
+  }
+}
