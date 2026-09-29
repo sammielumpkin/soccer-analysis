@@ -2,5 +2,9 @@
   "raw_rows": 78676,
   "dropped_unparseable_date": 0,
   "dropped_missing_score": 0,
-  "rows_kept": 78676
+  "rows_kept": 78676,
+  "team_names_trimmed": {
+    "'Kaiserslautern '": "Kaiserslautern",
+    "'Piacenza '": "Piacenza"
+  }
 }

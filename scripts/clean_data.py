@@ -10,7 +10,11 @@ Steps:
    fetch and parse quickly in the browser.
 4. Drop the Div column (the football-data.co.uk division code, e.g. "E0").
    The League and Country columns carry the same information in words.
-5. Write data/cleaning_log.json with the row counts, so analysis.py can
+5. Strip stray leading/trailing spaces from team names. "Kaiserslautern " and
+   "Piacenza " appear in the raw file next to "Kaiserslautern" and "Piacenza"
+   in the same season, which made the league table count one club twice.
+   Name changes are logged in data/cleaning_log.json.
+6. Write data/cleaning_log.json with the row counts, so analysis.py can
    report them in data/findings.json.
 """
 import json
@@ -40,6 +44,14 @@ drop_mask = missing_date | missing_score
 kept = df.loc[~drop_mask].copy()
 kept = kept.drop(columns=["Div"])
 
+# --- Standardize team names: trim stray whitespace ---
+renamed = {}
+for col in ["HomeTeam", "AwayTeam"]:
+    trimmed = kept[col].str.strip()
+    for old in sorted(set(kept.loc[kept[col] != trimmed, col])):
+        renamed[old] = old.strip()
+    kept[col] = trimmed
+
 # --- Compact number formatting: whole-number stat columns as nullable Int64 ---
 for col in INT_COLS:
     if col in kept.columns:
@@ -67,11 +79,13 @@ with open("data/cleaning_log.json", "w") as f:
         "dropped_unparseable_date": n_missing_date,
         "dropped_missing_score": n_missing_score,
         "rows_kept": end_rows,
+        "team_names_trimmed": {repr(k): v for k, v in renamed.items()},
     }, f, indent=2)
 
 print(f"Start rows:              {start_rows:,}")
 print(f"Dropped - unparseable date: {n_missing_date:,}")
 print(f"Dropped - missing score:    {n_missing_score:,}")
 print(f"Rows kept:                {end_rows:,}")
+print(f"Team names trimmed:      {list(renamed.values())}")
 print(f"\n{RAW_PATH}: {raw_size / 1_000_000:.2f} MB")
 print(f"{OUT_PATH}: {out_size / 1_000_000:.2f} MB")

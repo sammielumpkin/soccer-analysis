@@ -39,7 +39,7 @@ Some statistics are only recorded for some leagues and seasons, so those columns
 | --- | --- |
 | `data/matches_raw.csv` | The combined download from football-data.co.uk, exactly as `download_data.py` saved it (78,676 rows, 28 columns). |
 | `data/matches.csv` | The cleaned file the dashboard reads and `analysis.py` analyzes (78,676 rows, 27 columns). Dates are ISO format, whole-number columns are integers, and the `Div` column is removed because `League` and `Country` carry the same information. |
-| `data/cleaning_log.json` | Row counts from the cleaning step: raw rows, rows dropped for a bad date, rows dropped for a missing score, rows kept. Written by `clean_data.py`, read by `analysis.py`. |
+| `data/cleaning_log.json` | Row counts from the cleaning step: raw rows, rows dropped for a bad date, rows dropped for a missing score, rows kept, and the team names that were trimmed. Written by `clean_data.py`, read by `analysis.py`. |
 | `data/findings.json` | Every number in the report, computed by `analysis.py`. `script.js` reads this file to build the report. |
 
 ### Scripts
@@ -50,7 +50,7 @@ Run these from the repository root, in this order, to rebuild the data from scra
 | --- | --- |
 | `scripts/download_data.py` | Downloads the 10 leagues x 20 seasons of results from football-data.co.uk and saves them as `data/matches_raw.csv`. |
 | `scripts/check_requirements.py` | Prints the row count, column count, number of seasons, number of teams and missing values per column, to confirm the data meets the project requirements. |
-| `scripts/clean_data.py` | Turns `matches_raw.csv` into `matches.csv`: parses the mixed date formats, drops rows with no valid date or final score (none were found), stores whole-number columns as integers, drops `Div`, and writes `cleaning_log.json`. |
+| `scripts/clean_data.py` | Turns `matches_raw.csv` into `matches.csv`: parses the mixed date formats, drops rows with no valid date or final score (none were found), stores whole-number columns as integers, drops `Div`, trims stray spaces from team names (Kaiserslautern, Piacenza), and writes `cleaning_log.json`. |
 | `scripts/analysis.py` | Computes the league overview (matches and teams per season for each league, saved as `league_overview`; the division level is the only value typed by hand) and every finding (home advantage, favorites, odds calibration, underdog bets, goals, scores, half-time swings, shots, red cards, upsets) and saves them to `data/findings.json`. |
 | `scripts/verify_findings.py` | Recomputes the headline findings from `matches.csv` using different pandas techniques than `analysis.py` and checks that they match `findings.json`. |
 

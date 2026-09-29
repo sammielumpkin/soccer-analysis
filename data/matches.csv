@@ -8569,7 +8569,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2007-09-23,Granada 74,Alaves,2,2,D,0,1,A,,,,,,,,,,,,,2.0,3.1,3.7,2007-08,Spain,Segunda Division
 2007-09-23,Ferrol,Xerez,1,2,A,0,2,A,,,,,,,,,,,,,1.9,3.1,4.0,2007-08,Spain,Segunda Division
 2007-09-23,Celta,Las Palmas,2,0,H,0,0,D,,,,,,,,,,,,,1.61,3.4,5.5,2007-08,Spain,Segunda Division
-2007-09-23,Freiburg,Kaiserslautern ,1,0,H,0,0,D,,,,,,,,,,,,,1.9,3.2,3.6,2007-08,Germany,2. Bundesliga
+2007-09-23,Freiburg,Kaiserslautern,1,0,H,0,0,D,,,,,,,,,,,,,1.9,3.2,3.6,2007-08,Germany,2. Bundesliga
 2007-09-23,Koblenz,FC Koln,1,2,A,1,1,D,,,,,,,,,,,,,2.87,3.2,2.25,2007-08,Germany,2. Bundesliga
 2007-09-23,Offenbach,Mainz,2,0,H,1,0,H,,,,,,,,,,,,,2.75,3.2,2.3,2007-08,Germany,2. Bundesliga
 2007-09-23,Betis,Valencia,1,2,A,0,0,D,15,17,1,4,10,5,21,13,2,0,0,0,3.0,3.25,2.37,2007-08,Spain,La Liga
@@ -8726,7 +8726,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2007-09-30,Villarreal,Ath Bilbao,1,0,H,0,0,D,17,12,7,5,4,8,18,15,4,1,0,0,1.61,3.6,6.0,2007-08,Spain,La Liga
 2007-09-30,Hannover,Duisburg,2,1,H,1,1,D,16,8,4,2,8,6,20,17,2,4,0,0,1.72,3.5,5.0,2007-08,Germany,Bundesliga
 2007-09-30,Cottbus,Ein Frankfurt,2,2,D,2,0,H,16,17,7,9,4,3,27,15,1,3,0,0,2.8,3.25,2.5,2007-08,Germany,Bundesliga
-2007-10-01,Offenbach,Kaiserslautern ,0,0,D,0,0,D,,,,,,,,,,,,,2.05,3.3,3.25,2007-08,Germany,2. Bundesliga
+2007-10-01,Offenbach,Kaiserslautern,0,0,D,0,0,D,,,,,,,,,,,,,2.05,3.3,3.25,2007-08,Germany,2. Bundesliga
 2007-10-01,Tottenham,Aston Villa,4,4,D,1,3,A,19,7,12,7,13,3,10,13,2,3,0,0,1.9,3.25,4.33,2007-08,England,Premier League
 2007-10-01,Grenoble,Nantes,0,3,A,0,2,A,,,,,,,,,,,,,2.62,2.8,2.62,2007-08,France,Ligue 2
 2007-10-02,Leicester,Wolves,0,0,D,0,0,D,9,9,3,4,5,5,3,8,0,0,0,0,2.4,3.25,2.9,2007-08,England,Championship
@@ -8874,7 +8874,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2007-10-14,Cordoba,Salamanca,1,1,D,0,0,D,,,,,,,,,,,,,1.83,3.1,4.33,2007-08,Spain,Segunda Division
 2007-10-14,Castellon,Tenerife,1,1,D,0,1,A,,,,,,,,,,,,,1.9,3.2,4.0,2007-08,Spain,Segunda Division
 2007-10-14,Albinoleffe,Pisa,2,3,A,0,1,A,,,,,,,,,,,,,2.0,2.8,4.0,2007-08,Italy,Serie B
-2007-10-19,Hoffenheim,Kaiserslautern ,1,0,H,0,0,D,,,,,,,,,,,,,1.75,3.7,4.5,2007-08,Germany,2. Bundesliga
+2007-10-19,Hoffenheim,Kaiserslautern,1,0,H,0,0,D,,,,,,,,,,,,,1.75,3.7,4.5,2007-08,Germany,2. Bundesliga
 2007-10-19,Nantes,Troyes,2,0,H,1,0,H,,,,,,,,,,,,,1.65,3.0,4.33,2007-08,France,Ligue 2
 2007-10-19,Osnabruck,Aachen,2,2,D,1,2,A,,,,,,,,,,,,,3.2,3.25,2.25,2007-08,Germany,2. Bundesliga
 2007-10-19,Bastia,Boulogne,4,0,H,2,0,H,,,,,,,,,,,,,1.61,3.2,5.75,2007-08,France,Ligue 2
@@ -9200,7 +9200,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2007-11-04,Cagliari,Sampdoria,0,3,A,0,3,A,10,8,1,4,7,1,20,32,2,3,0,1,2.35,3.0,3.25,2007-08,Italy,Serie A
 2007-11-04,Ath Madrid,Villarreal,3,4,A,2,2,D,13,9,6,4,7,4,18,21,5,1,0,0,2.05,3.3,3.6,2007-08,Spain,La Liga
 2007-11-04,Ath Bilbao,Recreativo,2,0,H,0,0,D,14,12,5,2,2,8,15,27,3,4,0,0,2.0,3.3,3.8,2007-08,Spain,La Liga
-2007-11-04,Augsburg,Kaiserslautern ,0,0,D,0,0,D,,,,,,,,,,,,,2.15,3.2,3.1,2007-08,Germany,2. Bundesliga
+2007-11-04,Augsburg,Kaiserslautern,0,0,D,0,0,D,,,,,,,,,,,,,2.15,3.2,3.1,2007-08,Germany,2. Bundesliga
 2007-11-04,Bochum,Wolfsburg,5,3,H,4,0,H,16,18,8,7,4,5,16,20,4,2,0,0,2.4,3.3,2.87,2007-08,Germany,Bundesliga
 2007-11-04,West Ham,Bolton,1,1,D,1,0,H,9,11,7,6,8,3,13,13,2,1,0,0,1.9,3.3,4.33,2007-08,England,Premier League
 2007-11-04,Salamanca,Poli Ejido,4,1,H,2,1,H,,,,,,,,,,,,,2.0,3.1,3.5,2007-08,Spain,Segunda Division
@@ -9304,7 +9304,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2007-11-10,Wolves,Barnsley,1,0,H,1,0,H,15,6,8,3,10,7,13,12,1,0,0,0,1.66,3.5,5.5,2007-08,England,Championship
 2007-11-11,Tottenham,Wigan,4,0,H,3,0,H,19,6,8,2,5,2,8,16,0,2,0,0,1.44,4.2,8.0,2007-08,England,Premier League
 2007-11-11,Lorient,Toulouse,1,0,H,0,0,D,12,14,3,1,7,4,13,17,0,2,0,0,2.25,3.0,3.5,2007-08,France,Ligue 1
-2007-11-11,Aachen,Kaiserslautern ,2,1,H,1,0,H,,,,,,,,,,,,,1.72,3.6,4.75,2007-08,Germany,2. Bundesliga
+2007-11-11,Aachen,Kaiserslautern,2,1,H,1,0,H,,,,,,,,,,,,,1.72,3.6,4.75,2007-08,Germany,2. Bundesliga
 2007-11-11,CZ Jena,Hoffenheim,0,1,A,0,0,D,,,,,,,,,,,,,3.4,3.3,2.05,2007-08,Germany,2. Bundesliga
 2007-11-11,Portsmouth,Man City,0,0,D,0,0,D,20,10,12,5,9,1,11,7,1,1,0,0,2.0,3.4,3.8,2007-08,England,Premier League
 2007-11-11,St Pauli,Augsburg,2,0,H,1,0,H,,,,,,,,,,,,,2.05,3.3,3.3,2007-08,Germany,2. Bundesliga
@@ -9462,7 +9462,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2007-11-28,Blackburn,Aston Villa,0,4,A,0,1,A,16,7,10,7,11,2,11,16,0,1,1,0,2.2,3.25,3.4,2007-08,England,Premier League
 2007-11-30,Boulogne,Troyes,1,2,A,0,0,D,,,,,,,,,,,,,2.8,2.87,2.45,2007-08,France,Ligue 2
 2007-11-30,Hansa Rostock,Hannover,0,3,A,0,0,D,17,19,5,10,6,7,12,20,1,1,0,0,2.75,3.3,2.5,2007-08,Germany,Bundesliga
-2007-11-30,St Pauli,Kaiserslautern ,3,4,A,2,3,A,,,,,,,,,,,,,2.25,3.3,3.2,2007-08,Germany,2. Bundesliga
+2007-11-30,St Pauli,Kaiserslautern,3,4,A,2,3,A,,,,,,,,,,,,,2.25,3.3,3.2,2007-08,Germany,2. Bundesliga
 2007-11-30,Wehen,M'gladbach,1,1,D,1,0,H,,,,,,,,,,,,,4.0,3.4,1.9,2007-08,Germany,2. Bundesliga
 2007-11-30,Sedan,Clermont,2,2,D,1,1,D,,,,,,,,,,,,,1.9,3.0,4.0,2007-08,France,Ligue 2
 2007-11-30,Reims,Le Havre,3,3,D,2,1,H,,,,,,,,,,,,,3.2,2.8,2.2,2007-08,France,Ligue 2
@@ -9768,7 +9768,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2007-12-16,Castellon,Xerez,1,0,H,0,0,D,,,,,,,,,,,,,2.0,3.0,3.75,2007-08,Spain,Segunda Division
 2007-12-16,Torino,Roma,0,0,D,0,0,D,17,19,4,2,6,4,20,12,3,2,1,0,4.75,3.2,1.83,2007-08,Italy,Serie A
 2007-12-16,Hansa Rostock,Bochum,2,0,H,2,0,H,25,10,7,3,9,3,16,19,1,2,0,0,2.4,3.3,2.9,2007-08,Germany,Bundesliga
-2007-12-17,FC Koln,Kaiserslautern ,2,1,H,1,1,D,,,,,,,,,,,,,1.57,3.75,6.0,2007-08,Germany,2. Bundesliga
+2007-12-17,FC Koln,Kaiserslautern,2,1,H,1,1,D,,,,,,,,,,,,,1.57,3.75,6.0,2007-08,Germany,2. Bundesliga
 2007-12-22,Albinoleffe,Ascoli,0,0,D,0,0,D,,,,,,,,,,,,,1.8,3.0,4.5,2007-08,Italy,Serie B
 2007-12-22,Las Palmas,Hercules,0,0,D,0,0,D,,,,,,,,,,,,,2.62,2.9,2.62,2007-08,Spain,Segunda Division
 2007-12-22,Gimnastic,Cadiz,0,1,A,0,0,D,,,,,,,,,,,,,2.15,3.0,3.3,2007-08,Spain,Segunda Division
@@ -10159,7 +10159,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-01-30,Reggina,Milan,0,1,A,0,1,A,7,27,2,5,2,9,15,16,2,2,0,0,6.5,3.6,1.57,2007-08,Italy,Serie A
 2008-02-01,Le Havre,Clermont,1,0,H,0,0,D,,,,,,,,,,,,,1.8,2.8,4.75,2007-08,France,Ligue 2
 2008-02-01,Wehen,Hoffenheim,0,2,A,0,2,A,,,,,,,,,,,,,2.75,3.3,2.5,2007-08,Germany,2. Bundesliga
-2008-02-01,M'gladbach,Kaiserslautern ,1,1,D,1,0,H,,,,,,,,,,,,,1.5,4.0,7.0,2007-08,Germany,2. Bundesliga
+2008-02-01,M'gladbach,Kaiserslautern,1,1,D,1,0,H,,,,,,,,,,,,,1.5,4.0,7.0,2007-08,Germany,2. Bundesliga
 2008-02-01,FC Koln,St Pauli,1,1,D,0,1,A,,,,,,,,,,,,,1.53,3.8,6.5,2007-08,Germany,2. Bundesliga
 2008-02-01,Hansa Rostock,Bayern Munich,1,2,A,0,2,A,9,17,3,6,5,8,22,23,3,2,0,0,7.5,4.2,1.44,2007-08,Germany,Bundesliga
 2008-02-02,Palermo,Livorno,1,0,H,0,0,D,28,11,6,4,10,4,15,23,1,3,0,0,1.66,3.4,6.0,2007-08,Italy,Serie A
@@ -10439,7 +10439,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-02-17,Ath Madrid,Ath Bilbao,1,2,A,1,2,A,14,13,3,5,2,5,18,22,4,2,1,0,1.61,3.75,5.5,2007-08,Spain,La Liga
 2008-02-17,Almeria,Murcia,1,0,H,1,0,H,10,12,3,3,6,7,33,17,6,4,0,0,1.9,3.4,4.0,2007-08,Spain,La Liga
 2008-02-17,Freiburg,Augsburg,1,0,H,1,0,H,,,,,,,,,,,,,1.85,3.3,3.6,2007-08,Germany,2. Bundesliga
-2008-02-17,Greuther Furth,Kaiserslautern ,0,1,A,0,0,D,,,,,,,,,,,,,1.7,3.3,4.75,2007-08,Germany,2. Bundesliga
+2008-02-17,Greuther Furth,Kaiserslautern,0,1,A,0,0,D,,,,,,,,,,,,,1.7,3.3,4.75,2007-08,Germany,2. Bundesliga
 2008-02-17,Villarreal,Santander,0,0,D,0,0,D,12,18,1,1,9,7,12,15,1,3,0,0,1.83,3.5,4.33,2007-08,Spain,La Liga
 2008-02-17,Munich 1860,Hoffenheim,0,1,A,0,1,A,,,,,,,,,,,,,2.2,3.2,2.87,2007-08,Germany,2. Bundesliga
 2008-02-17,Cadiz,Alaves,2,0,H,1,0,H,,,,,,,,,,,,,2.0,3.1,3.75,2007-08,Spain,Segunda Division
@@ -10641,7 +10641,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-03-02,Cadiz,Castellon,1,1,D,1,0,H,,,,,,,,,,,,,2.15,3.0,3.3,2007-08,Spain,Segunda Division
 2008-03-02,St Etienne,Nice,0,0,D,0,0,D,20,5,8,2,6,1,16,19,2,2,0,0,2.0,3.2,4.0,2007-08,France,Ligue 1
 2008-03-02,QPR,Stoke,3,0,H,2,0,H,12,8,10,6,2,9,12,8,1,1,0,1,2.62,3.3,2.6,2007-08,England,Championship
-2008-03-02,Paderborn,Kaiserslautern ,0,0,D,0,0,D,,,,,,,,,,,,,2.55,3.3,2.45,2007-08,Germany,2. Bundesliga
+2008-03-02,Paderborn,Kaiserslautern,0,0,D,0,0,D,,,,,,,,,,,,,2.55,3.3,2.45,2007-08,Germany,2. Bundesliga
 2008-03-02,Almeria,Ath Bilbao,1,1,D,0,0,D,12,14,2,6,8,7,25,21,4,7,0,0,2.2,3.25,3.25,2007-08,Spain,La Liga
 2008-03-02,Osnabruck,Hoffenheim,0,3,A,0,2,A,,,,,,,,,,,,,3.0,3.2,2.2,2007-08,Germany,2. Bundesliga
 2008-03-02,Getafe,Mallorca,3,3,D,2,1,H,13,11,6,8,2,5,25,20,2,0,0,1,2.05,3.4,3.5,2007-08,Spain,La Liga
@@ -10795,7 +10795,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-03-12,Aston Villa,Middlesbrough,1,1,D,0,1,A,5,10,3,2,4,4,15,21,0,4,0,0,1.61,3.75,6.0,2007-08,England,Premier League
 2008-03-14,Ajaccio,Chateauroux,0,1,A,0,1,A,,,,,,,,,,,,,1.95,3.0,3.75,2007-08,France,Ligue 2
 2008-03-14,Paderborn,Aachen,0,1,A,0,1,A,,,,,,,,,,,,,3.1,3.3,2.3,2007-08,Germany,2. Bundesliga
-2008-03-14,Wehen,Kaiserslautern ,0,2,A,0,2,A,,,,,,,,,,,,,2.1,3.3,3.4,2007-08,Germany,2. Bundesliga
+2008-03-14,Wehen,Kaiserslautern,0,2,A,0,2,A,,,,,,,,,,,,,2.1,3.3,3.4,2007-08,Germany,2. Bundesliga
 2008-03-14,Boulogne,Clermont,1,2,A,1,1,D,,,,,,,,,,,,,2.55,2.8,2.62,2007-08,France,Ligue 2
 2008-03-14,Angers,Sedan,1,1,D,0,1,A,,,,,,,,,,,,,2.4,2.9,2.75,2007-08,France,Ligue 2
 2008-03-14,Troyes,Brest,1,3,A,0,1,A,,,,,,,,,,,,,1.53,3.2,6.5,2007-08,France,Ligue 2
@@ -11120,7 +11120,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-03-30,Munich 1860,CZ Jena,1,2,A,0,0,D,,,,,,,,,,,,,1.72,3.4,4.5,2007-08,Germany,2. Bundesliga
 2008-03-31,Monaco,Rennes,1,2,A,1,1,D,16,8,8,3,8,3,21,22,3,2,0,0,2.15,3.1,3.6,2007-08,France,Ligue 1
 2008-03-31,Troyes,Nantes,0,2,A,0,0,D,,,,,,,,,,,,,2.4,2.8,2.87,2007-08,France,Ligue 2
-2008-03-31,Osnabruck,Kaiserslautern ,2,0,H,0,0,D,,,,,,,,,,,,,2.62,3.3,2.55,2007-08,Germany,2. Bundesliga
+2008-03-31,Osnabruck,Kaiserslautern,2,0,H,0,0,D,,,,,,,,,,,,,2.62,3.3,2.55,2007-08,Germany,2. Bundesliga
 2008-04-01,Sheffield Weds,Coventry,1,1,D,0,0,D,15,7,4,3,7,5,10,8,1,1,0,0,2.2,3.25,3.0,2007-08,England,Championship
 2008-04-01,Reims,Bastia,1,2,A,1,2,A,,,,,,,,,,,,,2.5,2.9,2.63,2007-08,France,Ligue 2
 2008-04-01,Cardiff,West Brom,0,0,D,0,0,D,12,13,6,8,5,5,9,9,0,1,0,0,2.6,3.25,2.5,2007-08,England,Championship
@@ -11239,7 +11239,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-04-11,Troyes,Gueugnon,2,2,D,2,0,H,,,,,,,,,,,,,1.3,4.0,9.5,2007-08,France,Ligue 2
 2008-04-11,Sedan,Brest,2,0,H,1,0,H,,,,,,,,,,,,,1.85,2.87,4.33,2007-08,France,Ligue 2
 2008-04-11,Guingamp,Le Havre,1,1,D,1,0,H,,,,,,,,,,,,,2.75,2.75,2.55,2007-08,France,Ligue 2
-2008-04-11,Erzgebirge Aue,Kaiserslautern ,0,0,D,0,0,D,,,,,,,,,,,,,2.37,3.2,2.75,2007-08,Germany,2. Bundesliga
+2008-04-11,Erzgebirge Aue,Kaiserslautern,0,0,D,0,0,D,,,,,,,,,,,,,2.37,3.2,2.75,2007-08,Germany,2. Bundesliga
 2008-04-11,Osnabruck,Koblenz,2,0,H,1,0,H,,,,,,,,,,,,,2.25,3.25,3.2,2007-08,Germany,2. Bundesliga
 2008-04-11,Augsburg,Mainz,2,1,H,1,1,D,,,,,,,,,,,,,2.8,3.2,2.37,2007-08,Germany,2. Bundesliga
 2008-04-11,Paderborn,FC Koln,2,2,D,1,1,D,,,,,,,,,,,,,5.0,3.5,1.72,2007-08,Germany,2. Bundesliga
@@ -11550,7 +11550,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-04-28,Freiburg,Greuther Furth,3,2,H,1,1,D,,,,,,,,,,,,,1.95,3.2,3.5,2007-08,Germany,2. Bundesliga
 2008-04-28,Derby,Arsenal,2,6,A,1,2,A,12,20,10,11,5,6,6,7,0,0,0,0,13.0,5.5,1.25,2007-08,England,Premier League
 2008-05-02,Guingamp,Gueugnon,0,1,A,0,1,A,,,,,,,,,,,,,1.5,3.4,6.5,2007-08,France,Ligue 2
-2008-05-02,Mainz,Kaiserslautern ,2,1,H,1,1,D,,,,,,,,,,,,,1.7,3.6,5.0,2007-08,Germany,2. Bundesliga
+2008-05-02,Mainz,Kaiserslautern,2,1,H,1,1,D,,,,,,,,,,,,,1.7,3.6,5.0,2007-08,Germany,2. Bundesliga
 2008-05-02,Greuther Furth,Paderborn,1,1,D,0,0,D,,,,,,,,,,,,,1.55,3.8,6.5,2007-08,Germany,2. Bundesliga
 2008-05-02,CZ Jena,Osnabruck,1,1,D,0,0,D,,,,,,,,,,,,,2.15,3.4,3.3,2007-08,Germany,2. Bundesliga
 2008-05-02,Montpellier,Le Havre,0,0,D,0,0,D,,,,,,,,,,,,,3.0,2.7,2.45,2007-08,France,Ligue 2
@@ -11735,7 +11735,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-05-11,Koblenz,Erzgebirge Aue,2,2,D,0,0,D,,,,,,,,,,,,,1.55,3.8,5.25,2007-08,Germany,2. Bundesliga
 2008-05-11,Greuther Furth,Augsburg,3,2,H,1,0,H,,,,,,,,,,,,,2.25,3.25,2.87,2007-08,Germany,2. Bundesliga
 2008-05-11,FC Koln,Mainz,2,0,H,1,0,H,,,,,,,,,,,,,1.9,3.25,3.8,2007-08,Germany,2. Bundesliga
-2008-05-11,CZ Jena,Kaiserslautern ,2,2,D,1,0,H,,,,,,,,,,,,,5.5,3.8,1.53,2007-08,Germany,2. Bundesliga
+2008-05-11,CZ Jena,Kaiserslautern,2,2,D,1,0,H,,,,,,,,,,,,,5.5,3.8,1.53,2007-08,Germany,2. Bundesliga
 2008-05-11,Portsmouth,Fulham,0,1,A,0,0,D,15,7,10,4,5,6,13,11,0,0,0,0,3.3,3.6,2.1,2007-08,England,Premier League
 2008-05-11,Sunderland,Arsenal,0,1,A,0,1,A,13,12,5,8,3,4,14,12,1,1,0,0,4.33,3.75,1.8,2007-08,England,Premier League
 2008-05-11,Tottenham,Liverpool,0,2,A,0,0,D,6,18,3,12,8,4,11,9,1,1,0,0,2.62,3.4,2.62,2007-08,England,Premier League
@@ -11967,7 +11967,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-08-15,Tours,Vannes,1,0,H,0,0,D,,,,,,,,,,,,,2.15,2.88,3.3,2008-09,France,Ligue 2
 2008-08-15,Troyes,Brest,1,0,H,1,0,H,,,,,,,,,,,,,1.91,2.9,4.2,2008-09,France,Ligue 2
 2008-08-15,Bayern Munich,Hamburg,2,2,D,2,1,H,16,13,3,3,2,2,16,26,1,4,0,0,1.57,3.8,6.0,2008-09,Germany,Bundesliga
-2008-08-15,Mainz,Kaiserslautern ,3,3,D,3,0,H,,,,,,,,,,,,,1.91,3.4,4.2,2008-09,Germany,2. Bundesliga
+2008-08-15,Mainz,Kaiserslautern,3,3,D,3,0,H,,,,,,,,,,,,,1.91,3.4,4.2,2008-09,Germany,2. Bundesliga
 2008-08-15,St Pauli,Osnabruck,2,2,D,2,1,H,,,,,,,,,,,,,1.91,3.4,4.0,2008-09,Germany,2. Bundesliga
 2008-08-15,Guingamp,Reims,0,2,A,0,1,A,,,,,,,,,,,,,1.85,3.1,4.0,2008-09,France,Ligue 2
 2008-08-16,Norwich,Blackpool,1,1,D,0,0,D,14,3,5,2,12,0,9,13,1,4,0,0,1.91,3.4,4.0,2008-09,England,Championship
@@ -12087,7 +12087,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-08-29,Amiens,Reims,2,0,H,0,0,D,,,,,,,,,,,,,1.91,3.1,3.8,2008-09,France,Ligue 2
 2008-08-29,Ajaccio,Vannes,4,0,H,2,0,H,,,,,,,,,,,,,1.91,3.0,3.8,2008-09,France,Ligue 2
 2008-08-29,Troyes,Nimes,0,1,A,0,1,A,,,,,,,,,,,,,1.57,3.2,6.0,2008-09,France,Ligue 2
-2008-08-29,Ingolstadt,Kaiserslautern ,1,3,A,1,0,H,,,,,,,,,,,,,2.75,3.3,2.5,2008-09,Germany,2. Bundesliga
+2008-08-29,Ingolstadt,Kaiserslautern,1,3,A,1,0,H,,,,,,,,,,,,,2.75,3.3,2.5,2008-09,Germany,2. Bundesliga
 2008-08-29,Mainz,Osnabruck,4,2,H,2,1,H,,,,,,,,,,,,,1.44,4.2,7.5,2008-09,Germany,2. Bundesliga
 2008-08-29,Parma,Rimini,1,1,D,1,1,D,,,,,,,,,,,,,1.5,3.25,7.5,2008-09,Italy,Serie B
 2008-08-29,Duisburg,Augsburg,2,0,H,1,0,H,,,,,,,,,,,,,1.67,3.6,5.5,2008-09,Germany,2. Bundesliga
@@ -12413,7 +12413,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-09-21,Hull,Everton,2,2,D,1,0,H,9,17,5,8,4,6,11,12,0,1,0,0,3.1,3.4,2.3,2008-09,England,Premier League
 2008-09-21,Nancy,Rennes,0,0,D,0,0,D,7,12,1,3,2,6,15,15,1,1,0,1,2.1,2.9,4.0,2008-09,France,Ligue 1
 2008-09-21,Xerez,Cordoba,0,1,A,0,1,A,,,,,,,,,,,,,1.73,3.3,4.75,2008-09,Spain,Segunda Division
-2008-09-22,Greuther Furth,Kaiserslautern ,0,1,A,0,0,D,,,,,,,,,,,,,2.45,3.25,2.88,2008-09,Germany,2. Bundesliga
+2008-09-22,Greuther Furth,Kaiserslautern,0,1,A,0,0,D,,,,,,,,,,,,,2.45,3.25,2.88,2008-09,Germany,2. Bundesliga
 2008-09-23,Ancona,Brescia,2,0,H,1,0,H,,,,,,,,,,,,,3.0,2.9,2.38,2008-09,Italy,Serie B
 2008-09-23,Empoli,Modena,3,1,H,1,1,D,,,,,,,,,,,,,1.45,3.4,8.5,2008-09,Italy,Serie B
 2008-09-23,Sassuolo,Albinoleffe,1,0,H,0,0,D,,,,,,,,,,,,,2.38,2.8,3.1,2008-09,Italy,Serie B
@@ -12633,7 +12633,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-10-05,St Etienne,Monaco,2,0,H,1,0,H,13,10,6,2,2,8,9,16,0,1,0,0,2.0,3.2,4.0,2008-09,France,Ligue 1
 2008-10-05,Rennes,Lyon,3,0,H,1,0,H,12,9,4,2,4,3,9,12,0,1,0,0,3.4,3.2,2.2,2008-09,France,Ligue 1
 2008-10-05,Nancy,Paris SG,1,1,D,1,1,D,13,13,4,6,8,5,14,12,1,1,0,0,2.38,3.0,3.2,2008-09,France,Ligue 1
-2008-10-05,Koblenz,Kaiserslautern ,5,0,H,2,0,H,,,,,,,,,,,,,3.0,3.25,2.2,2008-09,Germany,2. Bundesliga
+2008-10-05,Koblenz,Kaiserslautern,5,0,H,2,0,H,,,,,,,,,,,,,3.0,3.25,2.2,2008-09,Germany,2. Bundesliga
 2008-10-05,St Pauli,Aachen,3,2,H,2,1,H,,,,,,,,,,,,,2.3,3.25,2.8,2008-09,Germany,2. Bundesliga
 2008-10-05,Ingolstadt,Hansa Rostock,4,2,H,1,1,D,,,,,,,,,,,,,2.75,3.25,2.38,2008-09,Germany,2. Bundesliga
 2008-10-05,Cagliari,Milan,0,0,D,0,0,D,12,15,4,4,5,5,28,16,3,3,0,0,8.0,4.0,1.44,2008-09,Italy,Serie A
@@ -12891,7 +12891,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-10-26,Chelsea,Liverpool,0,1,A,0,1,A,14,8,5,3,4,2,17,13,3,3,0,0,1.91,3.25,4.5,2008-09,England,Premier League
 2008-10-26,Koblenz,Nurnberg,1,1,D,0,1,A,,,,,,,,,,,,,3.25,3.3,2.2,2008-09,Germany,2. Bundesliga
 2008-10-26,Mainz,Duisburg,0,0,D,0,0,D,,,,,,,,,,,,,1.85,3.4,4.33,2008-09,Germany,2. Bundesliga
-2008-10-26,Oberhausen,Kaiserslautern ,2,1,H,1,1,D,,,,,,,,,,,,,4.0,3.3,1.95,2008-09,Germany,2. Bundesliga
+2008-10-26,Oberhausen,Kaiserslautern,2,1,H,1,1,D,,,,,,,,,,,,,4.0,3.3,1.95,2008-09,Germany,2. Bundesliga
 2008-10-26,Atalanta,Milan,0,1,A,0,0,D,14,6,6,1,2,0,21,26,3,4,0,0,4.75,3.25,1.83,2008-09,Italy,Serie A
 2008-10-26,Cagliari,Chievo,2,0,H,1,0,H,6,4,4,0,5,4,24,21,3,4,0,0,2.1,3.0,4.0,2008-09,Italy,Serie A
 2008-10-26,Tottenham,Bolton,2,0,H,1,0,H,19,10,9,3,3,4,9,16,0,3,0,1,2.05,3.3,4.0,2008-09,England,Premier League
@@ -13089,7 +13089,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-11-07,Clermont,Metz,1,0,H,1,0,H,,,,,,,,,,,,,3.0,2.88,2.6,2008-09,France,Ligue 2
 2008-11-07,Nimes,Reims,2,2,D,0,1,A,,,,,,,,,,,,,2.3,3.1,3.25,2008-09,France,Ligue 2
 2008-11-07,Strasbourg,Tours,4,0,H,2,0,H,,,,,,,,,,,,,1.57,3.5,7.0,2008-09,France,Ligue 2
-2008-11-07,Wehen,Kaiserslautern ,4,2,H,0,0,D,,,,,,,,,,,,,4.0,3.4,1.91,2008-09,Germany,2. Bundesliga
+2008-11-07,Wehen,Kaiserslautern,4,2,H,0,0,D,,,,,,,,,,,,,4.0,3.4,1.91,2008-09,Germany,2. Bundesliga
 2008-11-07,Vannes,Dijon,1,1,D,0,1,A,,,,,,,,,,,,,2.1,3.0,4.0,2008-09,France,Ligue 2
 2008-11-07,Nurnberg,Frankfurt FSV,0,0,D,0,0,D,,,,,,,,,,,,,1.36,4.5,9.0,2008-09,Germany,2. Bundesliga
 2008-11-07,Aachen,Koblenz,2,0,H,2,0,H,,,,,,,,,,,,,1.53,4.0,6.5,2008-09,Germany,2. Bundesliga
@@ -13345,7 +13345,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-11-22,Chelsea,Newcastle,0,0,D,0,0,D,25,2,14,0,8,1,12,13,0,2,0,0,1.2,6.0,19.0,2008-09,England,Premier League
 2008-11-23,Hamburg,Werder Bremen,2,1,H,1,1,D,13,17,6,7,3,6,20,21,3,2,0,0,2.38,3.4,2.88,2008-09,Germany,Bundesliga
 2008-11-23,Sunderland,West Ham,0,1,A,0,1,A,17,10,6,5,4,2,13,16,2,1,0,0,2.1,3.4,3.5,2008-09,England,Premier League
-2008-11-23,Augsburg,Kaiserslautern ,1,0,H,1,0,H,,,,,,,,,,,,,3.0,3.2,2.4,2008-09,Germany,2. Bundesliga
+2008-11-23,Augsburg,Kaiserslautern,1,0,H,1,0,H,,,,,,,,,,,,,3.0,3.2,2.4,2008-09,Germany,2. Bundesliga
 2008-11-23,Napoli,Cagliari,2,2,D,1,0,H,13,11,6,4,5,2,23,19,3,4,0,0,1.57,3.6,6.5,2008-09,Italy,Serie A
 2008-11-23,Mainz,St Pauli,2,2,D,0,1,A,,,,,,,,,,,,,1.5,4.0,7.0,2008-09,Germany,2. Bundesliga
 2008-11-23,Elche,Salamanca,3,1,H,0,0,D,,,,,,,,,,,,,2.5,3.0,2.75,2008-09,Spain,Segunda Division
@@ -13573,7 +13573,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-12-07,Reggina,Bologna,2,2,D,1,0,H,18,10,8,5,6,1,18,26,2,2,0,0,2.1,3.0,4.0,2008-09,Italy,Serie A
 2008-12-07,Napoli,Siena,2,0,H,0,0,D,13,10,6,2,9,5,13,29,4,2,0,0,1.62,3.5,6.5,2008-09,Italy,Serie A
 2008-12-07,Milan,Catania,1,0,H,0,0,D,22,9,10,2,10,4,14,19,2,3,0,0,1.29,5.0,12.0,2008-09,Italy,Serie A
-2008-12-07,Duisburg,Kaiserslautern ,0,0,D,0,0,D,,,,,,,,,,,,,2.1,3.4,3.4,2008-09,Germany,2. Bundesliga
+2008-12-07,Duisburg,Kaiserslautern,0,0,D,0,0,D,,,,,,,,,,,,,2.1,3.4,3.4,2008-09,Germany,2. Bundesliga
 2008-12-07,Numancia,Almeria,2,1,H,1,1,D,15,16,2,2,7,4,15,19,4,5,1,0,2.4,3.4,2.8,2008-09,Spain,La Liga
 2008-12-07,Lecce,Juventus,1,2,A,0,0,D,7,13,4,3,2,6,23,15,3,2,0,0,5.5,3.4,1.73,2008-09,Italy,Serie A
 2008-12-07,La Coruna,Malaga,2,0,H,0,0,D,16,10,5,3,8,8,18,22,2,2,0,0,1.91,3.4,4.0,2008-09,Spain,La Liga
@@ -13696,7 +13696,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2008-12-14,Fiorentina,Catania,2,0,H,0,0,D,31,7,6,2,8,0,13,20,2,2,0,0,1.5,3.75,7.5,2008-09,Italy,Serie A
 2008-12-14,Greuther Furth,Ahlen,3,0,H,1,0,H,,,,,,,,,,,,,1.67,3.75,5.0,2008-09,Germany,2. Bundesliga
 2008-12-15,Charlton,Derby,2,2,D,1,0,H,10,9,7,6,2,4,8,16,0,2,0,0,2.4,3.3,2.88,2008-09,England,Championship
-2008-12-15,Kaiserslautern ,Freiburg,2,0,H,0,0,D,,,,,,,,,,,,,2.05,3.4,3.5,2008-09,Germany,2. Bundesliga
+2008-12-15,Kaiserslautern,Freiburg,2,0,H,0,0,D,,,,,,,,,,,,,2.05,3.4,3.5,2008-09,Germany,2. Bundesliga
 2008-12-15,Sassuolo,Ancona,1,0,H,0,0,D,,,,,,,,,,,,,1.67,3.2,5.5,2008-09,Italy,Serie B
 2008-12-19,Angers,Dijon,2,0,H,1,0,H,,,,,,,,,,,,,1.9,3.0,4.75,2008-09,France,Ligue 2
 2008-12-19,Parma,Cittadella,1,0,H,0,0,D,,,,,,,,,,,,,1.5,3.6,8.5,2008-09,Italy,Serie B
@@ -14283,7 +14283,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-02-08,Getafe,Espanol,1,1,D,1,1,D,29,7,9,3,10,1,16,21,3,3,0,1,1.9,3.4,4.0,2008-09,Spain,La Liga
 2009-02-08,Barcelona,Sp Gijon,3,1,H,2,0,H,18,5,7,1,7,2,13,19,2,3,0,0,1.16,6.5,17.0,2008-09,Spain,La Liga
 2009-02-08,Huesca,Gimnastic,3,2,H,1,2,A,,,,,,,,,,,,,2.05,2.87,3.6,2008-09,Spain,Segunda Division
-2009-02-09,Nurnberg,Kaiserslautern ,3,0,H,2,0,H,,,,,,,,,,,,,1.95,3.3,3.6,2008-09,Germany,2. Bundesliga
+2009-02-09,Nurnberg,Kaiserslautern,3,0,H,2,0,H,,,,,,,,,,,,,1.95,3.3,3.6,2008-09,Germany,2. Bundesliga
 2009-02-09,Montpellier,Reims,2,2,D,1,2,A,,,,,,,,,,,,,1.57,3.2,6.5,2008-09,France,Ligue 2
 2009-02-09,Cittadella,Avellino,4,0,H,1,0,H,,,,,,,,,,,,,2.1,2.87,3.75,2008-09,Italy,Serie B
 2009-02-10,Modena,Rimini,1,1,D,0,1,A,,,,,,,,,,,,,,,,2008-09,Italy,Serie B
@@ -14494,7 +14494,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-02-22,Lille,Monaco,2,1,H,1,0,H,15,14,7,4,3,1,20,26,1,4,0,1,1.65,3.4,6.5,2008-09,France,Ligue 1
 2009-02-22,St Etienne,Bordeaux,1,1,D,0,0,D,13,18,4,6,10,5,18,17,1,3,0,0,3.0,3.0,2.5,2008-09,France,Ligue 1
 2009-02-22,Wolves,Cardiff,2,2,D,1,1,D,12,7,7,3,9,5,17,9,1,0,0,0,2.0,3.3,3.75,2008-09,England,Championship
-2009-02-23,St Pauli,Kaiserslautern ,2,0,H,0,0,D,,,,,,,,,,,,,2.75,3.3,2.5,2008-09,Germany,2. Bundesliga
+2009-02-23,St Pauli,Kaiserslautern,2,0,H,0,0,D,,,,,,,,,,,,,2.75,3.3,2.5,2008-09,Germany,2. Bundesliga
 2009-02-23,Ancona,Frosinone,1,4,A,1,2,A,,,,,,,,,,,,,2.3,2.8,3.25,2008-09,Italy,Serie B
 2009-02-23,Pisa,Salernitana,0,0,D,0,0,D,,,,,,,,,,,,,1.95,2.87,4.33,2008-09,Italy,Serie B
 2009-02-23,Hull,Tottenham,1,2,A,1,1,D,12,9,4,6,11,13,11,7,2,1,0,0,3.0,3.3,2.37,2008-09,England,Premier League
@@ -14633,7 +14633,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-03-06,Schalke 04,FC Koln,1,0,H,1,0,H,10,11,3,4,5,4,24,16,3,2,0,0,1.61,3.6,6.0,2008-09,Germany,Bundesliga
 2009-03-06,St Pauli,Hansa Rostock,3,2,H,0,2,A,,,,,,,,,,,,,2.1,3.3,3.6,2008-09,Germany,2. Bundesliga
 2009-03-06,Koblenz,Osnabruck,3,0,H,2,0,H,,,,,,,,,,,,,1.9,3.4,4.2,2008-09,Germany,2. Bundesliga
-2009-03-06,Frankfurt FSV,Kaiserslautern ,1,0,H,0,0,D,,,,,,,,,,,,,2.8,3.3,2.5,2008-09,Germany,2. Bundesliga
+2009-03-06,Frankfurt FSV,Kaiserslautern,1,0,H,0,0,D,,,,,,,,,,,,,2.8,3.3,2.5,2008-09,Germany,2. Bundesliga
 2009-03-06,Cittadella,Triestina,0,3,A,0,3,A,,,,,,,,,,,,,2.6,2.7,3.25,2008-09,Italy,Serie B
 2009-03-07,Albacete,Eibar,2,0,H,1,0,H,,,,,,,,,,,,,2.0,3.1,3.75,2008-09,Spain,Segunda Division
 2009-03-07,Alicante,Tenerife,2,2,D,0,2,A,,,,,,,,,,,,,3.5,3.3,2.1,2008-09,Spain,Segunda Division
@@ -14915,7 +14915,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-03-22,Napoli,Milan,0,0,D,0,0,D,13,7,4,4,4,6,15,13,1,0,0,0,3.4,3.1,2.25,2008-09,Italy,Serie A
 2009-03-22,Lecce,Atalanta,2,2,D,1,1,D,17,14,7,6,4,1,17,16,1,5,0,0,2.3,3.0,3.4,2008-09,Italy,Serie A
 2009-03-22,Inter,Reggina,3,0,H,2,0,H,19,16,6,8,5,2,16,18,1,3,0,0,1.2,6.0,15.0,2008-09,Italy,Serie A
-2009-03-22,Ahlen,Kaiserslautern ,0,1,A,0,0,D,,,,,,,,,,,,,3.1,3.3,2.3,2008-09,Germany,2. Bundesliga
+2009-03-22,Ahlen,Kaiserslautern,0,1,A,0,0,D,,,,,,,,,,,,,3.1,3.3,2.3,2008-09,Germany,2. Bundesliga
 2009-03-22,Greuther Furth,Munich 1860,1,0,H,0,0,D,,,,,,,,,,,,,2.0,3.3,3.75,2008-09,Germany,2. Bundesliga
 2009-03-22,Ingolstadt,Duisburg,0,0,D,0,0,D,,,,,,,,,,,,,3.5,3.3,2.1,2008-09,Germany,2. Bundesliga
 2009-03-22,Mainz,Aachen,1,4,A,0,2,A,,,,,,,,,,,,,1.6,3.6,6.0,2008-09,Germany,2. Bundesliga
@@ -15163,7 +15163,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-04-12,Osasuna,Ath Bilbao,2,1,H,1,1,D,21,10,5,5,4,1,15,15,4,2,0,1,2.1,3.25,3.6,2008-09,Spain,La Liga
 2009-04-12,Real Madrid,Valladolid,2,0,H,1,0,H,20,17,6,9,2,5,15,15,3,1,0,0,1.29,5.5,10.0,2008-09,Spain,La Liga
 2009-04-12,St Pauli,Duisburg,2,2,D,1,0,H,,,,,,,,,,,,,2.75,3.3,2.38,2008-09,Germany,2. Bundesliga
-2009-04-12,Osnabruck,Kaiserslautern ,0,2,A,0,2,A,,,,,,,,,,,,,2.75,3.2,2.4,2008-09,Germany,2. Bundesliga
+2009-04-12,Osnabruck,Kaiserslautern,0,2,A,0,2,A,,,,,,,,,,,,,2.75,3.2,2.4,2008-09,Germany,2. Bundesliga
 2009-04-12,Koblenz,Munich 1860,3,2,H,2,0,H,,,,,,,,,,,,,2.38,3.3,2.75,2008-09,Germany,2. Bundesliga
 2009-04-12,Frankfurt FSV,Augsburg,2,1,H,1,0,H,,,,,,,,,,,,,2.1,3.2,3.3,2008-09,Germany,2. Bundesliga
 2009-04-12,Ahlen,Aachen,0,2,A,0,2,A,,,,,,,,,,,,,3.0,3.3,2.2,2008-09,Germany,2. Bundesliga
@@ -15286,7 +15286,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-04-19,Milan,Torino,5,1,H,2,0,H,16,6,8,4,7,1,9,11,0,3,0,0,1.33,5.0,9.0,2008-09,Italy,Serie A
 2009-04-20,Burnley,Sheffield United,1,0,H,1,0,H,11,12,5,4,3,8,16,15,0,0,0,0,2.62,3.25,2.62,2008-09,England,Championship
 2009-04-20,Montpellier,Lens,0,1,A,0,0,D,,,,,,,,,,,,,2.38,2.8,3.1,2008-09,France,Ligue 2
-2009-04-20,Munich 1860,Kaiserslautern ,1,1,D,1,1,D,,,,,,,,,,,,,2.5,3.1,2.6,2008-09,Germany,2. Bundesliga
+2009-04-20,Munich 1860,Kaiserslautern,1,1,D,1,1,D,,,,,,,,,,,,,2.5,3.1,2.6,2008-09,Germany,2. Bundesliga
 2009-04-21,Ancona,Bari,0,3,A,0,3,A,,,,,,,,,,,,,3.5,2.62,2.5,2008-09,Italy,Serie B
 2009-04-21,Brescia,Avellino,3,0,H,0,0,D,,,,,,,,,,,,,1.44,4.0,8.5,2008-09,Italy,Serie B
 2009-04-21,Numancia,Ath Bilbao,1,2,A,1,1,D,14,10,2,4,2,4,22,10,3,1,1,1,2.62,3.4,2.6,2008-09,Spain,La Liga
@@ -15421,7 +15421,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-05-01,Vicenza,Rimini,2,0,H,1,0,H,,,,,,,,,,,,,2.25,2.75,3.8,2008-09,Italy,Serie B
 2009-05-01,Wehen,Osnabruck,0,1,A,0,0,D,,,,,,,,,,,,,2.4,3.25,2.9,2008-09,Germany,2. Bundesliga
 2009-05-01,Guingamp,Strasbourg,1,2,A,0,0,D,,,,,,,,,,,,,3.4,2.9,2.35,2008-09,France,Ligue 2
-2009-05-01,Hansa Rostock,Kaiserslautern ,5,1,H,2,0,H,,,,,,,,,,,,,2.35,3.25,3.1,2008-09,Germany,2. Bundesliga
+2009-05-01,Hansa Rostock,Kaiserslautern,5,1,H,2,0,H,,,,,,,,,,,,,2.35,3.25,3.1,2008-09,Germany,2. Bundesliga
 2009-05-01,Dijon,Clermont,2,0,H,1,0,H,,,,,,,,,,,,,2.05,3.0,4.0,2008-09,France,Ligue 2
 2009-05-01,Bochum,Hannover,0,2,A,0,2,A,23,14,6,7,10,5,18,16,3,1,0,0,2.0,3.5,3.6,2008-09,Germany,Bundesliga
 2009-05-01,Boulogne,Ajaccio,0,1,A,0,0,D,,,,,,,,,,,,,1.66,3.4,5.5,2008-09,France,Ligue 2
@@ -15598,7 +15598,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-05-11,Treviso,Vicenza,0,1,A,0,0,D,,,,,,,,,,,,,2.38,3.0,2.9,2008-09,Italy,Serie B
 2009-05-11,Newcastle,Middlesbrough,3,1,H,1,1,D,19,11,9,5,11,1,7,15,3,1,0,0,2.0,3.4,3.8,2008-09,England,Premier League
 2009-05-11,Lens,Reims,1,0,H,1,0,H,,,,,,,,,,,,,1.57,3.4,6.0,2008-09,France,Ligue 2
-2009-05-12,Aachen,Kaiserslautern ,1,0,H,0,0,D,,,,,,,,,,,,,2.2,3.25,3.1,2008-09,Germany,2. Bundesliga
+2009-05-12,Aachen,Kaiserslautern,1,0,H,0,0,D,,,,,,,,,,,,,2.2,3.25,3.1,2008-09,Germany,2. Bundesliga
 2009-05-12,Wolfsburg,Dortmund,3,0,H,1,0,H,13,11,6,0,1,5,14,17,2,2,0,1,1.95,3.6,3.6,2008-09,Germany,Bundesliga
 2009-05-12,Lyon,Nantes,3,0,H,2,0,H,11,13,5,1,6,9,22,19,0,1,0,0,1.3,5.0,10.0,2008-09,France,Ligue 1
 2009-05-12,Duisburg,Oberhausen,1,1,D,0,1,A,,,,,,,,,,,,,1.55,3.75,6.25,2008-09,Germany,2. Bundesliga
@@ -15804,7 +15804,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2009-05-24,Nurnberg,Munich 1860,2,1,H,2,0,H,,,,,,,,,,,,,1.4,4.33,7.0,2008-09,Germany,2. Bundesliga
 2009-05-24,Mainz,Oberhausen,4,0,H,2,0,H,,,,,,,,,,,,,1.4,4.0,8.0,2008-09,Germany,2. Bundesliga
 2009-05-24,Ingolstadt,Koblenz,4,0,H,2,0,H,,,,,,,,,,,,,3.6,3.2,2.0,2008-09,Germany,2. Bundesliga
-2009-05-24,Freiburg,Kaiserslautern ,4,3,H,2,1,H,,,,,,,,,,,,,1.73,3.5,4.33,2008-09,Germany,2. Bundesliga
+2009-05-24,Freiburg,Kaiserslautern,4,3,H,2,1,H,,,,,,,,,,,,,1.73,3.5,4.33,2008-09,Germany,2. Bundesliga
 2009-05-24,Duisburg,Osnabruck,4,1,H,2,0,H,,,,,,,,,,,,,2.5,3.4,2.5,2008-09,Germany,2. Bundesliga
 2009-05-24,Ahlen,Greuther Furth,2,4,A,1,2,A,,,,,,,,,,,,,2.5,3.25,2.6,2008-09,Germany,2. Bundesliga
 2009-05-24,Blackburn,West Brom,0,0,D,0,0,D,10,13,5,5,4,9,14,11,0,1,1,0,1.83,3.5,4.5,2008-09,England,Premier League
@@ -19782,7 +19782,7 @@ Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,HTHG,HTAG,HTR,HS,AS,HST,AST,HC,AC,HF,AF,HY,
 2010-05-15,Reggina,Gallipoli,2,1,H,1,0,H,,,,,,,,,,,,,,,,2009-10,Italy,Serie B
 2010-05-15,Lazio,Udinese,3,1,H,2,1,H,25,13,9,4,10,6,18,8,2,1,0,1,2.1,2.8,4.33,2009-10,Italy,Serie A
 2010-05-15,Milan,Juventus,3,0,H,2,0,H,11,24,5,6,4,8,11,15,2,2,0,0,2.0,3.4,3.6,2009-10,Italy,Serie A
-2010-05-15,Piacenza ,Triestina,0,0,D,0,0,D,,,,,,,,,,,,,,,,2009-10,Italy,Serie B
+2010-05-15,Piacenza,Triestina,0,0,D,0,0,D,,,,,,,,,,,,,,,,2009-10,Italy,Serie B
 2010-05-15,Modena,Brescia,1,2,A,0,1,A,,,,,,,,,,,,,11.0,4.75,1.29,2009-10,Italy,Serie B
 2010-05-15,Frosinone,Grosseto,1,0,H,0,0,D,,,,,,,,,,,,,1.75,3.3,5.25,2009-10,Italy,Serie B
 2010-05-15,Empoli,Albinoleffe,1,3,A,0,3,A,,,,,,,,,,,,,2.15,2.25,6.0,2009-10,Italy,Serie B

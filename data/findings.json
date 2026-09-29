@@ -4698,7 +4698,7 @@
       "seasons": 20,
       "teams_per_season_typical": 18,
       "teams_per_season_min": 18,
-      "teams_per_season_max": 19
+      "teams_per_season_max": 18
     },
     {
       "League": "Bundesliga",
@@ -4768,7 +4768,7 @@
       "seasons": 20,
       "teams_per_season_typical": 22,
       "teams_per_season_min": 19,
-      "teams_per_season_max": 23
+      "teams_per_season_max": 22
     },
     {
       "League": "Segunda Division",
