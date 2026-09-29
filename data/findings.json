@@ -3344,6 +3344,140 @@
       "avg_goals_per_game": 2.46
     }
   ],
+  "highest_scoring_league_trend": {
+    "league": "Bundesliga",
+    "overall_avg_goals_per_game": 2.96,
+    "by_season": [
+      {
+        "League": "Bundesliga",
+        "Season": "2005-06",
+        "matches": 306,
+        "avg_goals_per_game": 2.81
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2006-07",
+        "matches": 306,
+        "avg_goals_per_game": 2.74
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2007-08",
+        "matches": 306,
+        "avg_goals_per_game": 2.81
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2008-09",
+        "matches": 306,
+        "avg_goals_per_game": 2.92
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2009-10",
+        "matches": 306,
+        "avg_goals_per_game": 2.83
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2010-11",
+        "matches": 306,
+        "avg_goals_per_game": 2.92
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2011-12",
+        "matches": 306,
+        "avg_goals_per_game": 2.86
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2012-13",
+        "matches": 306,
+        "avg_goals_per_game": 2.93
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2013-14",
+        "matches": 306,
+        "avg_goals_per_game": 3.16
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2014-15",
+        "matches": 306,
+        "avg_goals_per_game": 2.75
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2015-16",
+        "matches": 306,
+        "avg_goals_per_game": 2.83
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2016-17",
+        "matches": 306,
+        "avg_goals_per_game": 2.87
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2017-18",
+        "matches": 306,
+        "avg_goals_per_game": 2.79
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2018-19",
+        "matches": 306,
+        "avg_goals_per_game": 3.18
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2019-20",
+        "matches": 306,
+        "avg_goals_per_game": 3.21
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2020-21",
+        "matches": 306,
+        "avg_goals_per_game": 3.03
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2021-22",
+        "matches": 306,
+        "avg_goals_per_game": 3.12
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2022-23",
+        "matches": 306,
+        "avg_goals_per_game": 3.17
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2023-24",
+        "matches": 306,
+        "avg_goals_per_game": 3.22
+      },
+      {
+        "League": "Bundesliga",
+        "Season": "2024-25",
+        "matches": 306,
+        "avg_goals_per_game": 3.13
+      }
+    ],
+    "peak_season": "2023-24",
+    "peak_avg_goals_per_game": 3.22,
+    "trough_season": "2006-07",
+    "trough_avg_goals_per_game": 2.74,
+    "first_5_seasons_avg": 2.82,
+    "last_5_seasons_avg": 3.13,
+    "change_first5_to_last5": 0.31,
+    "linear_trend_goals_per_game_per_season": 0.0209
+  },
   "predictability": {
     "most_predictable_league": "Premier League",
     "most_predictable_favorite_win_pct": 55.1,

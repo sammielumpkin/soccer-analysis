@@ -308,6 +308,37 @@ for lg, v in league_avg_goals.items():
     print(f"   {lg:<20} {v:.2f}")
 
 # ---------------------------------------------------------------------------
+# 5b. Has the highest-scoring league's rate changed over the 20 seasons?
+# ---------------------------------------------------------------------------
+highest_scoring_league = league_avg_goals.index[0]
+goals_by_season = [r for r in goals_rows if r["League"] == highest_scoring_league]
+goals_by_season.sort(key=lambda r: r["Season"])
+
+goal_rates = [r["avg_goals_per_game"] for r in goals_by_season]
+goal_seasons = [r["Season"] for r in goals_by_season]
+goal_slope = float(np.polyfit(range(len(goal_rates)), goal_rates, 1)[0])
+goal_peak = max(goals_by_season, key=lambda r: r["avg_goals_per_game"])
+goal_trough = min(goals_by_season, key=lambda r: r["avg_goals_per_game"])
+goal_first5_avg = round(sum(goal_rates[:5]) / 5, 2)
+goal_last5_avg = round(sum(goal_rates[-5:]) / 5, 2)
+
+findings["highest_scoring_league_trend"] = {
+    "league": highest_scoring_league,
+    "overall_avg_goals_per_game": round(league_avg_goals.iloc[0], 2),
+    "by_season": goals_by_season,
+    "peak_season": goal_peak["Season"], "peak_avg_goals_per_game": goal_peak["avg_goals_per_game"],
+    "trough_season": goal_trough["Season"], "trough_avg_goals_per_game": goal_trough["avg_goals_per_game"],
+    "first_5_seasons_avg": goal_first5_avg,
+    "last_5_seasons_avg": goal_last5_avg,
+    "change_first5_to_last5": round(goal_last5_avg - goal_first5_avg, 2),
+    "linear_trend_goals_per_game_per_season": round(goal_slope, 4),
+}
+
+print(f"\n5b) {highest_scoring_league} goals/game over {len(goal_seasons)} seasons (highest-scoring league overall)")
+print(f"   Peak: {goal_peak['Season']} ({goal_peak['avg_goals_per_game']})  |  Trough: {goal_trough['Season']} ({goal_trough['avg_goals_per_game']})")
+print(f"   First 5 seasons avg: {goal_first5_avg}  |  Last 5 seasons avg: {goal_last5_avg}  |  Linear trend: {goal_slope:.4f} goals/game per season")
+
+# ---------------------------------------------------------------------------
 # 6. Most predictable league / most upsets
 # ---------------------------------------------------------------------------
 eligible = [r for r in favorite_by_league if r["matches_with_odds"] >= MIN_LEAGUE_ODDS_MATCHES]
