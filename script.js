@@ -24,6 +24,19 @@ function render(d) {
     `and a $${d.underdog_flat_bet_pnl.stake_per_bet_usd} bet on the underdog in every match would have returned ${signed(d.underdog_flat_bet_pnl.overall_roi_pct)}%. ` +
     `The sections below cover home advantage, betting odds, goals, half-time swings, shots, red cards and the biggest upsets.`;
 
+  // ---- the leagues table (from findings.json league_overview)
+  const ov = d.league_overview;
+  const countries = new Set(ov.map(r => r.Country)).size;
+  const divisions = new Set(ov.map(r => r.tier)).size;
+  document.getElementById("leagues-intro").textContent =
+    `The data covers the top ${divisions === 2 ? "two divisions" : divisions + " divisions"} in ${countries} countries, ${seasons.length} seasons each.`;
+  const tierName = t => (t === 1 ? "Top division" : "Second division");
+  const teams = r => (r.teams_per_season_min === r.teams_per_season_max ? `${r.teams_per_season_typical}` : `${r.teams_per_season_typical} (${r.teams_per_season_min}–${r.teams_per_season_max})`);
+  document.getElementById("league-table").innerHTML =
+    `<thead><tr><th>League</th><th>Country</th><th>Division</th><th>Teams per season</th><th>Matches</th></tr></thead><tbody>` +
+    ov.map(r => `<tr><td>${withFlag(r.League)}</td><td>${esc(r.Country)}</td><td>${tierName(r.tier)}</td><td>${teams(r)}</td><td>${n0(r.matches)}</td></tr>`).join("") +
+    `</tbody>`;
+
   document.getElementById("stats").innerHTML = [
     [n0(d.n_matches_total), "matches analyzed"],
     [pc(rates.home_win_pct), "of matches won by the home team"],
@@ -204,6 +217,7 @@ function render(d) {
 
     <h3>How each rate and average is computed</h3>
     <ul>
+      <li><strong>League table:</strong> matches are the rows in that league; teams per season is the number of distinct clubs appearing in a season, shown as the median across seasons (with the range when it varies). Division level is stated by hand because the file has no such column.</li>
       <li><strong>Home win, draw and away win %:</strong> matches with that result ÷ matches in the group (league, season or team) × 100, rounded to one decimal.</li>
       <li><strong>Season and league trends:</strong> the first-five and last-five figures are simple averages of five yearly rates, and the trend is the slope of a least-squares line through the yearly values.</li>
       <li><strong>Favorite and underdog:</strong> the favorite is the outcome (home, draw or away) with the lowest Bet365 odds and the underdog is the one with the highest. Favorite win % = matches the favorite won ÷ matches with usable odds × 100.</li>
