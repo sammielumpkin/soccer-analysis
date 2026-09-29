@@ -127,6 +127,39 @@ print(f"   Drop vs pre-covid average: {findings['home_advantage_covid']['drop_vs
 print(f"   Recovered after: {findings['home_advantage_covid']['recovered_after']}")
 
 # ---------------------------------------------------------------------------
+# 2b. Has the strongest league's home advantage changed over the 20 seasons?
+# ---------------------------------------------------------------------------
+strongest_league = top_home["League"]
+lg_by_season = []
+for season, g in df[df["League"] == strongest_league].groupby("Season"):
+    lg_by_season.append({"Season": season, "matches": len(g), "home_win_pct": pct((g["FTR"] == "H").sum(), len(g))})
+lg_by_season.sort(key=lambda r: r["Season"])
+
+rates = [r["home_win_pct"] for r in lg_by_season]
+seasons_list = [r["Season"] for r in lg_by_season]
+slope = float(np.polyfit(range(len(rates)), rates, 1)[0])
+peak = max(lg_by_season, key=lambda r: r["home_win_pct"])
+trough = min(lg_by_season, key=lambda r: r["home_win_pct"])
+first5_avg = round(sum(rates[:5]) / 5, 1)
+last5_avg = round(sum(rates[-5:]) / 5, 1)
+
+findings["strongest_league_home_advantage_trend"] = {
+    "league": strongest_league,
+    "overall_home_win_pct": top_home["home_win_pct"],
+    "by_season": lg_by_season,
+    "peak_season": peak["Season"], "peak_home_win_pct": peak["home_win_pct"],
+    "trough_season": trough["Season"], "trough_home_win_pct": trough["home_win_pct"],
+    "first_5_seasons_avg_pct": first5_avg,
+    "last_5_seasons_avg_pct": last5_avg,
+    "change_first5_to_last5_pct_points": round(last5_avg - first5_avg, 1),
+    "linear_trend_pct_points_per_season": round(slope, 3),
+}
+
+print(f"\n2b) {strongest_league} home advantage over {len(seasons_list)} seasons (strongest league overall)")
+print(f"   Peak: {peak['Season']} ({peak['home_win_pct']}%)  |  Trough: {trough['Season']} ({trough['home_win_pct']}%)")
+print(f"   First 5 seasons avg: {first5_avg}%  |  Last 5 seasons avg: {last5_avg}%  |  Linear trend: {slope:.3f} pts/season")
+
+# ---------------------------------------------------------------------------
 # 3. Favorite (lowest B365 odds) win rate, by league
 # ---------------------------------------------------------------------------
 odds = df.dropna(subset=["B365H", "B365D", "B365A"]).copy()

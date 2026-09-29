@@ -303,6 +303,120 @@
     "drop_vs_before_pct_points": -4.3,
     "recovered_after": true
   },
+  "strongest_league_home_advantage_trend": {
+    "league": "La Liga",
+    "overall_home_win_pct": 46.6,
+    "by_season": [
+      {
+        "Season": "2005-06",
+        "matches": 380,
+        "home_win_pct": 42.6
+      },
+      {
+        "Season": "2006-07",
+        "matches": 380,
+        "home_win_pct": 45.3
+      },
+      {
+        "Season": "2007-08",
+        "matches": 380,
+        "home_win_pct": 47.9
+      },
+      {
+        "Season": "2008-09",
+        "matches": 380,
+        "home_win_pct": 48.4
+      },
+      {
+        "Season": "2009-10",
+        "matches": 380,
+        "home_win_pct": 51.1
+      },
+      {
+        "Season": "2010-11",
+        "matches": 380,
+        "home_win_pct": 51.8
+      },
+      {
+        "Season": "2011-12",
+        "matches": 380,
+        "home_win_pct": 49.5
+      },
+      {
+        "Season": "2012-13",
+        "matches": 380,
+        "home_win_pct": 49.7
+      },
+      {
+        "Season": "2013-14",
+        "matches": 380,
+        "home_win_pct": 47.1
+      },
+      {
+        "Season": "2014-15",
+        "matches": 380,
+        "home_win_pct": 45.0
+      },
+      {
+        "Season": "2015-16",
+        "matches": 380,
+        "home_win_pct": 48.2
+      },
+      {
+        "Season": "2016-17",
+        "matches": 380,
+        "home_win_pct": 47.6
+      },
+      {
+        "Season": "2017-18",
+        "matches": 380,
+        "home_win_pct": 47.1
+      },
+      {
+        "Season": "2018-19",
+        "matches": 380,
+        "home_win_pct": 44.2
+      },
+      {
+        "Season": "2019-20",
+        "matches": 380,
+        "home_win_pct": 45.8
+      },
+      {
+        "Season": "2020-21",
+        "matches": 380,
+        "home_win_pct": 41.6
+      },
+      {
+        "Season": "2021-22",
+        "matches": 380,
+        "home_win_pct": 43.4
+      },
+      {
+        "Season": "2022-23",
+        "matches": 380,
+        "home_win_pct": 47.9
+      },
+      {
+        "Season": "2023-24",
+        "matches": 380,
+        "home_win_pct": 43.9
+      },
+      {
+        "Season": "2024-25",
+        "matches": 380,
+        "home_win_pct": 44.5
+      }
+    ],
+    "peak_season": "2010-11",
+    "peak_home_win_pct": 51.8,
+    "trough_season": "2020-21",
+    "trough_home_win_pct": 41.6,
+    "first_5_seasons_avg_pct": 47.1,
+    "last_5_seasons_avg_pct": 44.3,
+    "change_first5_to_last5_pct_points": -2.8,
+    "linear_trend_pct_points_per_season": -0.193
+  },
   "favorite_win_rate_by_league": [
     {
       "League": "2. Bundesliga",
