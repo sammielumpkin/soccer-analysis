@@ -24,12 +24,12 @@ Some statistics are only recorded for some leagues and seasons, so those columns
 
 | File | What it does |
 | --- | --- |
-| `index.html` | The report page, and the page that opens at the site URL. Holds the title, summary, headline numbers, 10 finding sections and the data/methods section. `script.js` fills in the text and charts. |
+| `index.html` | The report page, and the page that opens at the site URL. Holds the title, a summary that mentions every finding, headline numbers, 10 finding sections (each with a titled chart) and the data/methods section. `script.js` fills in the text and charts. |
 | `dashboard.html` | The dashboard page: filters, summary numbers, switches, four charts, the table and the reset button. `dashboard.js` fills it in. |
 | `style.css` | The one stylesheet both pages share: soccer theme (pitch background, colors, fonts, animations), nav bar, layout, chart colors and dashboard controls. |
 | `img/ball.svg` | Black-and-white soccer ball drawn as an SVG. `style.css` uses it for the ball that bounces next to each page title and the one that rolls along the nav bar. |
 | `img/flags/*.svg` | Small SVG flags (`england.svg`, `france.svg`, `germany.svg`, `italy.svg`, `spain.svg`) shown next to country and league names. England's flag is St George's cross, used for the English leagues. `charts.js` maps each league and country to its flag. |
-| `charts.js` | Shared code for both pages: number formatters and the functions that draw the SVG charts (horizontal bars, stacked bars, vertical bars, lines). |
+| `charts.js` | Shared code for both pages: number formatters and the functions that draw the SVG charts (horizontal bars, stacked bars, vertical bars, lines), with optional chart axis titles and value labels. |
 | `script.js` | Report logic. Loads `data/findings.json` and writes every number, sentence and chart on `index.html`. No number on the report is typed by hand. |
 | `dashboard.js` | Dashboard logic. Loads `data/matches.csv`, applies the filters, computes every measure in the browser, and draws the charts and table. The current view is kept in the URL so it can be shared. |
 
@@ -51,7 +51,7 @@ Run these from the repository root, in this order, to rebuild the data from scra
 | `scripts/download_data.py` | Downloads the 10 leagues x 20 seasons of results from football-data.co.uk and saves them as `data/matches_raw.csv`. |
 | `scripts/check_requirements.py` | Prints the row count, column count, number of seasons, number of teams and missing values per column, to confirm the data meets the project requirements. |
 | `scripts/clean_data.py` | Turns `matches_raw.csv` into `matches.csv`: parses the mixed date formats, drops rows with no valid date or final score (none were found), stores whole-number columns as integers, drops `Div`, trims stray spaces from team names (Kaiserslautern, Piacenza), and writes `cleaning_log.json`. |
-| `scripts/analysis.py` | Computes the league overview (matches and teams per season for each league, saved as `league_overview`; the division level is the only value typed by hand) and every finding (home advantage, favorites, odds calibration, underdog bets, goals, scores, half-time swings, shots, red cards, upsets) and saves them to `data/findings.json`. |
+| `scripts/analysis.py` | Computes the league overview (matches and teams per season for each league, saved as `league_overview`; goals per game for every league and season, plus each league's overall average; the division level is the only value typed by hand) and every finding (home advantage, favorites, odds calibration, underdog bets, goals, scores, half-time swings, shots, red cards, upsets) and saves them to `data/findings.json`. |
 | `scripts/verify_findings.py` | Recomputes the headline findings from `matches.csv` using different pandas techniques than `analysis.py` and checks that they match `findings.json`. |
 
 ### Project

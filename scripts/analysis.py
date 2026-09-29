@@ -391,6 +391,7 @@ goal_last5_avg = round(sum(goal_rates[-5:]) / 5, 2)
 findings["highest_scoring_league_trend"] = {
     "league": highest_scoring_league,
     "overall_avg_goals_per_game": round(league_avg_goals.iloc[0], 2),
+    "overall_by_league": [{"League": lg, "avg_goals_per_game": round(v, 2)} for lg, v in league_avg_goals.items()],
     "by_season": goals_by_season,
     "peak_season": goal_peak["Season"], "peak_avg_goals_per_game": goal_peak["avg_goals_per_game"],
     "trough_season": goal_trough["Season"], "trough_avg_goals_per_game": goal_trough["avg_goals_per_game"],

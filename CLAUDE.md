@@ -151,26 +151,25 @@ not share code or files.
 _Last updated 2026-09-29._
 
 ### Done
-- **Data set:** European football match results, 10 leagues, 20 seasons (2005-06 to 2024-25). `data/matches.csv` has 78,676 rows and 27 columns (one row is one match). The raw download is kept in `data/matches_raw.csv`.
-- **Scripts** (`scripts/`): `download_data.py`, `check_requirements.py`, `clean_data.py` (drops `Div`, writes `data/cleaning_log.json`), `analysis.py` (writes `data/findings.json`, including raw and dropped row counts), and `verify_findings.py` (recomputes the findings independently; 71 of 71 match).
-- **Report page** (`index.html`, `script.js`): title, byline, summary, 4 headline numbers, 10 finding sections with charts, and the closing data and methods section. Every figure is read from `data/findings.json`. Checked in a browser: 10 charts, no errors. The "Fading edge" and "Favorites" sections were removed; their numbers are still computed in `analysis.py` and stored in `findings.json`.
+- **Data set:** European football match results, 10 leagues (top two divisions in England, France, Germany, Italy and Spain), 20 seasons (2005-06 to 2024-25). `data/matches.csv` has 78,676 rows and 27 columns (one row is one match). The raw download is kept in `data/matches_raw.csv`.
+- **Scripts** (`scripts/`): `download_data.py`, `check_requirements.py`, `clean_data.py` (drops `Div`, trims stray spaces from team names, writes `data/cleaning_log.json`), `analysis.py` (writes `data/findings.json`, including the league overview and goals per game for every league), and `verify_findings.py` (recomputes the findings independently; 81 of 81 match).
+- **Report page** (`index.html`, `script.js`): title, byline, one-paragraph summary that mentions every finding, 4 headline numbers, a leagues table, 10 finding sections, and the closing data and methods section. Every figure is read from `data/findings.json`. Each chart has a short title, axis titles where it has axes, direct value labels or a legend, and the same minus sign and precision as the text. The goals chart shows all 10 leagues with the Bundesliga highlighted. The closing section notes the trimmed team names, France's 2019-20 COVID cut (Ligue 1 279 and Ligue 2 280 of 380 matches), and the Ligue 2 fixtures missing from the source (32 in 2007-08, 1 in 2023-24).
 - **Dashboard** (`dashboard.html`, `dashboard.js`): loads `data/matches.csv` in the browser.
   - Filters: season from/to, country, league, team, team plays home/away, result.
   - 6 summary numbers, 4 charts, a measure switch (9 measures), a breakdown switch (league, season, country), a sortable table, and a reset button.
   - With no filters, its first four numbers match the report (78,676 matches, 44.5% home wins, 27.6% draws, -8.9% underdog return).
-  - Five filtered views were checked against an independent pandas calculation, and all matched. Clicks on the filters, switches, table headings and reset were tested.
-- **Shared site code:** `charts.js` (formatters and SVG charts used by both pages) and `style.css` (soccer theme: pitch background, condensed headings, rolling and bouncing ball animations that turn off for reduced motion). Both pages have the same nav bar with Report and Dashboard links.
+- **Shared site code:** `charts.js` (formatters and SVG charts used by both pages) and `style.css` (soccer theme, light and dark colors, animations that turn off for reduced motion). Both pages have the same nav bar.
 - **README.md:** lists every file and what it does, and links to football-data.co.uk as the data source.
-- **Repository:** public, on GitHub, with incremental commits. Everything is pushed to `main`.
+- **Repository:** public at github.com/sammielumpkin/soccer-analysis, incremental commit history, GitHub Pages built from `main` at https://sammielumpkin.github.io/soccer-analysis/.
 
 ### Still to do
-- **Enable GitHub Pages** from the `main` branch (the Pages API currently returns 404, so it is not on yet). Then open the live URL and check that both pages load and the dashboard loads `data/matches.csv`.
-- **Submission file:** one .txt or .md with four lines: name, student ID, repository URL, live site URL. The student ID is still needed.
-- **Optional:** read the live pages once end to end to check the wording of each finding.
+- **Submission file:** one .txt or .md with four lines: name, student ID, repository URL, live site URL. Keep it out of the public repo.
+- **Optional:** read the live pages once end to end; check dark mode and a phone by eye.
 
 ### Open issues
-- **Dark mode is untested.** It is styled but has not been seen in a browser. Animations were only seen as still screenshots.
-- **Phone layout:** neither page overflows sideways at 390px, but it has not been checked by eye on a real phone.
+- **Dark mode is untested** in a browser, and animations were only seen as still screenshots.
+- **Phone layout:** neither page overflows sideways at 390px, but it has not been checked on a real phone.
 - **Sparse columns:** shots, cards and half-time fields are blank for many older or lower-tier matches, so those findings use fewer rows than the headline count. The report's methods section gives the row counts.
 - **Odds:** 2 matches have an odd of 1.0 or below and 123 have no odds. They are left out of the odds-based numbers, in both `analysis.py` and the dashboard.
-- **Data size:** `data/matches.csv` is 8.2 MB, so the dashboard takes a moment to load. `data/matches_raw.csv` (10 MB) is only needed to rebuild the data.
+- **Data size:** `data/matches.csv` is 8.2 MB, so the dashboard takes a moment to load.
+- **Editing files on Windows:** write text files as UTF-8 explicitly (`encoding="utf-8"`), or a dash can be saved as an invalid byte.

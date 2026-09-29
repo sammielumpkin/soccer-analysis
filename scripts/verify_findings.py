@@ -144,6 +144,9 @@ for lg, entries in saved_league_avgs.items():
     weighted = sum(m * v for m, v in entries) / total_m
     record("5. Goals/game by league", lg, round(goals_series[lg], 2), round(weighted, 2), total_m)
 
+for r in saved_goals_league["overall_by_league"]:
+    record("5. Goals/game by league", f"{r['League']} (overall_by_league)", round(goals_series[r["League"]], 2), r["avg_goals_per_game"], int(league_counts[r["League"]]))
+
 record("5. Goals/game by league", "-> highest-scoring league (name)",
        goals_series.index[0], saved_goals_league["league"], int(league_counts[goals_series.index[0]]), tol=0)
 

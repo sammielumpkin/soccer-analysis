@@ -15,6 +15,7 @@
   --c1: #15803d;
   --c2: #7b3fb5;
   --c3: #2f6db5;
+  --c4: #7d8a82;
   --neg: #c0392b;
   --grid: #dfebda;
   --inbar: #ffffff;
@@ -39,6 +40,7 @@
     --c1: #4fb37d;
     --c2: #b48be0;
     --c3: #6c9fd8;
+    --c4: #9aa8a0;
     --neg: #e0776d;
     --grid: #25382c;
     --inbar: #0b1510;
@@ -259,6 +261,7 @@ figure.chart {
   border-radius: 10px;
 }
 figure.chart svg { display: block; width: 100%; height: auto; }
+figure.chart .chart-title { font: 700 1.05rem/1.2 var(--font-head); letter-spacing: 0.02em; color: var(--text); margin: 0 0 8px; }
 figure.chart figcaption { color: var(--muted); font-size: 0.88rem; margin-top: 8px; }
 
 .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; font-size: 0.88rem; color: var(--muted); }
@@ -269,6 +272,7 @@ figure.chart figcaption { color: var(--muted); font-size: 0.88rem; margin-top: 8
 .legend .l1::before { background: var(--c1); }
 .legend .l2::before { background: var(--c2); }
 .legend .l3::before { background: var(--c3); }
+.legend .lg::before { background: var(--c4); }
 
 /* ---------- svg chart parts ---------- */
 svg text { fill: var(--muted); font-size: 12px; font-family: inherit; }
@@ -276,12 +280,16 @@ svg .val { fill: var(--text); font-weight: 600; }
 svg .inbar { fill: var(--inbar); font-weight: 700; }
 svg .grid { stroke: var(--grid); stroke-width: 1; }
 svg .axis { stroke: var(--muted); stroke-width: 1; }
-svg .c1 { fill: var(--c1); } svg .c2 { fill: var(--c2); } svg .c3 { fill: var(--c3); } svg .neg { fill: var(--neg); }
+svg .c1 { fill: var(--c1); } svg .c2 { fill: var(--c2); } svg .c3 { fill: var(--c3); } svg .c4 { fill: var(--c4); } svg .neg { fill: var(--neg); }
 svg .s1 { stroke: var(--c1); fill: none; stroke-width: 2.5; }
 svg .s2 { stroke: var(--c2); fill: none; stroke-width: 2.5; }
 svg .s3 { stroke: var(--c3); fill: none; stroke-width: 2.5; }
 svg .p1 { fill: var(--c1); } svg .p2 { fill: var(--c2); } svg .p3 { fill: var(--c3); }
 svg .dash { stroke-dasharray: 5 4; }
+svg .sm { stroke: var(--c4); fill: none; stroke-width: 1.5; opacity: 0.6; }
+svg .hit { stroke: transparent; fill: none; stroke-width: 10; pointer-events: stroke; }
+svg .axt { font-size: 11px; font-weight: 600; letter-spacing: 0.03em; }
+svg .vlab { font-size: 10px; fill: var(--text); }
 
 /* ---------- closing section ---------- */
 section.method h3 { font-size: 1.4rem; font-weight: 700; margin: 26px 0 8px; color: var(--accent-dark); }

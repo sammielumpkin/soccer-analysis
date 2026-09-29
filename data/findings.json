@@ -3682,6 +3682,48 @@
   "highest_scoring_league_trend": {
     "league": "Bundesliga",
     "overall_avg_goals_per_game": 2.96,
+    "overall_by_league": [
+      {
+        "League": "Bundesliga",
+        "avg_goals_per_game": 2.96
+      },
+      {
+        "League": "2. Bundesliga",
+        "avg_goals_per_game": 2.77
+      },
+      {
+        "League": "Premier League",
+        "avg_goals_per_game": 2.74
+      },
+      {
+        "League": "Serie A",
+        "avg_goals_per_game": 2.68
+      },
+      {
+        "League": "La Liga",
+        "avg_goals_per_game": 2.66
+      },
+      {
+        "League": "Championship",
+        "avg_goals_per_game": 2.56
+      },
+      {
+        "League": "Ligue 1",
+        "avg_goals_per_game": 2.53
+      },
+      {
+        "League": "Serie B",
+        "avg_goals_per_game": 2.43
+      },
+      {
+        "League": "Ligue 2",
+        "avg_goals_per_game": 2.37
+      },
+      {
+        "League": "Segunda Division",
+        "avg_goals_per_game": 2.36
+      }
+    ],
     "by_season": [
       {
         "League": "Bundesliga",

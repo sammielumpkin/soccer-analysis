@@ -10,6 +10,11 @@ const pc = v => `${f1(v)}%`;
 const money = v => `${v < 0 ? "−" : ""}$${Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 const signed = (v, d = 1) => `${v < 0 ? "−" : "+"}${Math.abs(v).toFixed(d)}`;
 const shortSeason = s => s.slice(2);
+/* Real minus sign for numbers shown inside charts (toFixed gives a hyphen). */
+const mn = s => String(s).replace(/-/g, "−");
+/* Small axis titles. xText sits under the plot; yText is rotated beside it. */
+const xText = (cx, y, t) => `<text class="axt" x="${cx}" y="${y}" text-anchor="middle">${esc(t)}</text>`;
+const yText = (cy, x, t) => `<text class="axt" transform="rotate(-90)" x="${-cy}" y="${x}" text-anchor="middle">${esc(t)}</text>`;
 const maxBy = (arr, f) => arr.reduce((a, b) => (f(b) > f(a) ? b : a));
 const minBy = (arr, f) => arr.reduce((a, b) => (f(b) < f(a) ? b : a));
 
@@ -51,34 +56,35 @@ const legend = items => `<div class="legend">${items.map((t, i) => `<span class=
 // ---------------------------------------------------------------- charts
 /* Horizontal bars. items: [{label, value, cls?, text?}]. Negative values
    extend left of a zero line. */
-function hbar(items, { unit = "%", dec = 1, labelW = 150, max, label = "Bar chart" } = {}) {
+function hbar(items, { unit = "%", dec = 1, labelW = 150, max, label = "Bar chart", xTitle } = {}) {
   const W = 640, rowH = 28, top = 6, right = 64;
   const vals = items.map(i => i.value);
   const hi = max ?? Math.max(0, ...vals), lo = Math.min(0, ...vals);
   const barW = W - labelW - right;
   const scale = barW / ((hi - lo) || 1);
   const zeroX = labelW + (0 - lo) * scale;
-  const H = top * 2 + rowH * items.length;
+  const plotH = top * 2 + rowH * items.length;
+  const H = plotH + (xTitle ? 22 : 0);
   const useFlags = items.some(it => it.flag);
   const rows = items.map((it, i) => {
     const y = top + i * rowH;
     const neg = it.value < 0;
     const w = Math.max(1, Math.abs(it.value) * scale);
     const x = neg ? zeroX - w : zeroX;
-    const shown = it.text ?? `${it.value.toFixed(dec)}${unit}`;
+    const shown = mn(it.text ?? `${it.value.toFixed(dec)}${unit}`);
     return `${rowLabel(it, labelW, y, 18, useFlags)}
       <rect class="${it.cls || (neg ? "neg" : "c1")}" x="${x}" y="${y + 4}" width="${w}" height="${rowH - 8}" rx="3"><title>${esc(it.label)}: ${esc(shown)}</title></rect>
       <text class="val" x="${neg ? zeroX + 6 : x + w + 6}" y="${y + 18}">${esc(shown)}</text>`;
   }).join("");
-  const zeroLine = lo < 0 ? `<line class="axis" x1="${zeroX}" x2="${zeroX}" y1="${top}" y2="${H - top}"/>` : "";
-  return svg(W, H, label, rows + zeroLine);
+  const zeroLine = lo < 0 ? `<line class="axis" x1="${zeroX}" x2="${zeroX}" y1="${top}" y2="${plotH - top}"/>` : "";
+  return svg(W, H, label, rows + zeroLine + (xTitle ? xText(labelW + barW / 2, H - 6, xTitle) : ""));
 }
 
 /* Stacked horizontal bars that each sum to 100. items: [{label, parts:[v1,v2,v3], names}] */
-function stacked(items, { labelW = 130, rowH = 30, label = "Stacked bar chart" } = {}) {
+function stacked(items, { labelW = 130, rowH = 30, label = "Stacked bar chart", xTitle } = {}) {
   const W = 640, top = 6, right = 12;
   const barW = W - labelW - right;
-  const H = top * 2 + rowH * items.length;
+  const H = top * 2 + rowH * items.length + (xTitle ? 22 : 0);
   const useFlags = items.some(it => it.flag);
   const rows = items.map((it, i) => {
     const y = top + i * rowH;
@@ -92,13 +98,15 @@ function stacked(items, { labelW = 130, rowH = 30, label = "Stacked bar chart" }
     }).join("");
     return `${rowLabel(it, labelW, y, rowH / 2 + 4, useFlags)}${segs}`;
   }).join("");
-  return svg(W, H, label, rows);
+  return svg(W, H, label, rows + (xTitle ? xText(labelW + barW / 2, H - 6, xTitle) : ""));
 }
 
-/* Line chart. cats: x labels; series: [{name, values, dash?}] (up to 3).
-   A null value leaves a gap in the line. */
-function lineChart(cats, series, { unit = "", yMin, yMax, dec, label = "Line chart", markers = [] } = {}) {
-  const W = 640, H = 300, m = { l: 52, r: 18, t: 16, b: 40 };
+/* Line chart. cats: x labels; series: [{name, values, dash?, muted?}].
+   A null value leaves a gap in the line. A muted series is drawn as a thin
+   grey line (no dots) underneath the others, for showing context.
+   tipDec sets the decimals in hover tips (default: same as the axis). */
+function lineChart(cats, series, { unit = "", yMin, yMax, dec, tipDec, label = "Line chart", markers = [], xTitle, yTitle, legend: showLegend = true } = {}) {
+  const W = 640, H = 300 + (xTitle ? 20 : 0), m = { l: yTitle ? 68 : 52, r: 30, t: 16, b: xTitle ? 60 : 40 };
   const all = series.flatMap(s => s.values).filter(v => v !== null && v !== undefined);
   let lo = yMin ?? Math.min(...all), hi = yMax ?? Math.max(...all);
   const pad = (hi - lo) * 0.15 || 1;
@@ -110,10 +118,14 @@ function lineChart(cats, series, { unit = "", yMin, yMax, dec, label = "Line cha
   const X = i => m.l + (i * (W - m.l - m.r)) / (cats.length - 1);
   const Y = v => m.t + ((hi - v) / (hi - lo)) * (H - m.t - m.b);
   const grid = ticks.map(t => `<line class="grid" x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}"/>
-    <text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${t.toFixed(d)}${unit}</text>`).join("");
+    <text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${mn(t.toFixed(d))}${unit}</text>`).join("");
   const xl = cats.map((c, i) => (cats.length > 10 && i % 2 ? "" :
     `<text x="${X(i)}" y="${H - m.b + 18}" text-anchor="middle">${esc(c)}</text>`)).join("");
-  const lines = series.map((s, k) => {
+  const td = tipDec ?? d;
+  const order = series.map((s, k) => k).sort((a, b) => !!series[b].muted - !!series[a].muted);
+  const lines = order.map(k => {
+    const s = series[k];
+    const cn = series.slice(0, k).filter(x => !x.muted).length + 1;
     const runs = [];
     let run = [];
     s.values.forEach((v, i) => {
@@ -121,23 +133,27 @@ function lineChart(cats, series, { unit = "", yMin, yMax, dec, label = "Line cha
       else run.push(`${X(i)},${Y(v)}`);
     });
     if (run.length) runs.push(run);
-    const segs = runs.filter(r => r.length > 1).map(r => `<polyline class="s${k + 1}${s.dash ? " dash" : ""}" points="${r.join(" ")}"/>`).join("");
+    const segs = runs.filter(r => r.length > 1).map(r => s.muted
+      ? `<polyline class="sm" points="${r.join(" ")}"/><polyline class="hit" points="${r.join(" ")}"><title>${esc(s.name)}</title></polyline>`
+      : `<polyline class="s${cn}${s.dash ? " dash" : ""}" points="${r.join(" ")}"/>`).join("");
+    if (s.muted) return segs;
     const dots = s.values.map((v, i) => (v === null || v === undefined ? "" :
-      `<circle class="p${k + 1}" cx="${X(i)}" cy="${Y(v)}" r="3.5"><title>${esc(s.name)}, ${esc(cats[i])}: ${v.toFixed(d)}${unit}</title></circle>`)).join("");
+      `<circle class="p${cn}" cx="${X(i)}" cy="${Y(v)}" r="3.5"><title>${esc(s.name)}, ${esc(cats[i])}: ${mn(v.toFixed(td))}${unit}</title></circle>`)).join("");
     return segs + dots;
   }).join("");
   const marks = markers.map(mk => `<line class="axis dash" x1="${X(mk.index)}" x2="${X(mk.index)}" y1="${m.t}" y2="${H - m.b}"/>
     <text x="${X(mk.index)}" y="${m.t + 10}" text-anchor="middle">${esc(mk.text)}</text>`).join("");
-  return svg(W, H, label, grid + `<line class="axis" x1="${m.l}" x2="${W - m.r}" y1="${H - m.b}" y2="${H - m.b}"/>` + xl + marks + lines)
-    + (series.length > 1 ? legend(series.map(s => s.name)) : "");
+  const titles = (xTitle ? xText((m.l + W - m.r) / 2, H - 6, xTitle) : "") + (yTitle ? yText((m.t + H - m.b) / 2, 14, yTitle) : "");
+  return svg(W, H, label, grid + `<line class="axis" x1="${m.l}" x2="${W - m.r}" y1="${H - m.b}" y2="${H - m.b}"/>` + xl + marks + lines + titles)
+    + (showLegend && series.length > 1 ? legend(series.map(s => s.name)) : "");
 }
 
 /* Vertical bars that may be negative. items: [{label, value}] where label is a season like "2005-06" */
-function vbar(items, { unit = "", dec, label = "Bar chart" } = {}) {
-  const W = 640, H = 300, m = { l: 52, r: 12, t: 16, b: 40 };
+function vbar(items, { unit = "", dec, tipDec, label = "Bar chart", xTitle, yTitle, valueLabels = false } = {}) {
+  const W = 640, H = 300 + (xTitle ? 20 : 0), m = { l: yTitle ? 68 : 52, r: 12, t: 16, b: xTitle ? 60 : 40 };
   const vals = items.map(i => i.value);
   let lo = Math.min(0, ...vals), hi = Math.max(0, ...vals);
-  const pad = (hi - lo) * 0.08;
+  const pad = (hi - lo) * (valueLabels ? 0.2 : 0.08);
   lo -= lo < 0 ? pad : 0; hi += hi > 0 ? pad : 0;
   const { ticks, dec: autoDec } = niceTicks(lo, hi);
   lo = ticks[0]; hi = ticks[ticks.length - 1];
@@ -145,12 +161,18 @@ function vbar(items, { unit = "", dec, label = "Bar chart" } = {}) {
   const Y = v => m.t + ((hi - v) / (hi - lo)) * (H - m.t - m.b);
   const slot = (W - m.l - m.r) / items.length;
   const grid = ticks.map(t => `<line class="grid" x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}"/>
-    <text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${t.toFixed(d)}${unit}</text>`).join("");
+    <text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${mn(t.toFixed(d))}${unit}</text>`).join("");
+  const td = tipDec ?? d;
   const bars = items.map((it, i) => {
     const x = m.l + i * slot + slot * 0.15, w = slot * 0.7;
     const y0 = Y(0), y1 = Y(it.value);
-    return `<rect class="${it.value < 0 ? "neg" : "c1"}" x="${x}" y="${Math.min(y0, y1)}" width="${w}" height="${Math.max(1, Math.abs(y1 - y0))}" rx="2"><title>${esc(it.label)}: ${it.value.toFixed(d)}${unit}</title></rect>
+    return `<rect class="${it.value < 0 ? "neg" : "c1"}" x="${x}" y="${Math.min(y0, y1)}" width="${w}" height="${Math.max(1, Math.abs(y1 - y0))}" rx="2"><title>${esc(it.label)}: ${mn(it.value.toFixed(td))}${unit}</title></rect>
+      ${valueLabels ? (() => {
+        const lx = x + w / 2, neg = it.value < 0, ly = neg ? Math.max(y0, y1) + 5 : Math.min(y0, y1) - 5;
+        return `<text class="vlab" transform="rotate(-90 ${lx} ${ly})" x="${lx}" y="${ly + 3}" text-anchor="${neg ? "end" : "start"}">${neg ? "−" : "+"}${Math.abs(it.value).toFixed(td)}${unit}</text>`;
+      })() : ""}
       ${i % 2 ? "" : `<text x="${x + w / 2}" y="${H - m.b + 18}" text-anchor="middle">${esc(shortSeason(it.label))}</text>`}`;
   }).join("");
-  return svg(W, H, label, grid + bars + `<line class="axis" x1="${m.l}" x2="${W - m.r}" y1="${Y(0)}" y2="${Y(0)}"/>`);
+  const titles = (xTitle ? xText((m.l + W - m.r) / 2, H - 6, xTitle) : "") + (yTitle ? yText((m.t + H - m.b) / 2, 14, yTitle) : "");
+  return svg(W, H, label, grid + bars + `<line class="axis" x1="${m.l}" x2="${W - m.r}" y1="${Y(0)}" y2="${Y(0)}"/>` + titles);
 }

@@ -3,8 +3,13 @@
    Formatters and chart builders live in charts.js. */
 
 // ---------------------------------------------------------------- filling
-function fill(id, { h2, paras, plot, caption }) {
+function fill(id, { h2, paras, plot, caption, title }) {
   const s = document.getElementById(id);
+  const fig = s.querySelector("figure");
+  const t = document.createElement("div");
+  t.className = "chart-title";
+  t.textContent = title;
+  fig.prepend(t);
   s.querySelector("h2").textContent = h2;
   s.querySelector(".text").innerHTML = paras.map(p => `<p>${p}</p>`).join("");
   s.querySelector(".plot").innerHTML = plot;
@@ -21,8 +26,13 @@ function render(d) {
   document.getElementById("summary").textContent =
     `This report looks at ${n0(d.n_matches_total)} matches from ${leagues.length} European leagues across ${seasons.length} seasons, ` +
     `${firstSeason} to ${lastSeason}. Home teams won ${pc(rates.home_win_pct)} of them, ${pc(rates.draw_pct)} ended in a draw, ` +
-    `and a $${d.underdog_flat_bet_pnl.stake_per_bet_usd} bet on the underdog in every match would have returned ${signed(d.underdog_flat_bet_pnl.overall_roi_pct)}%. ` +
-    `The sections below cover home advantage, betting odds, goals, half-time swings, shots, red cards and the biggest upsets.`;
+    `${d.results_by_team_top10_home_win_pct.top_10[0].Team} has the best home record of ${d.results_by_team_top10_home_win_pct.teams_qualifying} clubs, winning ${pc(d.results_by_team_top10_home_win_pct.top_10[0].home_win_pct)} of its home matches. ` +
+    `Bookmaker odds are well calibrated (they implied ${pc(d.odds_calibration_overall.avg_implied_home_win_pct)} home wins against an actual ${pc(d.odds_calibration_overall.actual_home_win_pct)}), ` +
+    `yet a $${d.underdog_flat_bet_pnl.stake_per_bet_usd} bet on the underdog in every match would have returned ${signed(d.underdog_flat_bet_pnl.overall_roi_pct)}%. ` +
+    `${d.highest_scoring_league_trend.league} scores the most goals (${f2(d.highest_scoring_league_trend.overall_avg_goals_per_game)} per game) and ` +
+    `${d.most_common_score_by_league.every(r => r.most_common_score === d.most_common_score_by_league[0].most_common_score) ? `${d.most_common_score_by_league[0].most_common_score} is the most common final score in every league` : "the most common final score varies by league"}. ` +
+    `Half-time leaders go on to win ${pc(d.halftime_leads.lead_held_pct)} of the time, home teams with more shots on target win ${pc(d.shots_on_target_vs_win.overall.home_more.home_win_pct)} of matches, ` +
+    `teams reduced to ten men still win ${pc(d.red_cards_vs_win.either_team_sole_red_card_combined.still_won_pct)}, and the longest-odds winner came in at ${f1(d.biggest_upsets[0].WinningOdds)}.`;
 
   // ---- the leagues table (from findings.json league_overview)
   const ov = d.league_overview;
@@ -60,7 +70,8 @@ function render(d) {
     plot: stacked(
       [...leagues].sort((a, b) => b.home_win_pct - a.home_win_pct).map(r => ({
         label: r.League, flag: flagSrc(r.League), parts: [r.home_win_pct, r.draw_pct, r.away_win_pct], names: ["Home win", "Draw", "Away win"],
-      })), { label: "Home, draw and away result rates by league" }) + legend(["Home win %", "Draw %", "Away win %"]),
+      })), { label: "Home, draw and away result rates by league", xTitle: "Share of matches (%)" }) + legend(["Home win %", "Draw %", "Away win %"]),
+    title: "Match results by league",
     caption: "Share of matches ending in a home win, draw or away win, by league.",
   });
 
@@ -72,7 +83,8 @@ function render(d) {
       `Only teams with at least ${t10.min_home_matches_threshold} home matches are ranked, which leaves ${t10.teams_qualifying} clubs. ${t10.top_10[0].Team} won ${pc(t10.top_10[0].home_win_pct)} of ${n0(t10.top_10[0].matches)} home games and lost only ${pc(t10.top_10[0].away_win_pct)}. ${t10.top_10[1].Team} (${pc(t10.top_10[1].home_win_pct)}) and ${t10.top_10[2].Team} (${pc(t10.top_10[2].home_win_pct)}) follow. For comparison, the league-wide home-win rate is ${pc(rates.home_win_pct)}.`,
       `A different measure, points per game, finds the club whose home form differs most from its away form: ${fort.Team} earned ${f2(fort.home_ppg)} points per game at home but only ${f2(fort.away_ppg)} away, a gap of ${f2(fort.gap)}.`,
     ],
-    plot: hbar(t10.top_10.map(r => ({ label: r.Team, value: r.home_win_pct })), { max: 100, label: "Top 10 teams by home win rate" }),
+    plot: hbar(t10.top_10.map(r => ({ label: r.Team, value: r.home_win_pct })), { max: 100, label: "Top 10 teams by home win rate", xTitle: "Home matches won (%)" }),
+    title: "Ten best home records",
     caption: `Home-win rate of the ten strongest home teams (minimum ${t10.min_home_matches_threshold} home matches).`,
   });
 
@@ -89,8 +101,9 @@ function render(d) {
       cal.map(b => `${Math.round(b.bucket_low * 100)}–${Math.round(b.bucket_high * 100)}%`),
       [{ name: "Implied home-win %", values: cal.map(b => b.avg_implied_home_win_pct), dash: true },
        { name: "Actual home-win %", values: cal.map(b => b.actual_home_win_pct) }],
-      { unit: "%", yMin: 0, yMax: 100, dec: 0, label: "Implied versus actual home-win rate by probability band" }),
-    caption: "Implied versus actual home-win rate, grouped by the home team's implied chance (x axis).",
+      { unit: "%", yMin: 0, yMax: 100, dec: 0, tipDec: 1, label: "Implied versus actual home-win rate by probability band", xTitle: "Implied home-win chance", yTitle: "Home-win rate" }),
+    title: "Implied versus actual home-win rate",
+    caption: "Implied versus actual home-win rate, grouped by the home team's implied chance.",
   });
 
   // ---- 4. underdog P&L
@@ -103,21 +116,31 @@ function render(d) {
       `Suppose you staked $${u.stake_per_bet_usd} on the longest-odds outcome in each of ${n0(u.total_bets)} matches. The total result would be ${money(u.total_profit_usd)}, a return of ${signed(u.overall_roi_pct)}% per bet. Underdogs win often enough to feel tempting, but not often enough to cover the bookmaker's margin.`,
       `${profitable.length === 1 ? `Only one season was profitable: ${profitable[0].Season} at ${signed(profitable[0].roi_pct)}%.` : `${profitable.length} seasons were profitable.`} The worst season was ${worstS.Season} at ${signed(worstS.roi_pct)}%. By league, ${esc(bestL.League)} lost the least (${signed(bestL.roi_pct)}%) and ${esc(worstL.League)} lost the most (${signed(worstL.roi_pct)}%).`,
     ],
-    plot: vbar(u.by_season.map(r => ({ label: r.Season, value: r.roi_pct })), { unit: "%", dec: 0, label: "Underdog flat-bet return by season" }),
+    plot: vbar(u.by_season.map(r => ({ label: r.Season, value: r.roi_pct })), { unit: "%", dec: 0, tipDec: 1, valueLabels: true, label: "Underdog flat-bet return by season", xTitle: "Season", yTitle: "Return per $1 staked" }),
+    title: "Underdog return by season",
     caption: "Return on investment (profit per $1 staked) for betting the underdog in every match, by season.",
   });
 
   // ---- 5. goals
   const g = d.highest_scoring_league_trend;
+  const gRows = d.goals_per_game_by_league_season;
+  const gSeasons = g.by_season.map(r => r.Season);
+  const gSeries = leagues.map(l => ({
+    name: l.League, muted: l.League !== g.league,
+    values: gSeasons.map(sn => (gRows.find(r => r.League === l.League && r.Season === sn) || {}).avg_goals_per_game ?? null),
+  }));
+  const runnerUp = g.overall_by_league.filter(r => r.League !== g.league)[0];
   fill("goals", {
     h2: `${g.league} scores the most, and its goals per game rose from ${f2(g.first_5_seasons_avg)} to ${f2(g.last_5_seasons_avg)}`,
     paras: [
-      `${esc(g.league)} averages ${f2(g.overall_avg_goals_per_game)} goals per game, the highest of the ${leagues.length} leagues. Its average peaked at ${f2(g.peak_avg_goals_per_game)} in ${g.peak_season} and was lowest at ${f2(g.trough_avg_goals_per_game)} in ${g.trough_season}.`,
+      `${esc(g.league)} averages ${f2(g.overall_avg_goals_per_game)} goals per game, the highest of the ${leagues.length} leagues. The next highest is the ${esc(runnerUp.League)}, at ${f2(runnerUp.avg_goals_per_game)}. Its average peaked at ${f2(g.peak_avg_goals_per_game)} in ${g.peak_season} and was lowest at ${f2(g.trough_avg_goals_per_game)} in ${g.trough_season}.`,
       `Comparing the first five seasons (${f2(g.first_5_seasons_avg)}) with the last five (${f2(g.last_5_seasons_avg)}) gives a rise of ${f2(g.change_first5_to_last5)} goals per game. A straight-line fit through the ${g.by_season.length} seasons slopes ${signed(g.linear_trend_goals_per_game_per_season, 4)} goals per game each season.`,
     ],
-    plot: lineChart(g.by_season.map(r => shortSeason(r.Season)), [{ name: `${g.league} goals per game`, values: g.by_season.map(r => r.avg_goals_per_game) }],
-      { dec: 2, label: `${g.league} goals per game by season` }),
-    caption: `Average total goals (home plus away) per match in the ${g.league}, by season.`,
+    plot: lineChart(gSeasons.map(shortSeason), [...gSeries.filter(x => x.muted), { name: `${g.league} goals per game`, values: gSeries.find(x => !x.muted).values }],
+      { dec: 2, label: `Goals per game by league and season, ${g.league} highlighted`, legend: false, xTitle: "Season", yTitle: "Goals per game" })
+      + `<div class="legend"><span class="l1">${esc(g.league)}</span><span class="lg">The other ${leagues.length - 1} leagues (hover for names)</span></div>`,
+    title: `Goals per game, all ${leagues.length} leagues`,
+    caption: `Average total goals (home plus away) per match by league and season. The ${g.league} is highlighted.`,
   });
 
   // ---- 6. most common score
@@ -131,7 +154,8 @@ function render(d) {
       `Behind the top score, the next most common results in ${esc(scLo.League)} are ${scLo.top_3.slice(1).map(t => `${t.score} (${pc(t.pct)})`).join(" and ")}. In ${esc(scHi.League)} they are ${scHi.top_3.slice(1).map(t => `${t.score} (${pc(t.pct)})`).join(" and ")}. Low-scoring outcomes dominate everywhere.`,
     ],
     plot: hbar([...sc].sort((a, b) => b.most_common_pct - a.most_common_pct).map(r => ({ label: `${r.League} (${r.most_common_score})`, flag: flagSrc(r.League), value: r.most_common_pct })),
-      { labelW: 190, label: "Share of matches with the most common score, by league" }),
+      { labelW: 190, label: "Share of matches with the most common score, by league", xTitle: "Share of the league's matches (%)" }),
+    title: "Most common scoreline by league",
     caption: "Share of each league's matches that ended with its most common scoreline (shown in brackets).",
   });
 
@@ -148,24 +172,26 @@ function render(d) {
       { label: "Lead held (win)", value: ht.lead_held_pct, cls: "c1" },
       { label: "Lead drawn back", value: ht.lead_drawn_pct, cls: "c2" },
       { label: "Lead reversed (loss)", value: ht.lead_reversed_pct, cls: "c3" },
-    ], { max: 100, label: "Outcome of half-time leads" }),
+    ], { max: 100, label: "Outcome of half-time leads", xTitle: "Share of half-time leads (%)" }),
+    title: "What happens to a half-time lead",
     caption: "Final result for the team that led at half-time.",
   });
 
   // ---- 8. shots on target
   const st = d.shots_on_target_vs_win, so = st.overall;
-  const leagueHM = st.by_league.map(r => r.home_win_pct_when_home_more);
+  const shotHi = maxBy(st.by_league, r => r.home_win_pct_when_home_more), shotLo = minBy(st.by_league, r => r.home_win_pct_when_home_more);
   fill("shots", {
     h2: `Home teams win ${pc(so.home_more.home_win_pct)} of matches when they have more shots on target, but only ${pc(so.away_more.home_win_pct)} when they have fewer`,
     paras: [
       `Among ${n0(st.matches_with_shot_data)} matches with shot data, the home side had more shots on target in ${n0(so.home_more.matches)}, the away side had more in ${n0(so.away_more.matches)}, and they were level in ${n0(so.equal.matches)}. The home win rate was ${pc(so.home_more.home_win_pct)}, ${pc(so.away_more.home_win_pct)} and ${pc(so.equal.home_win_pct)} respectively.`,
-      `By league, when the home team outshoots the visitors on target, its win rate ranges from ${pc(Math.min(...leagueHM))} to ${pc(Math.max(...leagueHM))} by league.`,
+      `The pattern holds in every league. When the home team has more shots on target, its win rate is lowest in ${esc(shotLo.League)} (${pc(shotLo.home_win_pct_when_home_more)}) and highest in ${esc(shotHi.League)} (${pc(shotHi.home_win_pct_when_home_more)}).`,
     ],
     plot: hbar([
       { label: "Home more shots on target", value: so.home_more.home_win_pct, cls: "c1" },
       { label: "Equal shots on target", value: so.equal.home_win_pct, cls: "c2" },
       { label: "Away more shots on target", value: so.away_more.home_win_pct, cls: "c3" },
-    ], { max: 100, labelW: 190, label: "Home win rate by shots-on-target advantage" }),
+    ], { max: 100, labelW: 190, label: "Home win rate by shots-on-target advantage", xTitle: "Home matches won (%)" }),
+    title: "Home win rate by shots on target",
     caption: "Home win rate, grouped by which team had more shots on target.",
   });
 
@@ -181,8 +207,10 @@ function render(d) {
       { label: "Home team sole red card", value: rc.home_team_sole_red_card.still_won_pct, cls: "c1" },
       { label: "Away team sole red card", value: rc.away_team_sole_red_card.still_won_pct, cls: "c3" },
       { label: "Either team, combined", value: rc.either_team_sole_red_card_combined.still_won_pct, cls: "c2" },
-      { label: "Home win rate, no red cards", value: rc.no_red_card_baseline_home_win_pct.home_win_pct, cls: "c1" },
-    ], { max: 100, labelW: 200, label: "Win rate of teams playing with ten men" }),
+      { label: "Baseline: home win rate, no red cards", value: rc.no_red_card_baseline_home_win_pct.home_win_pct, cls: "c4" },
+    ], { max: 100, labelW: 230, label: "Win rate of teams playing with ten men", xTitle: "Matches won (%)" })
+      + `<div class="legend"><span class="l1">Home team sent off</span><span class="l3">Away team sent off</span><span class="l2">Either team sent off</span><span class="lg">Baseline (no red cards)</span></div>`,
+    title: "Win rate with ten men versus a full side",
     caption: "Share of matches won by the team that received the only red card, compared with the home win rate in matches with no red cards.",
   });
 
@@ -199,7 +227,8 @@ function render(d) {
       `Next on the list: ${line(c)} at ${f1(c.WinningOdds)} (${pc(c.WinnerImpliedProbPct)} implied), and ${line(e)} at ${f1(e.WinningOdds)}. The ranking covers the ${up.length} longest-odds winners in matches that had a decisive result.`,
     ],
     plot: hbar(up.slice(0, 10).map(r => ({ label: `${r.WinningTeam} over ${r.LosingTeam} (${r.Date.slice(0, 4)})`, value: r.WinningOdds, text: f1(r.WinningOdds) })),
-      { labelW: 270, label: "Ten longest-odds winners" }),
+      { labelW: 270, label: "Ten longest-odds winners", xTitle: "Decimal odds of the winning team" }),
+    title: "Ten longest-odds winners",
     caption: "Decimal odds of the winning team in the ten biggest upsets.",
   });
 
