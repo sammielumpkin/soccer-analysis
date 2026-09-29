@@ -634,6 +634,32 @@ print(f"   Away team alone gets a red card ({len(away_red_only):,} matches): sti
 print(f"   Either team down to 10 men, still wins: {findings['red_cards_vs_win']['either_team_sole_red_card_combined']['still_won_pct']}%  (vs {baseline_home_win_pct}% home baseline with no cards)")
 
 # ---------------------------------------------------------------------------
+# League overview: one row per league for the "The leagues" table
+# ---------------------------------------------------------------------------
+# The file has no division-level column, so the tier is stated here.
+LEAGUE_TIER = {
+    "Premier League": 1, "Championship": 2, "Ligue 1": 1, "Ligue 2": 2,
+    "Bundesliga": 1, "2. Bundesliga": 2, "Serie A": 1, "Serie B": 2,
+    "La Liga": 1, "Segunda Division": 2,
+}
+overview = []
+for league, g in df.groupby("League"):
+    teams_per_season = g.groupby("Season").apply(
+        lambda x: pd.concat([x["HomeTeam"], x["AwayTeam"]]).nunique(), include_groups=False)
+    overview.append({
+        "League": league, "Country": g["Country"].iloc[0], "tier": LEAGUE_TIER[league],
+        "matches": int(len(g)), "seasons": int(g["Season"].nunique()),
+        "teams_per_season_typical": int(teams_per_season.median()),
+        "teams_per_season_min": int(teams_per_season.min()),
+        "teams_per_season_max": int(teams_per_season.max()),
+    })
+overview.sort(key=lambda r: r["matches"])
+findings["league_overview"] = overview
+print("\nLeague overview (fewest to most matches):")
+for r in overview:
+    print(f"   {r['League']:<18}{r['Country']:<9}tier {r['tier']}  teams/season {r['teams_per_season_typical']}  matches {r['matches']:,}")
+
+# ---------------------------------------------------------------------------
 # Save
 # ---------------------------------------------------------------------------
 with open(OUT_PATH, "w") as f:

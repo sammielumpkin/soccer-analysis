@@ -4688,5 +4688,107 @@
       "matches": 48635,
       "home_win_pct": 44.4
     }
-  }
+  },
+  "league_overview": [
+    {
+      "League": "2. Bundesliga",
+      "Country": "Germany",
+      "tier": 2,
+      "matches": 6120,
+      "seasons": 20,
+      "teams_per_season_typical": 18,
+      "teams_per_season_min": 18,
+      "teams_per_season_max": 19
+    },
+    {
+      "League": "Bundesliga",
+      "Country": "Germany",
+      "tier": 1,
+      "matches": 6120,
+      "seasons": 20,
+      "teams_per_season_typical": 18,
+      "teams_per_season_min": 18,
+      "teams_per_season_max": 18
+    },
+    {
+      "League": "Ligue 1",
+      "Country": "France",
+      "tier": 1,
+      "matches": 7351,
+      "seasons": 20,
+      "teams_per_season_typical": 20,
+      "teams_per_season_min": 18,
+      "teams_per_season_max": 20
+    },
+    {
+      "League": "Ligue 2",
+      "Country": "France",
+      "tier": 2,
+      "matches": 7393,
+      "seasons": 20,
+      "teams_per_season_typical": 20,
+      "teams_per_season_min": 18,
+      "teams_per_season_max": 20
+    },
+    {
+      "League": "La Liga",
+      "Country": "Spain",
+      "tier": 1,
+      "matches": 7600,
+      "seasons": 20,
+      "teams_per_season_typical": 20,
+      "teams_per_season_min": 20,
+      "teams_per_season_max": 20
+    },
+    {
+      "League": "Premier League",
+      "Country": "England",
+      "tier": 1,
+      "matches": 7600,
+      "seasons": 20,
+      "teams_per_season_typical": 20,
+      "teams_per_season_min": 20,
+      "teams_per_season_max": 20
+    },
+    {
+      "League": "Serie A",
+      "Country": "Italy",
+      "tier": 1,
+      "matches": 7600,
+      "seasons": 20,
+      "teams_per_season_typical": 20,
+      "teams_per_season_min": 20,
+      "teams_per_season_max": 20
+    },
+    {
+      "League": "Serie B",
+      "Country": "Italy",
+      "tier": 2,
+      "matches": 8628,
+      "seasons": 20,
+      "teams_per_season_typical": 22,
+      "teams_per_season_min": 19,
+      "teams_per_season_max": 23
+    },
+    {
+      "League": "Segunda Division",
+      "Country": "Spain",
+      "tier": 2,
+      "matches": 9224,
+      "seasons": 20,
+      "teams_per_season_typical": 22,
+      "teams_per_season_min": 22,
+      "teams_per_season_max": 22
+    },
+    {
+      "League": "Championship",
+      "Country": "England",
+      "tier": 2,
+      "matches": 11040,
+      "seasons": 20,
+      "teams_per_season_typical": 24,
+      "teams_per_season_min": 24,
+      "teams_per_season_max": 24
+    }
+  ]
 }
