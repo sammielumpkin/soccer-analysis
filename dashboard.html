@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · European Football by the Numbers</title>
+  <meta name="description" content="Filter 20 seasons of European football results by season, country, league, team and result, and switch the charts between measures and breakdowns.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Football by the Numbers</a>
+    <a href="index.html">Report</a>
+    <a href="dashboard.html" aria-current="page">Dashboard</a>
+  </div>
+</nav>
+
+<main class="wrap wide" id="top">
+  <header class="dash-head">
+    <h1>Dashboard</h1>
+    <p>Every match in the report, loaded from <code>data/matches.csv</code> and calculated in your browser. Narrow the filters and every number, chart and table row below updates.</p>
+  </header>
+
+  <div id="error" class="error" hidden></div>
+
+  <section class="panel" aria-labelledby="filters-h">
+    <div class="panel-head">
+      <h2 id="filters-h">Filters</h2>
+      <div class="status" id="status" role="status" aria-live="polite">Loading matches…</div>
+      <button type="button" id="reset">Reset all filters</button>
+    </div>
+    <div class="filters">
+      <div class="field"><label for="f-from">Season from</label><select id="f-from"></select></div>
+      <div class="field"><label for="f-to">Season to</label><select id="f-to"></select></div>
+      <div class="field"><label for="f-country">Country</label><select id="f-country"></select></div>
+      <div class="field"><label for="f-league">League</label><select id="f-league"></select></div>
+      <div class="field"><label for="f-team">Team</label><select id="f-team"></select></div>
+      <div class="field"><label for="f-role">Team plays</label><select id="f-role"></select></div>
+      <div class="field"><label for="f-result">Result</label><select id="f-result"></select></div>
+    </div>
+  </section>
+
+  <section aria-label="Summary numbers">
+    <div class="tiles stats" id="tiles"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="switch-h">
+    <div class="panel-head"><h2 id="switch-h">Chart switches</h2></div>
+    <div class="switches">
+      <div class="field"><label for="measure">Measure</label><select id="measure"></select></div>
+      <div class="field"><label for="by">Break down by</label><select id="by"></select></div>
+    </div>
+  </section>
+
+  <section class="charts" aria-label="Charts">
+    <article class="card"><h3 id="t-main"></h3><p class="sub" id="s-main"></p><div id="c-main"></div></article>
+    <article class="card"><h3 id="t-mix"></h3><p class="sub" id="s-mix"></p><div id="c-mix"></div></article>
+    <article class="card"><h3 id="t-trend"></h3><p class="sub" id="s-trend"></p><div id="c-trend"></div></article>
+    <article class="card"><h3 id="t-teams"></h3><p class="sub" id="s-teams"></p><div id="c-teams"></div></article>
+  </section>
+
+  <section class="panel" aria-labelledby="table-h">
+    <div class="panel-head">
+      <h2 id="table-h">The numbers behind this view</h2>
+      <div class="status" id="table-note"></div>
+    </div>
+    <div class="table-wrap"><table id="table"></table></div>
+  </section>
+
+  <section class="panel" aria-labelledby="defs-h">
+    <div class="panel-head"><h2 id="defs-h">How each measure is computed</h2></div>
+    <ul id="defs"></ul>
+  </section>
+
+  <footer>Dashboard by Samantha Lumpkin. With every filter reset, the first four numbers above match the headline numbers on the <a href="index.html">report</a>.</footer>
+</main>
+
+<script src="charts.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

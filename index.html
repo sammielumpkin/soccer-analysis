@@ -7,11 +7,18 @@
   <meta name="description" content="Twenty seasons of results, odds, goals, half-time swings and cards from ten European football leagues.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="has-toc">
 
-<nav class="nav" aria-label="Report sections">
+<nav class="nav" aria-label="Site">
   <div class="nav-inner">
-    <a class="brand" href="#top">Football by the Numbers</a>
+    <a class="brand" href="index.html">Football by the Numbers</a>
+    <a href="index.html" aria-current="page">Report</a>
+    <a href="dashboard.html">Dashboard</a>
+  </div>
+</nav>
+
+<nav class="toc" aria-label="Report sections">
+  <div class="nav-inner">
     <a href="#home-advantage">Home edge</a>
     <a href="#fading-edge">Fading edge</a>
     <a href="#fortresses">Fortresses</a>
@@ -107,6 +114,7 @@
   <footer>Report by Samantha Lumpkin. Every figure on this page is read from <code>data/findings.json</code>.</footer>
 </main>
 
+<script src="charts.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
