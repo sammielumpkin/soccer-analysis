@@ -265,6 +265,34 @@ print(f"   Most predictable: {most_predictable['League']} (favorite wins {most_p
 print(f"   Most upsets:      {most_upsets['League']} (favorite wins only {most_upsets['favorite_win_pct']}%, i.e. {findings['predictability']['most_upsets_upset_pct']}% upset rate)")
 
 # ---------------------------------------------------------------------------
+# 6b. Biggest individual upsets: the longest-odds winners in the dataset
+# ---------------------------------------------------------------------------
+# Restricted to decisive results (H or A) -- a draw has no "winner", so it
+# isn't a winner-side upset in the sense asked here.
+decisive = odds[odds["FTR"].isin(["H", "A"])].copy()
+is_home_win = decisive["FTR"] == "H"
+decisive["WinningTeam"] = np.where(is_home_win, decisive["HomeTeam"], decisive["AwayTeam"])
+decisive["LosingTeam"] = np.where(is_home_win, decisive["AwayTeam"], decisive["HomeTeam"])
+decisive["WinningOdds"] = np.where(is_home_win, decisive["B365H"], decisive["B365A"])
+decisive["WinnerImpliedProbPct"] = round(100 / decisive["WinningOdds"], 1)
+
+upsets = decisive.sort_values("WinningOdds", ascending=False).head(20)
+biggest_upsets = [{
+    "Date": r["Date"].strftime("%Y-%m-%d"), "League": r["League"],
+    "WinningTeam": r["WinningTeam"], "LosingTeam": r["LosingTeam"],
+    "HomeTeam": r["HomeTeam"], "AwayTeam": r["AwayTeam"],
+    "FTHG": int(r["FTHG"]), "FTAG": int(r["FTAG"]),
+    "WinningOdds": round(r["WinningOdds"], 2), "WinnerImpliedProbPct": r["WinnerImpliedProbPct"],
+} for _, r in upsets.iterrows()]
+findings["biggest_upsets"] = biggest_upsets
+
+print(f"\n6b) Biggest upsets (longest odds for the actual winner, decisive results only)")
+for r in biggest_upsets[:10]:
+    print(f"   {r['Date']}  {r['League']:<17} {r['WinningTeam']} beat {r['LosingTeam']}  "
+          f"({r['HomeTeam']} {r['FTHG']}-{r['FTAG']} {r['AwayTeam']})  "
+          f"odds {r['WinningOdds']} (implied {r['WinnerImpliedProbPct']}%)")
+
+# ---------------------------------------------------------------------------
 # 7. Biggest home vs away performance gap, by team
 # ---------------------------------------------------------------------------
 def points(ftr, win_code):
